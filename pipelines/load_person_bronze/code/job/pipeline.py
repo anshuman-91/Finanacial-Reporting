@@ -6,8 +6,9 @@ from job.udfs.UDFs import *
 from job.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_Source_0 = Source_0(spark)
-    Target_1(spark, df_Source_0)
+    df_person_external = person_external(spark)
+    df_import_ts = import_ts(spark, df_person_external)
+    person_bronze(spark, df_import_ts)
 
 def main():
     Utils.initializeFromArgs(Utils.parseArgs())
