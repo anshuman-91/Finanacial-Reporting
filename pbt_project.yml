@@ -1,0 +1,36 @@
+name: Financial-Reporting
+description: ''
+version: 0.0.1
+author: anshuman@simpledatalabs.com
+language: python
+pipelines:
+  pipelines/load_acc_status_bronze:
+    name: load_acc_status_bronze
+    description: ''
+    author: anshuman@simpledatalabs.com
+    mode: batch
+    language: python
+    createdAt: '2022-05-25 09:30:11'
+    datasets:
+      inputs:
+      - 5468/datasets/acc_status_external
+      outputs: []
+    dependencies: {}
+datasets:
+  datasets/acc_status_external:
+    name: acc_status_external
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-05-25 09:39:48'
+    physicalDatasets:
+      recipes_fabric:
+        fabricId: 1010
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-25 09:39:49'
+jobs: {}
+libraries: []
+subgraphs: {}
+dependencies: '[]'
+template: '[]'

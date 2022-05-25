@@ -1,0 +1,80 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "1010",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "interimMode" : "Full",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : {
+        "recipes_fabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "gamedayfabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman2" : {
+          "type" : "record",
+          "fields" : [ ]
+        }
+      }
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ]
+  },
+  "connections" : [ ],
+  "processes" : {
+    "sROedc1q2QKmKocxzZC2p$$OUwpWEbV15EZz5lnn5ZLK" : {
+      "id" : "sROedc1q2QKmKocxzZC2p$$OUwpWEbV15EZz5lnn5ZLK",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Source_0",
+        "slug" : "Source_0",
+        "x" : 37,
+        "y" : 193,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Malu-xDP5uvB7OydPICh4$$7IpzS7U3yOjGTnTS-CgiJ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "datasetId" : "5468/datasets/acc_status_external"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ]
+  }
+}
