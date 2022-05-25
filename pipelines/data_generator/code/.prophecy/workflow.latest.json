@@ -1,0 +1,300 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "1010",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "interimMode" : "Full",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : {
+        "recipes_fabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "gamedayfabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman2" : {
+          "type" : "record",
+          "fields" : [ ]
+        }
+      }
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ]
+  },
+  "connections" : [ {
+    "id" : "1WpuLZuqCz0YuXgpwklfl",
+    "source" : "-kZC7ANtxxIVGDU16fX3W$$7DScOwXTPZYLZAVkUL4Hh",
+    "sourcePort" : "xPlfr_X_bA4mFRCAWHH1y$$pVzFH5WoTR0noLAXOFZWK",
+    "target" : "9bqoxciWRq6SKRR-A9m_Q$$bFWqI-NdCGR4gNrWcjbkM",
+    "targetPort" : "MWTquYnHr9hl-q6cjOKUu$$iMsl-kklMB576ibn_yB4i"
+  }, {
+    "id" : "qrL4YAe6-Ft2ITSSR3mGR",
+    "source" : "-kZC7ANtxxIVGDU16fX3W$$7DScOwXTPZYLZAVkUL4Hh",
+    "sourcePort" : "bV0mxqtrTIjIADvPJ-FVI$$DWqE1ckYzV1u0aCUFA8cj",
+    "target" : "VT7eA3sJhb2V8egD8MeLq$$r552PX0rmh_7DIJGUBbdP",
+    "targetPort" : "eXBA4u-vlaLZv3tVhfdxV$$WMqUsKts47R2XsKCUNakc"
+  }, {
+    "id" : "AQq_dpO8NHoHQb25hzuS8",
+    "source" : "-kZC7ANtxxIVGDU16fX3W$$7DScOwXTPZYLZAVkUL4Hh",
+    "sourcePort" : "xGmttuB1wpcZ9RSM0brZJ$$_dB7QHIVnFK9g4Sml9lB4",
+    "target" : "y9Je_Rlu2gSgnlJd-cIqH$$EYS97PVtiUR688WxHetqd",
+    "targetPort" : "uBoOuT83LpW1lcEHNRg_W$$qmBtg_1nRzIoSo9zGMcmd"
+  }, {
+    "id" : "QL3myndzAVCyV4VCChzYY",
+    "source" : "-kZC7ANtxxIVGDU16fX3W$$7DScOwXTPZYLZAVkUL4Hh",
+    "sourcePort" : "GMdGJ6sb6koLTOARM7xbe$$oEmsFNaNZzBwds82paHGG",
+    "target" : "wcZdVD4VGHmEsSGHN8aXX$$01YRM0ZODLwdexYi-4jbJ",
+    "targetPort" : "7iNVarxdXiYXH9cSeObTC$$T2k55CAf5izv1ZkwQpENl"
+  }, {
+    "id" : "MY6zcpckUxwph3lijGqtq",
+    "source" : "-kZC7ANtxxIVGDU16fX3W$$7DScOwXTPZYLZAVkUL4Hh",
+    "sourcePort" : "6fa19STcNfkOCb7agXGZJ$$jc5iQzR0XkXWE90ZKHCMC",
+    "target" : "0clw9SlNooEqtiFEO5C1o$$f2jjG48aah-wB1eQhWzbA",
+    "targetPort" : "rCMJ4GV9ij3hzv_yH2sEW$$3mJds-QxPqsXI7QCRgLIp"
+  }, {
+    "id" : "l3-zwhZJ8EIO1DVOn7mOE",
+    "source" : "-kZC7ANtxxIVGDU16fX3W$$7DScOwXTPZYLZAVkUL4Hh",
+    "sourcePort" : "xPlfr_X_bA4mFRCAWHH1y$$pVzFH5WoTR0noLAXOFZWK",
+    "target" : "rfFit1PPr_zfKMetM_yZb$$GUMBx_WBnKzma_DUQh-JD",
+    "targetPort" : "7qJWFIN9QglroX_pVf9_T$$QN2yk8UnXPJdg3etYL2l5"
+  } ],
+  "processes" : {
+    "-kZC7ANtxxIVGDU16fX3W$$7DScOwXTPZYLZAVkUL4Hh" : {
+      "id" : "-kZC7ANtxxIVGDU16fX3W$$7DScOwXTPZYLZAVkUL4Hh",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Generator",
+        "slug" : "Generator",
+        "x" : 226,
+        "y" : 279,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "xPlfr_X_bA4mFRCAWHH1y$$pVzFH5WoTR0noLAXOFZWK",
+          "slug" : "acc_status_first_df"
+        }, {
+          "id" : "GMdGJ6sb6koLTOARM7xbe$$oEmsFNaNZzBwds82paHGG",
+          "slug" : "acc_status_second_df"
+        }, {
+          "id" : "6fa19STcNfkOCb7agXGZJ$$jc5iQzR0XkXWE90ZKHCMC",
+          "slug" : "transactions_df"
+        }, {
+          "id" : "xGmttuB1wpcZ9RSM0brZJ$$_dB7QHIVnFK9g4Sml9lB4",
+          "slug" : "people_df"
+        }, {
+          "id" : "bV0mxqtrTIjIADvPJ-FVI$$DWqE1ckYzV1u0aCUFA8cj",
+          "slug" : "products_df"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "script" : "from pyspark.shell import sc\nimport datetime\n\n# acc_status\nacc_status_first_df = spark.createDataFrame(data=[\n    (\"1\", \"A\", \"P1\", \"2022-05-04\", \"0.00\"),\n    (\"2\", \"B\", \"P1\", \"2022-05-04\", \"0.00\"),\n    (\"3\", \"A\", \"P2\", \"2022-05-04\", \"0.00\"),\n], schema='acc_id string,person_id string,product_id string,business_date string,balance string')\nacc_status_first_df = acc_status_first_df.coalesce(1)\n\n\nacc_status_second_df = spark.createDataFrame(data=[\n    (\"1\", \"A\", \"P1\", \"2022-05-05\", \"100.00\"),\n    (\"2\", \"B\", \"P1\", \"2022-05-05\", \"150.00\"),\n    (\"3\", \"A\", \"P2\", \"2022-05-05\", \"1000.00\"),\n], schema='acc_id string,person_id string,product_id string,business_date string,balance string')\nacc_status_second_df = acc_status_second_df.coalesce(1)\n\n# transactions\ntransactions_df = spark.createDataFrame(data=[\n    (1, \"a1x\", datetime.date(2022,5,5), 200.00, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T01:30:00.184-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (1, \"a1y\", datetime.date(2022,5,5), 110.00, \"DEBIT\", datetime.datetime.strptime(\"2022-05-05T09:45:00.193-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (1, \"a1z\", datetime.date(2022,5,5), 10.00, \"INTEREST\", datetime.datetime.strptime(\"2022-05-05T12:00:00.564-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (2, \"a2a\", datetime.date(2022,5,5), 50.00, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T11:31:22.231-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (2, \"a2b\", datetime.date(2022,5,5), 200.00, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T05:04:21.871-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (2, \"a2c\", datetime.date(2022,5,5), 100.00, \"DEBIT\", datetime.datetime.strptime(\"2022-05-05T12:05:11.135-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (3, \"a2d\", datetime.date(2022,5,5), 449.50, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T15:05:15.154-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (3, \"a2e\", datetime.date(2022,5,5), 449.50, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T18:05:31.130-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (3, \"a2f\", datetime.date(2022,5,5), 100.00, \"INTEREST\", datetime.datetime.strptime(\"2022-05-05T22:45:55.116-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n], schema='acc_id int,tran_id string,business_date date,tran_amount double,tran_type string,tran_ts timestamp')\ntransactions_df = transactions_df.coalesce(1)\n\n# people\nperson_json_1 = '''{\"id\":\"A\",\"name\":\"James Jones\",\"email\":\"james_earl_93@gmail.com\",\"updated_at\":\"2022-05-05T12:00:00.000-05:00\",\"addresses\":[{\"postal_code\":\"A24011\",\"address_line1\":\"4638 White Pine Lane\",\"address_line2\":\"Roanoke, Virginia\",\"type\":\"PRIMARY\"},{\"postal_code\":\"CD36582\",\"address_line1\":\"1268 George Avenue\",\"address_line2\":\"Theodore, Alabama\",\"type\":\"ALTERNATE\"},{\"postal_code\":\"AX85003\",\"address_line1\":\"3881 Coplin Avenue\",\"address_line2\":\"Phoenix, Arizona\",\"type\":\"ALTERNATE\"}]}'''\nperson_json_2 = '''{\"id\":\"B\",\"name\":\"Jonas Smith\",\"updated_at\":\"2022-05-05T16:12:44.252-05:00\",\"email\":\"jjsmith89@yahoo.com\",\"addresses\":[{\"postal_code\":\"AB33614\",\"address_line1\":\"22897 Maryland Avenue, Tampa, Florida\",\"type\":\"PRIMARY\"},{\"postal_code\":\"CD21321\",\"address_line1\":\"559 Lake Floyd Circle, New Castle, Delaware\",\"type\":\"ALTERNATE\"}]}'''\nperson_json_3 = '''{\"id\":\"C\",\"name\":\"Adam Boorman\",\"email\":\"adamb213@gmail.com\",\"updated_at\":\"2022-05-05T05:32:55.864-05:00\",\"addresses\":[{\"postal_code\":\"XR96814\",\"address_line1\":\"4558 Indiana Circle\",\"address_line2\":\"Honolulu, Hawai\",\"type\":\"PRIMARY\"},{\"postal_code\":\"CC47906\",\"address_line1\":\"26 Glenwood Drive\",\"address_line2\":\"West Lafayette, IN\",\"type\":\"ALTERNATE\"}]}'''\npeople_df = spark.read.json(sc.parallelize([person_json_1,person_json_2,person_json_3]))\npeople_df = people_df.coalesce(1)\n\n# products\nproduct_json_1 = '''{\"id\":\"P1\",\"name\":\"Fixed Term\",\"properties\":{\"bonus_rate\":1.512,\"lock_in_period\":1},\"slug\":\"Fixed Duration 1 Year\",\"updated_at\":\"2022-05-05T12:00:00.000-05:00\"}'''\nproduct_json_2 = '''{\"id\":\"P2\",\"name\":\"Savings\",\"properties\":{\"bonus_rate\":1.512},\"slug\":\"Online Savings Account\",\"updated_at\":\"2022-05-05T12:00:00.000-05:00\"}'''\nproducts_df = spark.read.json(sc.parallelize([product_json_1,product_json_2]))\nproducts_df = products_df",
+        "scriptMethodHeader" : "def Script(spark: SparkSession) -> (DataFrame, DataFrame, DataFrame, DataFrame, DataFrame):",
+        "scriptMethodFooter" : "    return (acc_status_first_df, acc_status_second_df, transactions_df, people_df, products_df)"
+      }
+    },
+    "wcZdVD4VGHmEsSGHN8aXX$$01YRM0ZODLwdexYi-4jbJ" : {
+      "id" : "wcZdVD4VGHmEsSGHN8aXX$$01YRM0ZODLwdexYi-4jbJ",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1_1",
+        "slug" : "Reformat_1_1",
+        "x" : 793,
+        "y" : 93,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "7iNVarxdXiYXH9cSeObTC$$T2k55CAf5izv1ZkwQpENl",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "RmIsWgtTkc_N5dVspTSyz$$j0s8V-nkC5A2jeJNE7qlr",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    },
+    "9bqoxciWRq6SKRR-A9m_Q$$bFWqI-NdCGR4gNrWcjbkM" : {
+      "id" : "9bqoxciWRq6SKRR-A9m_Q$$bFWqI-NdCGR4gNrWcjbkM",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 816,
+        "y" : -86,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "MWTquYnHr9hl-q6cjOKUu$$iMsl-kklMB576ibn_yB4i",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "rIQBDNgXvAR2yHQ2DRbE2$$FN6HqSjQc47fA8a_uADuE",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    },
+    "y9Je_Rlu2gSgnlJd-cIqH$$EYS97PVtiUR688WxHetqd" : {
+      "id" : "y9Je_Rlu2gSgnlJd-cIqH$$EYS97PVtiUR688WxHetqd",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1_3",
+        "slug" : "Reformat_1_3",
+        "x" : 783,
+        "y" : 372,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "uBoOuT83LpW1lcEHNRg_W$$qmBtg_1nRzIoSo9zGMcmd",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "ib21MiFS_j3KG8aNeM3IF$$UG28lgYbhVkupkA1Jzyia",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    },
+    "rfFit1PPr_zfKMetM_yZb$$GUMBx_WBnKzma_DUQh-JD" : {
+      "id" : "rfFit1PPr_zfKMetM_yZb$$GUMBx_WBnKzma_DUQh-JD",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "acc_status_1_csv",
+        "slug" : "acc_status_1_csv",
+        "x" : 988.5,
+        "y" : -90.5,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "7qJWFIN9QglroX_pVf9_T$$QN2yk8UnXPJdg3etYL2l5",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "datasetId" : "5468/datasets/acc_status_bronze"
+      }
+    },
+    "VT7eA3sJhb2V8egD8MeLq$$r552PX0rmh_7DIJGUBbdP" : {
+      "id" : "VT7eA3sJhb2V8egD8MeLq$$r552PX0rmh_7DIJGUBbdP",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1_4",
+        "slug" : "Reformat_1_4",
+        "x" : 759,
+        "y" : 535,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "eXBA4u-vlaLZv3tVhfdxV$$WMqUsKts47R2XsKCUNakc",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "UG29J77yXuAJQAunqa-ty$$_JTKaGjcj5fnY9Xs9SrCi",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    },
+    "0clw9SlNooEqtiFEO5C1o$$f2jjG48aah-wB1eQhWzbA" : {
+      "id" : "0clw9SlNooEqtiFEO5C1o$$f2jjG48aah-wB1eQhWzbA",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1_2",
+        "slug" : "Reformat_1_2",
+        "x" : 786,
+        "y" : 236,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "rCMJ4GV9ij3hzv_yH2sEW$$3mJds-QxPqsXI7QCRgLIp",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "KDrf9lxONpzidceSprxjQ$$uTe1F_1M1D9lWkQ6q1Oyv",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ]
+  }
+}

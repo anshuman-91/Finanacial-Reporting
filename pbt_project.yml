@@ -4,6 +4,18 @@ version: 0.0.1
 author: anshuman@simpledatalabs.com
 language: python
 pipelines:
+  pipelines/data_generator:
+    name: data_generator
+    description: ''
+    author: anshuman@simpledatalabs.com
+    mode: batch
+    language: python
+    createdAt: '2022-05-25 14:59:22'
+    datasets:
+      inputs: []
+      outputs:
+      - 5468/datasets/acc_status_bronze
+    dependencies: {}
   pipelines/load_acc_status_bronze:
     name: load_acc_status_bronze
     description: ''
@@ -16,6 +28,19 @@ pipelines:
       - 5468/datasets/acc_status_external
       outputs:
       - 5468/datasets/acc_status_bronze
+    dependencies: {}
+  pipelines/load_person_bronze:
+    name: load_person_bronze
+    description: ''
+    author: anshuman@simpledatalabs.com
+    mode: batch
+    language: python
+    createdAt: '2022-05-25 14:01:35'
+    datasets:
+      inputs:
+      - 5468/datasets/person_external
+      outputs:
+      - 5468/datasets/person_bronze
     dependencies: {}
   pipelines/load_transactions_bronze:
     name: load_transactions_bronze
@@ -42,19 +67,6 @@ pipelines:
       - 5468/datasets/products_external
       outputs:
       - 5468/datasets/products_bronze
-    dependencies: {}
-  pipelines/load_person_bronze:
-    name: load_person_bronze
-    description: ''
-    author: anshuman@simpledatalabs.com
-    mode: batch
-    language: python
-    createdAt: '2022-05-25 14:01:35'
-    datasets:
-      inputs:
-      - 5468/datasets/person_external
-      outputs:
-      - 5468/datasets/person_bronze
     dependencies: {}
 datasets:
   datasets/person_bronze:
