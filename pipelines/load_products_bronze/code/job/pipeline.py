@@ -7,8 +7,8 @@ from job.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_products_external = products_external(spark)
-    df_SchemaTransform_1 = SchemaTransform_1(spark, df_products_external)
-    products_bronze(spark, df_SchemaTransform_1)
+    df_import_ts = import_ts(spark, df_products_external)
+    products_bronze(spark, df_import_ts)
 
 def main():
     Utils.initializeFromArgs(Utils.parseArgs())

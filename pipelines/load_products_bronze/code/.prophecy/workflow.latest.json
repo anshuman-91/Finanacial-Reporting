@@ -112,8 +112,8 @@
       "id" : "E4m3k6lQe8q5l70bSaVlQ$$rOLlZnSeyEzuDrpyOpwxl",
       "component" : "SchemaTransform",
       "metadata" : {
-        "label" : "SchemaTransform_1",
-        "slug" : "SchemaTransform_1",
+        "label" : "import_ts",
+        "slug" : "import_ts",
         "x" : 364,
         "y" : 148,
         "language" : "python",

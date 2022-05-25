@@ -4,7 +4,7 @@ from pyspark.sql.types import *
 from job.config.ConfigStore import *
 from job.udfs.UDFs import *
 
-def acc_20220504_csv(spark: SparkSession, in0: DataFrame):
+def acc_status_1_csv(spark: SparkSession, in0: DataFrame):
     if Config.fabricName == "recipes_fabric":
         in0.write\
             .option("header", True)\
