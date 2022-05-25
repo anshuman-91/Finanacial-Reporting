@@ -43,7 +43,32 @@ pipelines:
       outputs:
       - 5468/datasets/products_bronze
     dependencies: {}
+  pipelines/load_person_bronze:
+    name: load_person_bronze
+    description: ''
+    author: anshuman@simpledatalabs.com
+    mode: batch
+    language: python
+    createdAt: '2022-05-25 14:01:35'
+    datasets:
+      inputs:
+      - 5468/datasets/person_external
+      outputs:
+      - 5468/datasets/person_bronze
+    dependencies: {}
 datasets:
+  datasets/person_bronze:
+    name: person_bronze
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-05-25 14:03:57'
+    physicalDatasets:
+      recipes_fabric:
+        fabricId: 1010
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-25 14:03:57'
   datasets/transactions_bronze:
     name: transactions_bronze
     description: ''
@@ -116,6 +141,18 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-25 13:50:49'
+  datasets/person_external:
+    name: person_external
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-05-25 14:03:17'
+    physicalDatasets:
+      recipes_fabric:
+        fabricId: 1010
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-25 14:03:17'
 jobs: {}
 libraries: []
 subgraphs: {}

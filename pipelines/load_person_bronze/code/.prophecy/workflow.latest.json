@@ -1,0 +1,111 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "1010",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "interimMode" : "Full",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : {
+        "recipes_fabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "gamedayfabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman2" : {
+          "type" : "record",
+          "fields" : [ ]
+        }
+      }
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ]
+  },
+  "connections" : [ {
+    "id" : "qkHCJKuTebTdhDnbKEXza",
+    "source" : "SRBciHuI7ut8mYKMnJ0sq$$vJ1Hie8qUsQzkudo3-DG4",
+    "sourcePort" : "do1c1VkGdiDV1tKrj10Yp$$P3TPFBb549dZ2Aw4M3JTp",
+    "target" : "l2ZPXTHnivcF738Th_p1r$$VZRZVgfuB7O1E4Ux9aTSU",
+    "targetPort" : "ZwVBAfu2ss_6Qsse8Z2Im$$Tk5Ki5skreJpRChkelap_"
+  } ],
+  "processes" : {
+    "SRBciHuI7ut8mYKMnJ0sq$$vJ1Hie8qUsQzkudo3-DG4" : {
+      "id" : "SRBciHuI7ut8mYKMnJ0sq$$vJ1Hie8qUsQzkudo3-DG4",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Source_0",
+        "slug" : "Source_0",
+        "x" : 372,
+        "y" : 133,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "do1c1VkGdiDV1tKrj10Yp$$P3TPFBb549dZ2Aw4M3JTp",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "datasetId" : "5468/datasets/person_external"
+      }
+    },
+    "l2ZPXTHnivcF738Th_p1r$$VZRZVgfuB7O1E4Ux9aTSU" : {
+      "id" : "l2ZPXTHnivcF738Th_p1r$$VZRZVgfuB7O1E4Ux9aTSU",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "Target_1",
+        "slug" : "Target_1",
+        "x" : 579,
+        "y" : 132,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ZwVBAfu2ss_6Qsse8Z2Im$$Tk5Ki5skreJpRChkelap_",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "datasetId" : "5468/datasets/person_bronze"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ]
+  }
+}
