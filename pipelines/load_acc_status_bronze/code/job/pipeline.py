@@ -7,6 +7,7 @@ from job.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_Source_0 = Source_0(spark)
+    Target_1(spark, df_Source_0)
 
 def main():
     Utils.initializeFromArgs(Utils.parseArgs())

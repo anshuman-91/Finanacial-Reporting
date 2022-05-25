@@ -44,16 +44,47 @@
     "buildSystem" : "maven",
     "externalDependencies" : [ ]
   },
-  "connections" : [ ],
+  "connections" : [ {
+    "id" : "bZIhfaCQl56B0wyVMJ6mN",
+    "source" : "sROedc1q2QKmKocxzZC2p$$OUwpWEbV15EZz5lnn5ZLK",
+    "sourcePort" : "Malu-xDP5uvB7OydPICh4$$7IpzS7U3yOjGTnTS-CgiJ",
+    "target" : "KiQLzBaSQsH4U7_ealygT$$43mp2Keiw7H7BK0VNr-0Z",
+    "targetPort" : "AKRXPZ6YYlELrXBkbGRq5$$ysB2Vrgop7EmAVVLwYWLp"
+  } ],
   "processes" : {
+    "KiQLzBaSQsH4U7_ealygT$$43mp2Keiw7H7BK0VNr-0Z" : {
+      "id" : "KiQLzBaSQsH4U7_ealygT$$43mp2Keiw7H7BK0VNr-0Z",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "Target_1",
+        "slug" : "Target_1",
+        "x" : 19,
+        "y" : 145.5,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "AKRXPZ6YYlELrXBkbGRq5$$ysB2Vrgop7EmAVVLwYWLp",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "datasetId" : "5468/datasets/acc_status_bronze"
+      }
+    },
     "sROedc1q2QKmKocxzZC2p$$OUwpWEbV15EZz5lnn5ZLK" : {
       "id" : "sROedc1q2QKmKocxzZC2p$$OUwpWEbV15EZz5lnn5ZLK",
       "component" : "Source",
       "metadata" : {
         "label" : "Source_0",
         "slug" : "Source_0",
-        "x" : 37,
-        "y" : 193,
+        "x" : -204,
+        "y" : 144,
         "language" : "python",
         "phase" : 0,
         "cache" : false,

@@ -9,10 +9,10 @@ def Source_0(spark: SparkSession) -> DataFrame:
         return spark.read\
             .schema(
               StructType([
-                StructField("_c0", StringType(), True), StructField("_c1", StringType(), True), StructField("_c2", StringType(), True), StructField("_c3", StringType(), True), StructField("_c4", StringType(), True)
+                StructField("acc_id", IntegerType(), True), StructField("person_id", StringType(), True), StructField("product_id", StringType(), True), StructField("business_date", DateType(), True), StructField("balance", DoubleType(), True)
             ])
             )\
-            .option("header", False)\
+            .option("header", True)\
             .option("sep", ",")\
             .option("recursiveFileLookup", True)\
             .csv("dbfs:/Prophecy/anshuman@simpledatalabs.com/fin_reporting/external/acc_status/")

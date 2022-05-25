@@ -14,7 +14,8 @@ pipelines:
     datasets:
       inputs:
       - 5468/datasets/acc_status_external
-      outputs: []
+      outputs:
+      - 5468/datasets/acc_status_bronze
     dependencies: {}
 datasets:
   datasets/acc_status_external:
@@ -29,6 +30,18 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-25 09:39:49'
+  datasets/acc_status_bronze:
+    name: acc_status_bronze
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-05-25 13:09:36'
+    physicalDatasets:
+      recipes_fabric:
+        fabricId: 1010
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-25 13:09:36'
 jobs: {}
 libraries: []
 subgraphs: {}
