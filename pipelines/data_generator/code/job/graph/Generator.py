@@ -9,15 +9,15 @@ def Generator(spark: SparkSession) -> (DataFrame, DataFrame, DataFrame, DataFram
     import datetime
     # acc_status
     acc_status_first_df = spark.createDataFrame(
-        data = [(1, "A", "P1", datetime.date(2022, 5, 4), 0.0), (2, "B", "P1", datetime.date(2022, 5, 4), 0.0),
-         (3, "A", "P2", datetime.date(2022, 5, 4), 0.0),],
-        schema = 'acc_id int,person_id string,product_id string,business_date date,balance double'
+        data = [("1", "A", "P1", "2022-05-04", "0.00"), ("2", "B", "P1", "2022-05-04", "0.00"),
+         ("3", "A", "P2", "2022-05-04", "0.00"),],
+        schema = 'acc_id string,person_id string,product_id string,business_date string,balance string'
     )
     acc_status_first_df = acc_status_first_df.coalesce(1)
     acc_status_second_df = spark.createDataFrame(
-        data = [(1, "A", "P1", datetime.date(2022, 5, 5), 100.0), (2, "B", "P1", datetime.date(2022, 5, 5), 150.0),
-         (3, "A", "P2", datetime.date(2022, 5, 5), 1000.0),],
-        schema = 'acc_id int,person_id string,product_id string,business_date date,balance double'
+        data = [("1", "A", "P1", "2022-05-05", "100.00"), ("2", "B", "P1", "2022-05-05", "150.00"),
+         ("3", "A", "P2", "2022-05-05", "1000.00"),],
+        schema = 'acc_id string,person_id string,product_id string,business_date string,balance string'
     )
     acc_status_second_df = acc_status_second_df.coalesce(1)
     # transactions
@@ -50,9 +50,19 @@ def Generator(spark: SparkSession) -> (DataFrame, DataFrame, DataFrame, DataFram
     people_df = spark.read.json(sc.parallelize([person_json_1, person_json_2, person_json_3]))
     people_df = people_df.coalesce(1)
     # products
+    schema = StructType([
+        StructField("id", StringType(), True),
+        StructField("name", StringType(), True),
+                        StructField("properties", StructType([
+          StructField("bonus_rate", DoubleType(), True),
+                                                                StructField("lock_in_period", IntegerType(), True)
+        ]), True),
+                        StructField("slug", StringType(), True),
+        StructField("updated_at", TimestampType(), True)
+    ])
     product_json_1 = '''{"id":"P1","name":"Fixed Term","properties":{"bonus_rate":1.512,"lock_in_period":1},"slug":"Fixed Duration 1 Year","updated_at":"2022-05-05T12:00:00.000-05:00"}'''
     product_json_2 = '''{"id":"P2","name":"Savings","properties":{"bonus_rate":1.512},"slug":"Online Savings Account","updated_at":"2022-05-05T12:00:00.000-05:00"}'''
-    products_df = spark.read.json(sc.parallelize([product_json_1, product_json_2]))
-    products_df = products_df
+    products_df = spark.read.json(sc.parallelize([product_json_1, product_json_2]), schema = schema)
+    products_df = products_df.coalesce(1)
 
     return (acc_status_first_df, acc_status_second_df, transactions_df, people_df, products_df)

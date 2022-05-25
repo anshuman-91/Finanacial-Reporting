@@ -17,6 +17,8 @@ pipelines:
       - 5468/datasets/acc_status_external_20220504
       - 5468/datasets/acc_status_external_20220505
       - 5468/datasets/transactions_external_20220505
+      - 5468/datasets/person_external_20220505
+      - 5468/datasets/products_external_20220505
     dependencies: {}
   pipelines/load_acc_status_bronze:
     name: load_acc_status_bronze
@@ -71,18 +73,6 @@ pipelines:
       - 5468/datasets/products_bronze
     dependencies: {}
 datasets:
-  datasets/person_bronze:
-    name: person_bronze
-    description: ''
-    author: anshuman@simpledatalabs.com
-    createdAt: '2022-05-25 14:03:57'
-    physicalDatasets:
-      recipes_fabric:
-        fabricId: 1010
-        datasetType: File
-        description: ''
-        author: anshuman@simpledatalabs.com
-        createdAt: '2022-05-25 14:03:57'
   datasets/acc_status_external_20220505:
     name: acc_status_external_20220505
     description: ''
@@ -119,6 +109,18 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-25 09:39:49'
+  datasets/person_external_20220505:
+    name: person_external_20220505
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-05-25 15:46:01'
+    physicalDatasets:
+      recipes_fabric:
+        fabricId: 1010
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-25 15:46:01'
   datasets/products_bronze:
     name: products_bronze
     description: ''
@@ -179,6 +181,30 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-25 15:33:43'
+  datasets/products_external_20220505:
+    name: products_external_20220505
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-05-25 15:47:48'
+    physicalDatasets:
+      recipes_fabric:
+        fabricId: 1010
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-25 15:47:48'
+  datasets/person_bronze:
+    name: person_bronze
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-05-25 14:03:57'
+    physicalDatasets:
+      recipes_fabric:
+        fabricId: 1010
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-25 14:03:57'
   datasets/acc_status_external_20220504:
     name: acc_status_external_20220504
     description: ''

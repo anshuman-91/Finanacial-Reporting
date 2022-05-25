@@ -45,12 +45,6 @@
     "externalDependencies" : [ ]
   },
   "connections" : [ {
-    "id" : "qrL4YAe6-Ft2ITSSR3mGR",
-    "source" : "-kZC7ANtxxIVGDU16fX3W$$7DScOwXTPZYLZAVkUL4Hh",
-    "sourcePort" : "bV0mxqtrTIjIADvPJ-FVI$$DWqE1ckYzV1u0aCUFA8cj",
-    "target" : "VT7eA3sJhb2V8egD8MeLq$$r552PX0rmh_7DIJGUBbdP",
-    "targetPort" : "eXBA4u-vlaLZv3tVhfdxV$$WMqUsKts47R2XsKCUNakc"
-  }, {
     "id" : "l3-zwhZJ8EIO1DVOn7mOE",
     "source" : "-kZC7ANtxxIVGDU16fX3W$$7DScOwXTPZYLZAVkUL4Hh",
     "sourcePort" : "xPlfr_X_bA4mFRCAWHH1y$$pVzFH5WoTR0noLAXOFZWK",
@@ -74,8 +68,39 @@
     "sourcePort" : "xGmttuB1wpcZ9RSM0brZJ$$_dB7QHIVnFK9g4Sml9lB4",
     "target" : "-Tz9mhmkv-M_554GDGemX$$jR4kDBiWb27tsaKv89J5L",
     "targetPort" : "sx-abxNUKP5Fn2Fov5Ydf$$nrAFX4pH952vW5pvvTSqE"
+  }, {
+    "id" : "wg3Ruuoh7vw0rUnXHVCxW",
+    "source" : "-kZC7ANtxxIVGDU16fX3W$$7DScOwXTPZYLZAVkUL4Hh",
+    "sourcePort" : "bV0mxqtrTIjIADvPJ-FVI$$DWqE1ckYzV1u0aCUFA8cj",
+    "target" : "bbcEqAOqplQTf4rNoJPRv$$uHJLTIwDywk6fSwMdkwi_",
+    "targetPort" : "GFacfyZtRDpkbXWOoDCei$$duTmQqwohxEqj9RZeWgaK"
   } ],
   "processes" : {
+    "bbcEqAOqplQTf4rNoJPRv$$uHJLTIwDywk6fSwMdkwi_" : {
+      "id" : "bbcEqAOqplQTf4rNoJPRv$$uHJLTIwDywk6fSwMdkwi_",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "products_avro",
+        "slug" : "products_avro",
+        "x" : 986,
+        "y" : 533.75,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "GFacfyZtRDpkbXWOoDCei$$duTmQqwohxEqj9RZeWgaK",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "datasetId" : "5468/datasets/products_external_20220505"
+      }
+    },
     "-kZC7ANtxxIVGDU16fX3W$$7DScOwXTPZYLZAVkUL4Hh" : {
       "id" : "-kZC7ANtxxIVGDU16fX3W$$7DScOwXTPZYLZAVkUL4Hh",
       "component" : "Script",
@@ -110,7 +135,7 @@
         "selectedInputFields" : [ ]
       },
       "properties" : {
-        "script" : "from pyspark.shell import sc\nimport datetime\n\n# acc_status\nacc_status_first_df = spark.createDataFrame(data=[\n    (1, \"A\", \"P1\", datetime.date(2022,5,4), 0.00),\n    (2, \"B\", \"P1\", datetime.date(2022,5,4), 0.00),\n    (3, \"A\", \"P2\", datetime.date(2022,5,4), 0.00),\n], schema='acc_id int,person_id string,product_id string,business_date date,balance double')\nacc_status_first_df = acc_status_first_df.coalesce(1)\n\n\nacc_status_second_df = spark.createDataFrame(data=[\n    (1, \"A\", \"P1\", datetime.date(2022,5,5), 100.00),\n    (2, \"B\", \"P1\", datetime.date(2022,5,5), 150.00),\n    (3, \"A\", \"P2\", datetime.date(2022,5,5), 1000.00),\n], schema='acc_id int,person_id string,product_id string,business_date date,balance double')\nacc_status_second_df = acc_status_second_df.coalesce(1)\n\n# transactions\ntransactions_df = spark.createDataFrame(data=[\n    (1, \"a1x\", datetime.date(2022,5,5), 200.00, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T01:30:00.184-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (1, \"a1y\", datetime.date(2022,5,5), 110.00, \"DEBIT\", datetime.datetime.strptime(\"2022-05-05T09:45:00.193-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (1, \"a1z\", datetime.date(2022,5,5), 10.00, \"INTEREST\", datetime.datetime.strptime(\"2022-05-05T12:00:00.564-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (2, \"a2a\", datetime.date(2022,5,5), 50.00, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T11:31:22.231-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (2, \"a2b\", datetime.date(2022,5,5), 200.00, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T05:04:21.871-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (2, \"a2c\", datetime.date(2022,5,5), 100.00, \"DEBIT\", datetime.datetime.strptime(\"2022-05-05T12:05:11.135-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (3, \"a2d\", datetime.date(2022,5,5), 449.50, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T15:05:15.154-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (3, \"a2e\", datetime.date(2022,5,5), 449.50, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T18:05:31.130-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (3, \"a2f\", datetime.date(2022,5,5), 100.00, \"INTEREST\", datetime.datetime.strptime(\"2022-05-05T22:45:55.116-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n], schema='acc_id int,tran_id string,business_date date,tran_amount double,tran_type string,tran_ts timestamp')\ntransactions_df = transactions_df.coalesce(1)\n\n# people\nperson_json_1 = '''{\"id\":\"A\",\"name\":\"James Jones\",\"email\":\"james_earl_93@gmail.com\",\"updated_at\":\"2022-05-05T12:00:00.000-05:00\",\"addresses\":[{\"postal_code\":\"A24011\",\"address_line1\":\"4638 White Pine Lane\",\"address_line2\":\"Roanoke, Virginia\",\"type\":\"PRIMARY\"},{\"postal_code\":\"CD36582\",\"address_line1\":\"1268 George Avenue\",\"address_line2\":\"Theodore, Alabama\",\"type\":\"ALTERNATE\"},{\"postal_code\":\"AX85003\",\"address_line1\":\"3881 Coplin Avenue\",\"address_line2\":\"Phoenix, Arizona\",\"type\":\"ALTERNATE\"}]}'''\nperson_json_2 = '''{\"id\":\"B\",\"name\":\"Jonas Smith\",\"updated_at\":\"2022-05-05T16:12:44.252-05:00\",\"email\":\"jjsmith89@yahoo.com\",\"addresses\":[{\"postal_code\":\"AB33614\",\"address_line1\":\"22897 Maryland Avenue, Tampa, Florida\",\"type\":\"PRIMARY\"},{\"postal_code\":\"CD21321\",\"address_line1\":\"559 Lake Floyd Circle, New Castle, Delaware\",\"type\":\"ALTERNATE\"}]}'''\nperson_json_3 = '''{\"id\":\"C\",\"name\":\"Adam Boorman\",\"email\":\"adamb213@gmail.com\",\"updated_at\":\"2022-05-05T05:32:55.864-05:00\",\"addresses\":[{\"postal_code\":\"XR96814\",\"address_line1\":\"4558 Indiana Circle\",\"address_line2\":\"Honolulu, Hawai\",\"type\":\"PRIMARY\"},{\"postal_code\":\"CC47906\",\"address_line1\":\"26 Glenwood Drive\",\"address_line2\":\"West Lafayette, IN\",\"type\":\"ALTERNATE\"}]}'''\npeople_df = spark.read.json(sc.parallelize([person_json_1,person_json_2,person_json_3]))\npeople_df = people_df.coalesce(1)\n\n# products\nproduct_json_1 = '''{\"id\":\"P1\",\"name\":\"Fixed Term\",\"properties\":{\"bonus_rate\":1.512,\"lock_in_period\":1},\"slug\":\"Fixed Duration 1 Year\",\"updated_at\":\"2022-05-05T12:00:00.000-05:00\"}'''\nproduct_json_2 = '''{\"id\":\"P2\",\"name\":\"Savings\",\"properties\":{\"bonus_rate\":1.512},\"slug\":\"Online Savings Account\",\"updated_at\":\"2022-05-05T12:00:00.000-05:00\"}'''\nproducts_df = spark.read.json(sc.parallelize([product_json_1,product_json_2]))\nproducts_df = products_df",
+        "script" : "from pyspark.shell import sc\nimport datetime\n\n# acc_status\nacc_status_first_df = spark.createDataFrame(data=[\n    (\"1\", \"A\", \"P1\", \"2022-05-04\", \"0.00\"),\n    (\"2\", \"B\", \"P1\", \"2022-05-04\", \"0.00\"),\n    (\"3\", \"A\", \"P2\", \"2022-05-04\", \"0.00\"),\n], schema='acc_id string,person_id string,product_id string,business_date string,balance string')\nacc_status_first_df = acc_status_first_df.coalesce(1)\n\n\nacc_status_second_df = spark.createDataFrame(data=[\n    (\"1\", \"A\", \"P1\", \"2022-05-05\", \"100.00\"),\n    (\"2\", \"B\", \"P1\", \"2022-05-05\", \"150.00\"),\n    (\"3\", \"A\", \"P2\", \"2022-05-05\", \"1000.00\"),\n], schema='acc_id string,person_id string,product_id string,business_date string,balance string')\nacc_status_second_df = acc_status_second_df.coalesce(1)\n\n# transactions\ntransactions_df = spark.createDataFrame(data=[\n    (1, \"a1x\", datetime.date(2022,5,5), 200.00, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T01:30:00.184-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (1, \"a1y\", datetime.date(2022,5,5), 110.00, \"DEBIT\", datetime.datetime.strptime(\"2022-05-05T09:45:00.193-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (1, \"a1z\", datetime.date(2022,5,5), 10.00, \"INTEREST\", datetime.datetime.strptime(\"2022-05-05T12:00:00.564-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (2, \"a2a\", datetime.date(2022,5,5), 50.00, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T11:31:22.231-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (2, \"a2b\", datetime.date(2022,5,5), 200.00, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T05:04:21.871-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (2, \"a2c\", datetime.date(2022,5,5), 100.00, \"DEBIT\", datetime.datetime.strptime(\"2022-05-05T12:05:11.135-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (3, \"a2d\", datetime.date(2022,5,5), 449.50, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T15:05:15.154-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (3, \"a2e\", datetime.date(2022,5,5), 449.50, \"CREDIT\", datetime.datetime.strptime(\"2022-05-05T18:05:31.130-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n    (3, \"a2f\", datetime.date(2022,5,5), 100.00, \"INTEREST\", datetime.datetime.strptime(\"2022-05-05T22:45:55.116-05:00\",\"%Y-%m-%dT%H:%M:%S.%f%z\")),\n], schema='acc_id int,tran_id string,business_date date,tran_amount double,tran_type string,tran_ts timestamp')\ntransactions_df = transactions_df.coalesce(1)\n\n# people\nperson_json_1 = '''{\"id\":\"A\",\"name\":\"James Jones\",\"email\":\"james_earl_93@gmail.com\",\"updated_at\":\"2022-05-05T12:00:00.000-05:00\",\"addresses\":[{\"postal_code\":\"A24011\",\"address_line1\":\"4638 White Pine Lane\",\"address_line2\":\"Roanoke, Virginia\",\"type\":\"PRIMARY\"},{\"postal_code\":\"CD36582\",\"address_line1\":\"1268 George Avenue\",\"address_line2\":\"Theodore, Alabama\",\"type\":\"ALTERNATE\"},{\"postal_code\":\"AX85003\",\"address_line1\":\"3881 Coplin Avenue\",\"address_line2\":\"Phoenix, Arizona\",\"type\":\"ALTERNATE\"}]}'''\nperson_json_2 = '''{\"id\":\"B\",\"name\":\"Jonas Smith\",\"updated_at\":\"2022-05-05T16:12:44.252-05:00\",\"email\":\"jjsmith89@yahoo.com\",\"addresses\":[{\"postal_code\":\"AB33614\",\"address_line1\":\"22897 Maryland Avenue, Tampa, Florida\",\"type\":\"PRIMARY\"},{\"postal_code\":\"CD21321\",\"address_line1\":\"559 Lake Floyd Circle, New Castle, Delaware\",\"type\":\"ALTERNATE\"}]}'''\nperson_json_3 = '''{\"id\":\"C\",\"name\":\"Adam Boorman\",\"email\":\"adamb213@gmail.com\",\"updated_at\":\"2022-05-05T05:32:55.864-05:00\",\"addresses\":[{\"postal_code\":\"XR96814\",\"address_line1\":\"4558 Indiana Circle\",\"address_line2\":\"Honolulu, Hawai\",\"type\":\"PRIMARY\"},{\"postal_code\":\"CC47906\",\"address_line1\":\"26 Glenwood Drive\",\"address_line2\":\"West Lafayette, IN\",\"type\":\"ALTERNATE\"}]}'''\npeople_df = spark.read.json(sc.parallelize([person_json_1,person_json_2,person_json_3]))\npeople_df = people_df.coalesce(1)\n\n# products\nschema = StructType([StructField(\"id\", StringType(), True), StructField(\"name\", StringType(), True),\n                StructField(\"properties\", StructType([StructField(\"bonus_rate\", DoubleType(), True),\n                                                      StructField(\"lock_in_period\", IntegerType(), True)]), True),\n                StructField(\"slug\", StringType(), True), StructField(\"updated_at\", TimestampType(), True)])\nproduct_json_1 = '''{\"id\":\"P1\",\"name\":\"Fixed Term\",\"properties\":{\"bonus_rate\":1.512,\"lock_in_period\":1},\"slug\":\"Fixed Duration 1 Year\",\"updated_at\":\"2022-05-05T12:00:00.000-05:00\"}'''\nproduct_json_2 = '''{\"id\":\"P2\",\"name\":\"Savings\",\"properties\":{\"bonus_rate\":1.512},\"slug\":\"Online Savings Account\",\"updated_at\":\"2022-05-05T12:00:00.000-05:00\"}'''\nproducts_df = spark.read.json(sc.parallelize([product_json_1, product_json_2]), schema=schema)\nproducts_df = products_df.coalesce(1)\n",
         "scriptMethodHeader" : "def Script(spark: SparkSession) -> (DataFrame, DataFrame, DataFrame, DataFrame, DataFrame):",
         "scriptMethodFooter" : "    return (acc_status_first_df, acc_status_second_df, transactions_df, people_df, products_df)"
       }
@@ -165,43 +190,14 @@
         "datasetId" : "5468/datasets/acc_status_external_20220504"
       }
     },
-    "VT7eA3sJhb2V8egD8MeLq$$r552PX0rmh_7DIJGUBbdP" : {
-      "id" : "VT7eA3sJhb2V8egD8MeLq$$r552PX0rmh_7DIJGUBbdP",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "Reformat_1_4",
-        "slug" : "Reformat_1_4",
-        "x" : 759,
-        "y" : 535,
-        "language" : "python",
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "eXBA4u-vlaLZv3tVhfdxV$$WMqUsKts47R2XsKCUNakc",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "UG29J77yXuAJQAunqa-ty$$_JTKaGjcj5fnY9Xs9SrCi",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ]
-      },
-      "properties" : {
-        "columnsSelector" : [ ],
-        "expressions" : [ ]
-      }
-    },
     "-Tz9mhmkv-M_554GDGemX$$jR4kDBiWb27tsaKv89J5L" : {
       "id" : "-Tz9mhmkv-M_554GDGemX$$jR4kDBiWb27tsaKv89J5L",
       "component" : "Target",
       "metadata" : {
         "label" : "people_json",
         "slug" : "people_json",
-        "x" : 983,
-        "y" : 386.75,
+        "x" : 981,
+        "y" : 384.75,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -215,7 +211,9 @@
         "outputs" : [ ],
         "selectedInputFields" : [ ]
       },
-      "properties" : { }
+      "properties" : {
+        "datasetId" : "5468/datasets/person_external_20220505"
+      }
     },
     "Oxtl4rWoyUGW6KBGha8_E$$VRIv1VxQ7CB5z5k9Q5-Zf" : {
       "id" : "Oxtl4rWoyUGW6KBGha8_E$$VRIv1VxQ7CB5z5k9Q5-Zf",
