@@ -4,7 +4,7 @@ from pyspark.sql.types import *
 from job.config.ConfigStore import *
 from job.udfs.UDFs import *
 
-def Source_0(spark: SparkSession) -> DataFrame:
+def products_external(spark: SparkSession) -> DataFrame:
     if Config.fabricName == "recipes_fabric":
         return spark.read\
             .format("avro")\

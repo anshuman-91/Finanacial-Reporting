@@ -45,9 +45,15 @@
     "externalDependencies" : [ ]
   },
   "connections" : [ {
-    "id" : "5S8Xy2xu_HxaEJINI1Yzp",
+    "id" : "cxEqte0AA2poKt7TXau87",
     "source" : "qc0XrFmDwdOiA5J7UV1l6$$HSdAsV9Tu0XvHwp5lZlPc",
     "sourcePort" : "yM7WfzJCVV12JJLXAkPKf$$5hSoLUE6juhzkxeuDdO_x",
+    "target" : "E4m3k6lQe8q5l70bSaVlQ$$rOLlZnSeyEzuDrpyOpwxl",
+    "targetPort" : "nDghxM8yWmKurNtLGujHW$$PT-54hox09BdQgFPtApX_"
+  }, {
+    "id" : "7ahplwgnSP7jdUPT1ai6Z",
+    "source" : "E4m3k6lQe8q5l70bSaVlQ$$rOLlZnSeyEzuDrpyOpwxl",
+    "sourcePort" : "-w83yJ0Fujdtsgaxjyv3n$$ddY9oka4WSywSEqEk0act",
     "target" : "faTeALjiaxWtAxlv5Npxo$$_hhLIb0Mx8GNAkNzOJm3R",
     "targetPort" : "X-zNK2uzIbSDfl1sWbV1Q$$El8Zu_ZMmwi0zeF0FbV-F"
   } ],
@@ -56,9 +62,9 @@
       "id" : "qc0XrFmDwdOiA5J7UV1l6$$HSdAsV9Tu0XvHwp5lZlPc",
       "component" : "Source",
       "metadata" : {
-        "label" : "Source_0",
-        "slug" : "Source_0",
-        "x" : 283,
+        "label" : "products_external",
+        "slug" : "products_external",
+        "x" : 201,
         "y" : 147,
         "language" : "python",
         "phase" : 0,
@@ -81,8 +87,8 @@
       "id" : "faTeALjiaxWtAxlv5Npxo$$_hhLIb0Mx8GNAkNzOJm3R",
       "component" : "Target",
       "metadata" : {
-        "label" : "Target_1",
-        "slug" : "Target_1",
+        "label" : "products_bronze",
+        "slug" : "products_bronze",
         "x" : 521,
         "y" : 148,
         "language" : "python",
@@ -100,6 +106,51 @@
       },
       "properties" : {
         "datasetId" : "5468/datasets/products_bronze"
+      }
+    },
+    "E4m3k6lQe8q5l70bSaVlQ$$rOLlZnSeyEzuDrpyOpwxl" : {
+      "id" : "E4m3k6lQe8q5l70bSaVlQ$$rOLlZnSeyEzuDrpyOpwxl",
+      "component" : "SchemaTransform",
+      "metadata" : {
+        "label" : "SchemaTransform_1",
+        "slug" : "SchemaTransform_1",
+        "x" : 364,
+        "y" : 148,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nDghxM8yWmKurNtLGujHW$$PT-54hox09BdQgFPtApX_",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "-w83yJ0Fujdtsgaxjyv3n$$ddY9oka4WSywSEqEk0act",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "transformations" : [ {
+          "kind" : "AddReplaceColumn",
+          "AddReplaceColumn" : {
+            "sourceColumn" : "import_ts",
+            "expression" : {
+              "format" : "sql",
+              "expression" : "current_timestamp()"
+            }
+          },
+          "DropColumn" : {
+            "sourceColumn" : ""
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          }
+        } ]
       }
     }
   },
