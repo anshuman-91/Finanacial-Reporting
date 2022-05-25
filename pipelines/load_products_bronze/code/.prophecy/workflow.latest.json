@@ -73,7 +73,9 @@
         } ],
         "selectedInputFields" : [ ]
       },
-      "properties" : { }
+      "properties" : {
+        "datasetId" : "5468/datasets/products_external"
+      }
     },
     "faTeALjiaxWtAxlv5Npxo$$_hhLIb0Mx8GNAkNzOJm3R" : {
       "id" : "faTeALjiaxWtAxlv5Npxo$$_hhLIb0Mx8GNAkNzOJm3R",
@@ -96,7 +98,9 @@
         "outputs" : [ ],
         "selectedInputFields" : [ ]
       },
-      "properties" : { }
+      "properties" : {
+        "datasetId" : "5468/datasets/products_bronze"
+      }
     }
   },
   "ports" : {

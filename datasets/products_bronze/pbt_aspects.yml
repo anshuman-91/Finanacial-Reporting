@@ -1,0 +1,29 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: id
+    type: string
+    nullable: true
+    metadata: {}
+  - name: name
+    type: string
+    nullable: true
+    metadata: {}
+  - name: properties
+    type:
+      type: array
+      elementType:
+        type: struct
+        fields: []
+      containsNull: true
+    nullable: true
+    metadata: {}
+  - name: slug
+    type: string
+    nullable: true
+    metadata: {}
+  - name: updated_at
+    type: timestamp
+    nullable: true
+    metadata: {}
