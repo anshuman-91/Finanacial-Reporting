@@ -73,7 +73,9 @@
         "outputs" : [ ],
         "selectedInputFields" : [ ]
       },
-      "properties" : { }
+      "properties" : {
+        "datasetId" : "5468/datasets/transactions_bronze"
+      }
     },
     "uXOKYS8hUREG5oeNjk6_L$$sKuTLA03pF8RSrGsXFkFr" : {
       "id" : "uXOKYS8hUREG5oeNjk6_L$$sKuTLA03pF8RSrGsXFkFr",
