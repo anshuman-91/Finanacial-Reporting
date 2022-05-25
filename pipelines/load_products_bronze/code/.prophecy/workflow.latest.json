@@ -1,0 +1,107 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "1010",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "interimMode" : "Full",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : {
+        "recipes_fabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "gamedayfabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman2" : {
+          "type" : "record",
+          "fields" : [ ]
+        }
+      }
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ]
+  },
+  "connections" : [ {
+    "id" : "5S8Xy2xu_HxaEJINI1Yzp",
+    "source" : "qc0XrFmDwdOiA5J7UV1l6$$HSdAsV9Tu0XvHwp5lZlPc",
+    "sourcePort" : "yM7WfzJCVV12JJLXAkPKf$$5hSoLUE6juhzkxeuDdO_x",
+    "target" : "faTeALjiaxWtAxlv5Npxo$$_hhLIb0Mx8GNAkNzOJm3R",
+    "targetPort" : "X-zNK2uzIbSDfl1sWbV1Q$$El8Zu_ZMmwi0zeF0FbV-F"
+  } ],
+  "processes" : {
+    "qc0XrFmDwdOiA5J7UV1l6$$HSdAsV9Tu0XvHwp5lZlPc" : {
+      "id" : "qc0XrFmDwdOiA5J7UV1l6$$HSdAsV9Tu0XvHwp5lZlPc",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Source_0",
+        "slug" : "Source_0",
+        "x" : 283,
+        "y" : 147,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "yM7WfzJCVV12JJLXAkPKf$$5hSoLUE6juhzkxeuDdO_x",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : { }
+    },
+    "faTeALjiaxWtAxlv5Npxo$$_hhLIb0Mx8GNAkNzOJm3R" : {
+      "id" : "faTeALjiaxWtAxlv5Npxo$$_hhLIb0Mx8GNAkNzOJm3R",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "Target_1",
+        "slug" : "Target_1",
+        "x" : 521,
+        "y" : 148,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "X-zNK2uzIbSDfl1sWbV1Q$$El8Zu_ZMmwi0zeF0FbV-F",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : { }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ]
+  }
+}

@@ -30,6 +30,17 @@ pipelines:
       outputs:
       - 5468/datasets/transactions_bronze
     dependencies: {}
+  pipelines/load_products_bronze:
+    name: load_products_bronze
+    description: ''
+    author: anshuman@simpledatalabs.com
+    mode: batch
+    language: python
+    createdAt: '2022-05-25 13:48:49'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
 datasets:
   datasets/acc_status_external:
     name: acc_status_external
