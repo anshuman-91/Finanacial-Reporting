@@ -17,6 +17,18 @@ pipelines:
       outputs:
       - 5468/datasets/acc_status_bronze
     dependencies: {}
+  pipelines/load_transactions_bronze:
+    name: load_transactions_bronze
+    description: ''
+    author: anshuman@simpledatalabs.com
+    mode: batch
+    language: python
+    createdAt: '2022-05-25 13:11:54'
+    datasets:
+      inputs:
+      - 5468/datasets/transactions_external
+      outputs: []
+    dependencies: {}
 datasets:
   datasets/acc_status_external:
     name: acc_status_external
@@ -42,6 +54,18 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-25 13:09:36'
+  datasets/transactions_external:
+    name: transactions_external
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-05-25 13:14:29'
+    physicalDatasets:
+      recipes_fabric:
+        fabricId: 1010
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-25 13:14:29'
 jobs: {}
 libraries: []
 subgraphs: {}
