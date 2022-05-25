@@ -4,4 +4,3 @@ from .Reformat_1_2 import *
 from .Reformat_1_1 import *
 from .Reformat_1 import *
 from .Reformat_1_4 import *
-from .Generator import *

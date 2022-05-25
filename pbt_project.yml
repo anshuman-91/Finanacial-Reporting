@@ -14,7 +14,7 @@ pipelines:
     datasets:
       inputs: []
       outputs:
-      - 5468/datasets/acc_status_bronze
+      - 5468/datasets/acc_status_external
     dependencies: {}
   pipelines/load_acc_status_bronze:
     name: load_acc_status_bronze

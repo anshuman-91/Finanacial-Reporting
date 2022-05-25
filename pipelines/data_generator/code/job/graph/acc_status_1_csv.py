@@ -9,9 +9,9 @@ def acc_status_1_csv(spark: SparkSession, in0: DataFrame):
         in0.write\
             .option("header", True)\
             .option("sep", ",")\
-            .mode("append")\
+            .mode("ignore")\
             .option("separator", ",")\
             .option("header", True)\
-            .csv("dbfs:/Prophecy/anshuman@simpledatalabs.com/fin_reporting/acc_status/bronze/")
+            .csv("dbfs:/Prophecy/anshuman@simpledatalabs.com/fin_reporting/external/acc_status/")
     else:
         raise Exception("No valid dataset present to read fabric")
