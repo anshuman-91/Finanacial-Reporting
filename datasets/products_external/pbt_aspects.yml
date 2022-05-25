@@ -12,11 +12,16 @@ schema:
     metadata: {}
   - name: properties
     type:
-      type: array
-      elementType:
-        type: struct
-        fields: []
-      containsNull: true
+      type: struct
+      fields:
+      - name: bonus_rate
+        type: double
+        nullable: true
+        metadata: {}
+      - name: lock_in_period
+        type: integer
+        nullable: true
+        metadata: {}
     nullable: true
     metadata: {}
   - name: slug

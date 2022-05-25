@@ -11,7 +11,9 @@ def products_external(spark: SparkSession) -> DataFrame:
             .option("recursiveFileLookup", True)\
             .schema(
               StructType([
-                StructField("id", StringType(), True), StructField("name", StringType(), True), StructField("properties", ArrayType(StructType([]), True), True), StructField("slug", StringType(), True), StructField("updated_at", TimestampType(), True)
+                StructField("id", StringType(), True), StructField("name", StringType(), True), StructField("properties", StructType([
+                  StructField("bonus_rate", DoubleType(), True), StructField("lock_in_period", IntegerType(), True)
+                ]), True), StructField("slug", StringType(), True), StructField("updated_at", TimestampType(), True)
             ])
             )\
             .load("dbfs:/Prophecy/anshuman@simpledatalabs.com/fin_reporting/external/products")
