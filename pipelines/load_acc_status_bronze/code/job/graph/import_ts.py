@@ -4,5 +4,5 @@ from pyspark.sql.types import *
 from job.config.ConfigStore import *
 from job.udfs.UDFs import *
 
-def Reformat_1_2(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0
+def import_ts(spark: SparkSession, in0: DataFrame) -> DataFrame:
+    return in0.withColumn("import_ts", current_timestamp())

@@ -45,9 +45,15 @@
     "externalDependencies" : [ ]
   },
   "connections" : [ {
-    "id" : "bZIhfaCQl56B0wyVMJ6mN",
+    "id" : "1SVmeO7HHDKWR7b92xidv",
     "source" : "sROedc1q2QKmKocxzZC2p$$OUwpWEbV15EZz5lnn5ZLK",
     "sourcePort" : "Malu-xDP5uvB7OydPICh4$$7IpzS7U3yOjGTnTS-CgiJ",
+    "target" : "aEofK368mKp5S-kXAArxN$$Q21z_Pz2o7zp9U-bOKI_9",
+    "targetPort" : "2J1Zb1yfJVeijtoJCw0ad$$AI8OkR4R-uXQbAkiQGhwY"
+  }, {
+    "id" : "MLMoSppLAX9hKuREZh8fH",
+    "source" : "aEofK368mKp5S-kXAArxN$$Q21z_Pz2o7zp9U-bOKI_9",
+    "sourcePort" : "8zBAcCEXM1sIgha1nx8W5$$5wPAnWzdwK3LDkYfV1-r3",
     "target" : "KiQLzBaSQsH4U7_ealygT$$43mp2Keiw7H7BK0VNr-0Z",
     "targetPort" : "AKRXPZ6YYlELrXBkbGRq5$$ysB2Vrgop7EmAVVLwYWLp"
   } ],
@@ -56,10 +62,10 @@
       "id" : "KiQLzBaSQsH4U7_ealygT$$43mp2Keiw7H7BK0VNr-0Z",
       "component" : "Target",
       "metadata" : {
-        "label" : "Target_1",
-        "slug" : "Target_1",
-        "x" : 19,
-        "y" : 145.5,
+        "label" : "acc_status_bronze",
+        "slug" : "acc_status_bronze",
+        "x" : 68,
+        "y" : 76.5,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -81,10 +87,10 @@
       "id" : "sROedc1q2QKmKocxzZC2p$$OUwpWEbV15EZz5lnn5ZLK",
       "component" : "Source",
       "metadata" : {
-        "label" : "Source_0",
-        "slug" : "Source_0",
-        "x" : -204,
-        "y" : 144,
+        "label" : "acc_status_external",
+        "slug" : "acc_status_external",
+        "x" : -344,
+        "y" : 77,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -100,6 +106,51 @@
       },
       "properties" : {
         "datasetId" : "5468/datasets/acc_status_external"
+      }
+    },
+    "aEofK368mKp5S-kXAArxN$$Q21z_Pz2o7zp9U-bOKI_9" : {
+      "id" : "aEofK368mKp5S-kXAArxN$$Q21z_Pz2o7zp9U-bOKI_9",
+      "component" : "SchemaTransform",
+      "metadata" : {
+        "label" : "import_ts",
+        "slug" : "import_ts",
+        "x" : -141.5,
+        "y" : 76.25,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "2J1Zb1yfJVeijtoJCw0ad$$AI8OkR4R-uXQbAkiQGhwY",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "8zBAcCEXM1sIgha1nx8W5$$5wPAnWzdwK3LDkYfV1-r3",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "transformations" : [ {
+          "kind" : "AddReplaceColumn",
+          "AddReplaceColumn" : {
+            "sourceColumn" : "import_ts",
+            "expression" : {
+              "format" : "sql",
+              "expression" : "current_timestamp()"
+            }
+          },
+          "DropColumn" : {
+            "sourceColumn" : ""
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          }
+        } ]
       }
     }
   },

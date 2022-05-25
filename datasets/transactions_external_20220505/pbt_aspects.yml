@@ -6,11 +6,7 @@ schema:
     type: integer
     nullable: true
     metadata: {}
-  - name: person_id
-    type: string
-    nullable: true
-    metadata: {}
-  - name: product_id
+  - name: tran_id
     type: string
     nullable: true
     metadata: {}
@@ -18,7 +14,15 @@ schema:
     type: date
     nullable: true
     metadata: {}
-  - name: balance
+  - name: tran_amount
     type: double
+    nullable: true
+    metadata: {}
+  - name: tran_type
+    type: string
+    nullable: true
+    metadata: {}
+  - name: tran_ts
+    type: timestamp
     nullable: true
     metadata: {}

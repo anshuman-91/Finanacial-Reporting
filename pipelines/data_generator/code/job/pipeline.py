@@ -13,7 +13,7 @@ def pipeline(spark: SparkSession) -> None:
     df_Reformat_1_3 = Reformat_1_3(spark, df_Generator_people_df)
     acc_20220504_csv(spark, df_Generator_acc_status_first_df)
     df_Reformat_1_4 = Reformat_1_4(spark, df_Generator_products_df)
-    df_Reformat_1_2 = Reformat_1_2(spark, df_Generator_transactions_df)
+    trans_parquet(spark, df_Generator_transactions_df)
 
 def main():
     Utils.initializeFromArgs(Utils.parseArgs())
