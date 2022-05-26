@@ -119,15 +119,254 @@
         "sourcePort" : "CIffbziPIDpHAskZlS1AD$$KNjhPNV33rAxVTqA7SZMb",
         "target" : "s6Q0uEf4_WSDFxAjP_RcT$$RpRSTVjzw0ooMMoxdG4Gc",
         "targetPort" : "nUYDruNuDlDk5YM7mgclj$$ACJ5o190OfHbkhnFV5JCC"
+      }, {
+        "id" : "kT0nsjnInpckytjWx47qJ",
+        "source" : "s6Q0uEf4_WSDFxAjP_RcT$$RpRSTVjzw0ooMMoxdG4Gc",
+        "sourcePort" : "c72VkUlsL8W_e6l4kMgoD$$w2Zm2Etn8PN2X3QG4ns2l",
+        "target" : "Du_v1Ogmy0lVyGKrQfGFi$$QtICrgBSGPTpodPAASKnJ",
+        "targetPort" : "C9NYRvkLZUrOBbyBPBzGP$$rOUHWbs8cL_MHQqpafRH9"
+      }, {
+        "id" : "DvXvFGM_fo0oypv86PXUU",
+        "source" : "Du_v1Ogmy0lVyGKrQfGFi$$QtICrgBSGPTpodPAASKnJ",
+        "sourcePort" : "B4tzEhyj-bAG4djgX0uvd$$nKtpud35_vMCVuJk_hrb0",
+        "target" : "EWsICXz4bT9mloM_bs2Cb$$r62-uDsi8aW8R56Mvnj6c",
+        "targetPort" : "6pG45X_-HM-flcKo7C9iU$$Xxi5YoBozQiUoR4QrqNpD"
+      }, {
+        "id" : "YMZjWvHt0NFTfpLDo7uEX",
+        "source" : "EWsICXz4bT9mloM_bs2Cb$$r62-uDsi8aW8R56Mvnj6c",
+        "sourcePort" : "cuyj5UYlb9IzK1mf_1_zc$$9e6vLjF4Qpk-5IuU-CfWF",
+        "target" : "phheWdtyyavtAFMjkF0iy$$SkVX9n7xHVwR1Dy1F7eQP",
+        "targetPort" : "oD2j29iwaSLcNVdMXNnY-$$7o1wNIfElEkC7MxqNz47a"
+      }, {
+        "id" : "uSY8qdOVXwavi_ovKevc8",
+        "source" : "5bvlJXbO8zbKh0hAgc7ZU$$8yvIXmXpT8awJOpEXUWnu",
+        "sourcePort" : "wcFj1vDjLOfTYIkgpvzuM$$x5t5EBPDJ2iagAd4_7nLd",
+        "target" : "Rzek95CWwszwEZucUJ4Np$$ugr3USHAdmuMahZrmAqjL",
+        "targetPort" : "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0"
+      }, {
+        "id" : "3W9wCYzwH34bHZguNeGc7",
+        "source" : "phheWdtyyavtAFMjkF0iy$$SkVX9n7xHVwR1Dy1F7eQP",
+        "sourcePort" : "YW2zIJgMWJoAyWLdUT2g5$$cP-ictGgY7NkkBOt4KvGv",
+        "target" : "Rzek95CWwszwEZucUJ4Np$$ugr3USHAdmuMahZrmAqjL",
+        "targetPort" : "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP"
+      }, {
+        "id" : "2I6wycJkU0fXlq6Fkc3xQ",
+        "source" : "Rzek95CWwszwEZucUJ4Np$$ugr3USHAdmuMahZrmAqjL",
+        "sourcePort" : "G3qYE_3cXtKM-kdo1Q92j$$oiqMZXBz9oBJXqAhlYPvn",
+        "target" : "yaCiej4OmDBcyxD-hoC6z$$ffmALk_3jkBjvHVBqsthF",
+        "targetPort" : "GvjC2-iazyVI-1LU23-md$$wKUvPn5LKlwBO-23kR3t3"
+      }, {
+        "id" : "k3o84DV-wGiD5mPSIhG1X",
+        "source" : "yaCiej4OmDBcyxD-hoC6z$$ffmALk_3jkBjvHVBqsthF",
+        "sourcePort" : "IDgeXriX-INDBCDZ5Ol6G$$_cJrPHYVV8Ek4d_qlbT4t",
+        "target" : "39LbVeKf0fI09WXKNQJy2$$ivYMPn7cy1kc6OmRVczc8",
+        "targetPort" : "Z3_asHmXxFrXxRZgzagYq$$txIbRgQsuP3NbsVYumcc8"
       } ],
       "processes" : {
+        "Rzek95CWwszwEZucUJ4Np$$ugr3USHAdmuMahZrmAqjL" : {
+          "id" : "Rzek95CWwszwEZucUJ4Np$$ugr3USHAdmuMahZrmAqjL",
+          "component" : "Join",
+          "metadata" : {
+            "label" : "join_tran_balance",
+            "slug" : "join_tran_balance",
+            "x" : 450.50000000000006,
+            "y" : 119.60000000000002,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0",
+              "slug" : "in0"
+            }, {
+              "id" : "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP",
+              "slug" : "in1"
+            } ],
+            "outputs" : [ {
+              "id" : "G3qYE_3cXtKM-kdo1Q92j$$oiqMZXBz9oBJXqAhlYPvn",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "conditions" : [ {
+              "alias" : "in1",
+              "expression" : {
+                "format" : "python",
+                "expression" : "((col(\"in0.acc_id\") == col(\"in1.acc_id\")) & (col(\"in0.business_date\") == col(\"in1.business_date\")))"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "target" : "acc_id",
+              "expression" : {
+                "format" : "python",
+                "expression" : "col(\"in0.acc_id\")"
+              },
+              "description" : "",
+              "_row_id" : ""
+            }, {
+              "target" : "business_date",
+              "expression" : {
+                "format" : "python",
+                "expression" : "col(\"in0.business_date\")"
+              },
+              "description" : "",
+              "_row_id" : ""
+            }, {
+              "target" : "signed_tran_amount",
+              "expression" : {
+                "format" : "python",
+                "expression" : "col(\"in0.signed_tran_amount\")"
+              },
+              "description" : "",
+              "_row_id" : ""
+            }, {
+              "target" : "bal_change",
+              "expression" : {
+                "format" : "python",
+                "expression" : "col(\"in1.balance_change\")"
+              },
+              "description" : "",
+              "_row_id" : ""
+            } ],
+            "activeTab" : "expressions",
+            "columnsSelector" : [ "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##business_date", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##business_date", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##acc_id", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##balance_change", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##business_date", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##signed_tran_amount" ],
+            "whereClause" : null,
+            "headAlias" : "in0"
+          }
+        },
+        "YG5950MONXlvAgmOLg57v$$NNfVVmvSQwITfw4FNtIAg" : {
+          "id" : "YG5950MONXlvAgmOLg57v$$NNfVVmvSQwITfw4FNtIAg",
+          "component" : "SchemaTransform",
+          "metadata" : {
+            "label" : "signed_tran_amt_1",
+            "slug" : "signed_tran_amt_1",
+            "x" : -391.99999999999966,
+            "y" : 106,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "ds0G_bDBAuPoel9PJr8FR$$NS2r4wAGRKNHgLCyEDSGA",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "DCGpGBRaIH1qWpNQkoSuq$$8Lwxy2rjV-P9MbXsymsSj",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "columnsSelector" : [ "ds0G_bDBAuPoel9PJr8FR$$NS2r4wAGRKNHgLCyEDSGA##tran_type", "ds0G_bDBAuPoel9PJr8FR$$NS2r4wAGRKNHgLCyEDSGA##tran_amount" ],
+            "transformations" : [ {
+              "kind" : "AddReplaceColumn",
+              "AddReplaceColumn" : {
+                "sourceColumn" : "signed_tran_amt",
+                "expression" : {
+                  "format" : "python",
+                  "expression" : "when((col(\"tran_type\") == lit(\"DEBIT\")), - col(\"tran_amount\")).otherwise(col(\"tran_amount\"))"
+                }
+              },
+              "DropColumn" : {
+                "sourceColumn" : ""
+              },
+              "RenameColumn" : {
+                "sourceColumn" : "",
+                "targetColumn" : ""
+              }
+            } ]
+          }
+        },
+        "Du_v1Ogmy0lVyGKrQfGFi$$QtICrgBSGPTpodPAASKnJ" : {
+          "id" : "Du_v1Ogmy0lVyGKrQfGFi$$QtICrgBSGPTpodPAASKnJ",
+          "component" : "Filter",
+          "metadata" : {
+            "label" : "Filter_1",
+            "slug" : "Filter_1",
+            "x" : -36.49999999999994,
+            "y" : 288.6,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "C9NYRvkLZUrOBbyBPBzGP$$rOUHWbs8cL_MHQqpafRH9",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "B4tzEhyj-bAG4djgX0uvd$$nKtpud35_vMCVuJk_hrb0",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "columnsSelector" : [ "C9NYRvkLZUrOBbyBPBzGP$$rOUHWbs8cL_MHQqpafRH9##row_num" ],
+            "condition" : {
+              "format" : "python",
+              "expression" : "(col(\"row_num\") == lit(1))"
+            }
+          }
+        },
+        "phheWdtyyavtAFMjkF0iy$$SkVX9n7xHVwR1Dy1F7eQP" : {
+          "id" : "phheWdtyyavtAFMjkF0iy$$SkVX9n7xHVwR1Dy1F7eQP",
+          "component" : "SchemaTransform",
+          "metadata" : {
+            "label" : "SchemaTransform_1",
+            "slug" : "SchemaTransform_1",
+            "x" : 282.50000000000006,
+            "y" : 285.6,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "oD2j29iwaSLcNVdMXNnY-$$7o1wNIfElEkC7MxqNz47a",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "YW2zIJgMWJoAyWLdUT2g5$$cP-ictGgY7NkkBOt4KvGv",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "columnsSelector" : [ "oD2j29iwaSLcNVdMXNnY-$$7o1wNIfElEkC7MxqNz47a##balance", "oD2j29iwaSLcNVdMXNnY-$$7o1wNIfElEkC7MxqNz47a##prev_balance" ],
+            "transformations" : [ {
+              "kind" : "AddReplaceColumn",
+              "AddReplaceColumn" : {
+                "sourceColumn" : "balance_change",
+                "expression" : {
+                  "format" : "python",
+                  "expression" : "when(col(\"prev_balance\").isNotNull(),col(\"balance\") - col(\"prev_balance\")).otherwise(col(\"balance\") )"
+                }
+              },
+              "DropColumn" : {
+                "sourceColumn" : ""
+              },
+              "RenameColumn" : {
+                "sourceColumn" : "",
+                "targetColumn" : ""
+              }
+            } ]
+          }
+        },
         "5bvlJXbO8zbKh0hAgc7ZU$$8yvIXmXpT8awJOpEXUWnu" : {
           "id" : "5bvlJXbO8zbKh0hAgc7ZU$$8yvIXmXpT8awJOpEXUWnu",
           "component" : "Aggregate",
           "metadata" : {
             "label" : "sum_trans",
             "slug" : "sum_trans",
-            "x" : 238.00000000000003,
+            "x" : -217.9999999999999,
             "y" : 105,
             "language" : "python",
             "phase" : 0,
@@ -179,14 +418,76 @@
             } ]
           }
         },
+        "39LbVeKf0fI09WXKNQJy2$$ivYMPn7cy1kc6OmRVczc8" : {
+          "id" : "39LbVeKf0fI09WXKNQJy2$$ivYMPn7cy1kc6OmRVczc8",
+          "component" : "Script",
+          "metadata" : {
+            "label" : "check_unmatches",
+            "slug" : "check_unmatches",
+            "x" : 731.5,
+            "y" : 118.60000000000002,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "Z3_asHmXxFrXxRZgzagYq$$txIbRgQsuP3NbsVYumcc8",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "RE1P3bgx8w8GU_iDG5eVx$$iABgW15je6BqOmEjez2Jf",
+              "slug" : "out0"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "script" : "if (in0.count() > 0):\r\n   raise Exception(\"Transactions don't add up to balance\")\r\nout0 = in0",
+            "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+            "scriptMethodFooter" : "    return out0"
+          }
+        },
+        "yaCiej4OmDBcyxD-hoC6z$$ffmALk_3jkBjvHVBqsthF" : {
+          "id" : "yaCiej4OmDBcyxD-hoC6z$$ffmALk_3jkBjvHVBqsthF",
+          "component" : "Filter",
+          "metadata" : {
+            "label" : "unmatched",
+            "slug" : "unmatched",
+            "x" : 590.5000000000001,
+            "y" : 119.60000000000002,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "GvjC2-iazyVI-1LU23-md$$wKUvPn5LKlwBO-23kR3t3",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "IDgeXriX-INDBCDZ5Ol6G$$_cJrPHYVV8Ek4d_qlbT4t",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "columnsSelector" : [ "GvjC2-iazyVI-1LU23-md$$wKUvPn5LKlwBO-23kR3t3##signed_tran_amount", "GvjC2-iazyVI-1LU23-md$$wKUvPn5LKlwBO-23kR3t3##bal_change" ],
+            "condition" : {
+              "format" : "python",
+              "expression" : "col(\"bal_change\")!= col(\"signed_tran_amount\")"
+            }
+          }
+        },
         "s6Q0uEf4_WSDFxAjP_RcT$$RpRSTVjzw0ooMMoxdG4Gc" : {
           "id" : "s6Q0uEf4_WSDFxAjP_RcT$$RpRSTVjzw0ooMMoxdG4Gc",
           "component" : "WindowFunction",
           "metadata" : {
             "label" : "WindowFunction_1",
             "slug" : "WindowFunction_1",
-            "x" : 259,
-            "y" : 285,
+            "x" : -196.99999999999986,
+            "y" : 285.00000000000006,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -215,24 +516,36 @@
               "_row_id" : ""
             } ],
             "frameType" : "row",
-            "partitionColumns" : [ ],
+            "partitionColumns" : [ {
+              "format" : "python",
+              "expression" : "col(\"acc_id\")"
+            }, {
+              "format" : "python",
+              "expression" : "col(\"business_date\")"
+            } ],
             "activeTab" : "windowUse",
             "columnsSelector" : [ ],
             "specifyFrame" : false,
             "frameStart" : null,
-            "orderColumns" : [ ],
+            "orderColumns" : [ {
+              "expression" : {
+                "format" : "python",
+                "expression" : "col(\"import_ts\")"
+              },
+              "sortType" : "desc"
+            } ],
             "frameEnd" : null,
             "userSpecifiedStart" : null
           }
         },
-        "YG5950MONXlvAgmOLg57v$$NNfVVmvSQwITfw4FNtIAg" : {
-          "id" : "YG5950MONXlvAgmOLg57v$$NNfVVmvSQwITfw4FNtIAg",
-          "component" : "SchemaTransform",
+        "EWsICXz4bT9mloM_bs2Cb$$r62-uDsi8aW8R56Mvnj6c" : {
+          "id" : "EWsICXz4bT9mloM_bs2Cb$$r62-uDsi8aW8R56Mvnj6c",
+          "component" : "WindowFunction",
           "metadata" : {
-            "label" : "signed_tran_amt_1",
-            "slug" : "signed_tran_amt_1",
-            "x" : 64,
-            "y" : 106,
+            "label" : "WindowFunction_2",
+            "slug" : "WindowFunction_2",
+            "x" : 112.50000000000006,
+            "y" : 287.6,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -240,34 +553,44 @@
           },
           "ports" : {
             "inputs" : [ {
-              "id" : "ds0G_bDBAuPoel9PJr8FR$$NS2r4wAGRKNHgLCyEDSGA",
+              "id" : "6pG45X_-HM-flcKo7C9iU$$Xxi5YoBozQiUoR4QrqNpD",
               "slug" : "in0"
             } ],
             "outputs" : [ {
-              "id" : "DCGpGBRaIH1qWpNQkoSuq$$8Lwxy2rjV-P9MbXsymsSj",
+              "id" : "cuyj5UYlb9IzK1mf_1_zc$$9e6vLjF4Qpk-5IuU-CfWF",
               "slug" : "out"
             } ],
             "selectedInputFields" : [ ]
           },
           "properties" : {
-            "columnsSelector" : [ ],
-            "transformations" : [ {
-              "kind" : "AddReplaceColumn",
-              "AddReplaceColumn" : {
-                "sourceColumn" : "signed_tran_amt",
-                "expression" : {
-                  "format" : "python",
-                  "expression" : "when((col(\"tran_type\") == lit(\"DEBIT\")), - col(\"tran_amount\")).otherwise(col(\"tran_amount\"))"
-                }
+            "userSpecifiedEnd" : null,
+            "expressionColumns" : [ {
+              "target" : "prev_balance",
+              "expression" : {
+                "format" : "python",
+                "expression" : "lag(col(\"balance\"),1)"
               },
-              "DropColumn" : {
-                "sourceColumn" : ""
+              "description" : "",
+              "_row_id" : ""
+            } ],
+            "frameType" : "row",
+            "partitionColumns" : [ {
+              "format" : "python",
+              "expression" : "col(\"acc_id\")"
+            } ],
+            "activeTab" : "windowUse",
+            "columnsSelector" : [ "6pG45X_-HM-flcKo7C9iU$$Xxi5YoBozQiUoR4QrqNpD##balance" ],
+            "specifyFrame" : false,
+            "frameStart" : null,
+            "orderColumns" : [ {
+              "expression" : {
+                "format" : "python",
+                "expression" : "col(\"business_date\")"
               },
-              "RenameColumn" : {
-                "sourceColumn" : "",
-                "targetColumn" : ""
-              }
-            } ]
+              "sortType" : "desc"
+            } ],
+            "frameEnd" : null,
+            "userSpecifiedStart" : null
           }
         },
         "2QFCdetMj_zU5pJrD5YyL$$_s4XYLnImJJDxBQRNkK1D" : {
@@ -276,8 +599,8 @@
           "metadata" : {
             "label" : "balances_1",
             "slug" : "balances_1",
-            "x" : 79,
-            "y" : 279,
+            "x" : -376.99999999999966,
+            "y" : 279.00000000000006,
             "language" : "python",
             "phase" : 0,
             "cache" : false,

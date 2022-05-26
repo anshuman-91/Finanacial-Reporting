@@ -5,4 +5,7 @@ from job.config.ConfigStore import *
 from job.udfs.UDFs import *
 
 def WindowFunction_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.withColumn("row_num", row_number().over(Window.partitionBy()))
+    return in0.withColumn(
+        "row_num",
+        row_number().over(Window.partitionBy(col("acc_id"), col("business_date")).orderBy(col("import_ts").desc()))
+    )
