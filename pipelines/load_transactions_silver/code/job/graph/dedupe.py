@@ -5,4 +5,4 @@ from job.config.ConfigStore import *
 from job.udfs.UDFs import *
 
 def dedupe(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.dropDuplicates(in0.columns)
+    return in0.dropDuplicates(["tran_id"])

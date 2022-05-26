@@ -282,5 +282,5 @@ datasets:
 jobs: {}
 libraries: []
 subgraphs: {}
-dependencies: '[]'
+dependencies: []
 template: '[]'
