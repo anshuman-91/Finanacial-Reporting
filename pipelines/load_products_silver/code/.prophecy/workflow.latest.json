@@ -116,8 +116,8 @@
       "id" : "JiQRaYpUf1qzKu9lHoF4D$$SDRy2UK2ICDTUSTVH5sNj",
       "component" : "Source",
       "metadata" : {
-        "label" : "Source_0",
-        "slug" : "Source_0",
+        "label" : "products_bronze",
+        "slug" : "products_bronze",
         "x" : 130,
         "y" : 166,
         "language" : "python",
@@ -320,8 +320,8 @@
       "id" : "uIGLy35Kt68h-O2tiw1_G$$0JIDtCGsJmbDr8aUK70qc",
       "component" : "Target",
       "metadata" : {
-        "label" : "Target_1",
-        "slug" : "Target_1",
+        "label" : "products_silver",
+        "slug" : "products_silver",
         "x" : 1135,
         "y" : 152.99999999999997,
         "language" : "python",

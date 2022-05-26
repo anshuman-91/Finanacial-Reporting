@@ -6,13 +6,13 @@ from job.udfs.UDFs import *
 from job.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_Source_0 = Source_0(spark)
-    df_dedup = dedup(spark, df_Source_0)
+    df_products_bronze = products_bronze(spark)
+    df_dedup = dedup(spark, df_products_bronze)
     df_flatten_schema = flatten_schema(spark, df_dedup)
     df_null_check = null_check(spark, df_flatten_schema)
     df_import_ts = import_ts(spark, df_null_check)
     df_validate_bonus_rate = validate_bonus_rate(spark, df_import_ts)
-    Target_1(spark, df_validate_bonus_rate)
+    products_silver(spark, df_validate_bonus_rate)
 
 def main():
     Utils.initializeFromArgs(Utils.parseArgs())
