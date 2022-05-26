@@ -1,0 +1,253 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "1010",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "interimMode" : "Full",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : {
+        "recipes_fabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "gamedayfabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman2" : {
+          "type" : "record",
+          "fields" : [ ]
+        }
+      }
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ]
+  },
+  "connections" : [ {
+    "id" : "jpOYfxqv_hWusw_JYcSfC",
+    "source" : "bEhvKlqkm_ZR9HIFZHsP1$$8VEqPzSSDYuTsnGbLYO7K",
+    "sourcePort" : "jZvmMQjpXfmO_9b3gfaTC$$yc7Y5yBIdHjR5lYOQjFSG",
+    "target" : "yIzCcksEp5W4O9sg249sb$$VI5w40Q9pssvW4FGSrPNb",
+    "targetPort" : "SMC09fsyE7VdxTI_SZO0o$$0kweFPOBJ6nlX2jGziFT_"
+  }, {
+    "id" : "GJqYPXDjhcbXLovkzqYuV",
+    "source" : "yIzCcksEp5W4O9sg249sb$$VI5w40Q9pssvW4FGSrPNb",
+    "sourcePort" : "igH4ftCtj675irjYrnxff$$l4lrHhTXGx5lj63gHUuxA",
+    "target" : "1Q-zqPWfKEOvePime13xY$$HnJ5DY923hshVkXR-gRU5",
+    "targetPort" : "r6s1tklTrPwUe-fuVv6f1$$Mb1iQV_eWFM5UyQg_XB5K"
+  }, {
+    "id" : "XZJ6RmMuMhF_Avi9R5qEJ",
+    "source" : "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE",
+    "sourcePort" : "F6lGsKO6ljKVXDdFSBOxB$$xmthIwIf2BJ2NNJM8iZeJ",
+    "target" : "YgMCJMGtEPZdoML5r9e5R$$9mmevQFKNOZsJ2MBG8ZPL",
+    "targetPort" : "sZPWh9Ac37fTHyo-cUr5J$$sEhZSXoeHAgfZYy3cqCHK"
+  }, {
+    "id" : "KDadqrdICguDHHarDoLo8",
+    "source" : "1Q-zqPWfKEOvePime13xY$$HnJ5DY923hshVkXR-gRU5",
+    "sourcePort" : "xacv6fWoWp__3ZypqRolj$$AON0EUR2zgzgkJE_SmMyq",
+    "target" : "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE",
+    "targetPort" : "UxcIzasK5ROxncIrS1C3V$$g4XaK0i8E9QNAibCEPEmL"
+  }, {
+    "id" : "jGfXCnurmo97i0920u23V",
+    "source" : "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE",
+    "sourcePort" : "F6lGsKO6ljKVXDdFSBOxB$$xmthIwIf2BJ2NNJM8iZeJ",
+    "target" : "rM3M3GOD3fjr81HyllvOQ$$ZvBLJ7YNtoSjbWrgUDNBw",
+    "targetPort" : "F-ZH-7yt3EawpfGFlqP4K$$J8YYMXlMIbC0ebFhRd3Mi"
+  } ],
+  "processes" : {
+    "bEhvKlqkm_ZR9HIFZHsP1$$8VEqPzSSDYuTsnGbLYO7K" : {
+      "id" : "bEhvKlqkm_ZR9HIFZHsP1$$8VEqPzSSDYuTsnGbLYO7K",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "transactions_bronze",
+        "slug" : "transactions_bronze",
+        "x" : 326.80000000000035,
+        "y" : 277.40000000000026,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "jZvmMQjpXfmO_9b3gfaTC$$yc7Y5yBIdHjR5lYOQjFSG",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "datasetId" : "5468/datasets/transactions_bronze"
+      }
+    },
+    "yIzCcksEp5W4O9sg249sb$$VI5w40Q9pssvW4FGSrPNb" : {
+      "id" : "yIzCcksEp5W4O9sg249sb$$VI5w40Q9pssvW4FGSrPNb",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "null_check",
+        "slug" : "null_check",
+        "x" : 523.7999999999996,
+        "y" : 276.80000000000024,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SMC09fsyE7VdxTI_SZO0o$$0kweFPOBJ6nlX2jGziFT_",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "igH4ftCtj675irjYrnxff$$l4lrHhTXGx5lj63gHUuxA",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "script" : "if (in0.filter(\r\n    col(\"acc_id\").isNull\r\n    or col(\"tran_amount\").isNull\r\n    or col(\"tran_type\").isNull or col(\"tran_type\") === \"\"\r\n    or col(\"tran_id\").isNull or col(\"tran_id\") === \"\"\r\n    or col(\"business_date\").isNull\r\n    or col(\"tran_ts\").isNull\r\n    ).count()> 0){\r\n    throw new RuntimeException(\"Schema Validation Failed\")\r\n}\r\nval out0 = in0\r\nout0",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    },
+    "YgMCJMGtEPZdoML5r9e5R$$9mmevQFKNOZsJ2MBG8ZPL" : {
+      "id" : "YgMCJMGtEPZdoML5r9e5R$$9mmevQFKNOZsJ2MBG8ZPL",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "transactions_silver",
+        "slug" : "transactions_silver",
+        "x" : 1046.4999999999986,
+        "y" : 270.40000000000003,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sZPWh9Ac37fTHyo-cUr5J$$sEhZSXoeHAgfZYy3cqCHK",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "datasetId" : "5468/datasets/acc_status_silver"
+      }
+    },
+    "rM3M3GOD3fjr81HyllvOQ$$ZvBLJ7YNtoSjbWrgUDNBw" : {
+      "id" : "rM3M3GOD3fjr81HyllvOQ$$ZvBLJ7YNtoSjbWrgUDNBw",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "reconcile",
+        "slug" : "reconcile",
+        "x" : 1027,
+        "y" : 69,
+        "language" : "python",
+        "phase" : -1,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "F-ZH-7yt3EawpfGFlqP4K$$J8YYMXlMIbC0ebFhRd3Mi",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "-wgNN0UQyy9e2fBC8DEbF$$wgBsz5mhUBTwaMD0NwPNH",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : { },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE" : {
+      "id" : "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "dvr",
+        "slug" : "dvr",
+        "x" : 877.5000000000002,
+        "y" : 273.40000000000003,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UxcIzasK5ROxncIrS1C3V$$g4XaK0i8E9QNAibCEPEmL",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "F6lGsKO6ljKVXDdFSBOxB$$xmthIwIf2BJ2NNJM8iZeJ",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "script" : "if (in0.filter(col(\"tran_amount\") < 0).count() > 0){\r\n    throw new RuntimeException(\"Found negative account balances\")\r\n}else if (in0.filter(!col(\"tran_type\").isin(\"INTEREST\", \"DEBIT\", \"CREDIT\")).count() >0){\r\n        throw new RuntimeException(\"Found invalid Transaction types. Allowed values = [\\\"INTEREST\\\", \\\"DEBIT\\\", \\\"CREDIT\\\"]\")\r\n\r\n}\r\nval out0 = in0\r\n    ",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    },
+    "1Q-zqPWfKEOvePime13xY$$HnJ5DY923hshVkXR-gRU5" : {
+      "id" : "1Q-zqPWfKEOvePime13xY$$HnJ5DY923hshVkXR-gRU5",
+      "component" : "Deduplicate",
+      "metadata" : {
+        "label" : "dedupe",
+        "slug" : "dedupe",
+        "x" : 698.7999999999997,
+        "y" : 273.80000000000024,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "r6s1tklTrPwUe-fuVv6f1$$Mb1iQV_eWFM5UyQg_XB5K",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "xacv6fWoWp__3ZypqRolj$$AON0EUR2zgzgkJE_SmMyq",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "dedupType" : "any",
+        "dedupColumns" : [ ]
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ]
+  }
+}

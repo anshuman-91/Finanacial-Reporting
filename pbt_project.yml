@@ -46,6 +46,19 @@ pipelines:
       outputs:
       - 5468/datasets/person_bronze
     dependencies: {}
+  pipelines/load_transactions_silver:
+    name: load_transactions_silver
+    description: ''
+    author: anshuman@simpledatalabs.com
+    mode: batch
+    language: python
+    createdAt: '2022-05-26 06:56:51'
+    datasets:
+      inputs:
+      - 5468/datasets/transactions_bronze
+      outputs:
+      - 5468/datasets/acc_status_silver
+    dependencies: {}
   pipelines/load_transactions_bronze:
     name: load_transactions_bronze
     description: ''
