@@ -45,64 +45,13 @@
     "externalDependencies" : [ ]
   },
   "connections" : [ {
-    "id" : "Z_UGbRrM1j6hwkiiw1otD",
+    "id" : "F5euEvDSeEIcSqnpt-_17",
     "source" : "SRBciHuI7ut8mYKMnJ0sq$$vJ1Hie8qUsQzkudo3-DG4",
     "sourcePort" : "do1c1VkGdiDV1tKrj10Yp$$P3TPFBb549dZ2Aw4M3JTp",
-    "target" : "PpQNzVff0DATfmoQTwlgw$$wkBZDuxLMA18UXPmUKvKt",
-    "targetPort" : "DMet6mF4beZzjImk-_UeH$$BVJINpf8vmrXUKIMzcGFS"
-  }, {
-    "id" : "Mtt7wkAKrAu-aXsGVksHi",
-    "source" : "PpQNzVff0DATfmoQTwlgw$$wkBZDuxLMA18UXPmUKvKt",
-    "sourcePort" : "V_dSgS5FBFkw-E9wbbA7o$$1JW4XDn-arWAn9Ok_sKpe",
     "target" : "l2ZPXTHnivcF738Th_p1r$$VZRZVgfuB7O1E4Ux9aTSU",
     "targetPort" : "ZwVBAfu2ss_6Qsse8Z2Im$$Tk5Ki5skreJpRChkelap_"
   } ],
   "processes" : {
-    "PpQNzVff0DATfmoQTwlgw$$wkBZDuxLMA18UXPmUKvKt" : {
-      "id" : "PpQNzVff0DATfmoQTwlgw$$wkBZDuxLMA18UXPmUKvKt",
-      "component" : "SchemaTransform",
-      "metadata" : {
-        "label" : "import_ts",
-        "slug" : "import_ts",
-        "x" : 414.5,
-        "y" : 130,
-        "language" : "python",
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "DMet6mF4beZzjImk-_UeH$$BVJINpf8vmrXUKIMzcGFS",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "V_dSgS5FBFkw-E9wbbA7o$$1JW4XDn-arWAn9Ok_sKpe",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ]
-      },
-      "properties" : {
-        "columnsSelector" : [ ],
-        "transformations" : [ {
-          "kind" : "AddReplaceColumn",
-          "AddReplaceColumn" : {
-            "sourceColumn" : "import_ts",
-            "expression" : {
-              "format" : "sql",
-              "expression" : "current_timestamp()"
-            }
-          },
-          "DropColumn" : {
-            "sourceColumn" : ""
-          },
-          "RenameColumn" : {
-            "sourceColumn" : "",
-            "targetColumn" : ""
-          }
-        } ]
-      }
-    },
     "SRBciHuI7ut8mYKMnJ0sq$$vJ1Hie8qUsQzkudo3-DG4" : {
       "id" : "SRBciHuI7ut8mYKMnJ0sq$$vJ1Hie8qUsQzkudo3-DG4",
       "component" : "Source",

@@ -35,10 +35,6 @@ schema:
     type: string
     nullable: true
     metadata: {}
-  - name: import_ts
-    type: timestamp
-    nullable: true
-    metadata: {}
   - name: name
     type: string
     nullable: true

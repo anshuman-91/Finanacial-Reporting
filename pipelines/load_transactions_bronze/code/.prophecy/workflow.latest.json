@@ -45,15 +45,9 @@
     "externalDependencies" : [ ]
   },
   "connections" : [ {
-    "id" : "wxs-Ndht2l8QRYIU8SPcu",
+    "id" : "41xRjshi18xhK03pXaZCp",
     "source" : "uXOKYS8hUREG5oeNjk6_L$$sKuTLA03pF8RSrGsXFkFr",
     "sourcePort" : "SXN6auRhH8TNRPPPxcTfE$$J0lUvk2UkLdwM8HCrgVon",
-    "target" : "CF6BEXqgMINTcUdgKXtKc$$JzN37dp-2sIc3KY2PR9P8",
-    "targetPort" : "Ry9qicu4dvej2OZxSFiWq$$2UIllOBUCXiZE_qd2xKpo"
-  }, {
-    "id" : "BgRis8QAPEKCZPj0_sIzS",
-    "source" : "CF6BEXqgMINTcUdgKXtKc$$JzN37dp-2sIc3KY2PR9P8",
-    "sourcePort" : "eKknAEUgUZkBliwPUi2B9$$8mwquJhqC6elb8QWYLVL_",
     "target" : "8FY2YTsg-0T49rdv-LfpQ$$zYuwI-HP05wWZOCmCRy5z",
     "targetPort" : "sC0Gyfp4kL3GMuy4lmZAk$$AhxvHZeuqsI5RKMHHFeQz"
   } ],
@@ -106,51 +100,6 @@
       },
       "properties" : {
         "datasetId" : "5468/datasets/transactions_external"
-      }
-    },
-    "CF6BEXqgMINTcUdgKXtKc$$JzN37dp-2sIc3KY2PR9P8" : {
-      "id" : "CF6BEXqgMINTcUdgKXtKc$$JzN37dp-2sIc3KY2PR9P8",
-      "component" : "SchemaTransform",
-      "metadata" : {
-        "label" : "import_ts",
-        "slug" : "import_ts",
-        "x" : 439,
-        "y" : 141,
-        "language" : "python",
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "Ry9qicu4dvej2OZxSFiWq$$2UIllOBUCXiZE_qd2xKpo",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "eKknAEUgUZkBliwPUi2B9$$8mwquJhqC6elb8QWYLVL_",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ]
-      },
-      "properties" : {
-        "columnsSelector" : [ ],
-        "transformations" : [ {
-          "kind" : "AddReplaceColumn",
-          "AddReplaceColumn" : {
-            "sourceColumn" : "import_ts",
-            "expression" : {
-              "format" : "sql",
-              "expression" : "current_timestamp()"
-            }
-          },
-          "DropColumn" : {
-            "sourceColumn" : ""
-          },
-          "RenameColumn" : {
-            "sourceColumn" : "",
-            "targetColumn" : ""
-          }
-        } ]
       }
     }
   },
