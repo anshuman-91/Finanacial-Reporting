@@ -68,8 +68,183 @@
     "sourcePort" : "xacv6fWoWp__3ZypqRolj$$AON0EUR2zgzgkJE_SmMyq",
     "target" : "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE",
     "targetPort" : "UxcIzasK5ROxncIrS1C3V$$g4XaK0i8E9QNAibCEPEmL"
+  }, {
+    "id" : "AFdITPjk_c5lP4m5bB6ja",
+    "source" : "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE",
+    "sourcePort" : "F6lGsKO6ljKVXDdFSBOxB$$xmthIwIf2BJ2NNJM8iZeJ",
+    "target" : "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM",
+    "targetPort" : "1FOB5EHzjVp8PpnpFzyiN$$GaMnwl78GJN1Td-WI9PT8"
   } ],
   "processes" : {
+    "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM" : {
+      "id" : "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "reconcile",
+        "slug" : "reconcile",
+        "x" : 1070.6499999999994,
+        "y" : 71.60000000000014,
+        "language" : "python",
+        "phase" : -1,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1FOB5EHzjVp8PpnpFzyiN$$GaMnwl78GJN1Td-WI9PT8",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "cJH0KDryl9nGtrJZODxfP$$GNMuGvwo44hCaT7A1g_qU",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : { },
+      "connections" : [ {
+        "id" : "bHKQ3lrKM6Jd8-y1_fJTa",
+        "source" : "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM",
+        "sourcePort" : "1FOB5EHzjVp8PpnpFzyiN$$GaMnwl78GJN1Td-WI9PT8",
+        "target" : "YG5950MONXlvAgmOLg57v$$NNfVVmvSQwITfw4FNtIAg",
+        "targetPort" : "ds0G_bDBAuPoel9PJr8FR$$NS2r4wAGRKNHgLCyEDSGA"
+      }, {
+        "id" : "g8HNObUvoiQwF53SQ3q7D",
+        "source" : "YG5950MONXlvAgmOLg57v$$NNfVVmvSQwITfw4FNtIAg",
+        "sourcePort" : "DCGpGBRaIH1qWpNQkoSuq$$8Lwxy2rjV-P9MbXsymsSj",
+        "target" : "5bvlJXbO8zbKh0hAgc7ZU$$8yvIXmXpT8awJOpEXUWnu",
+        "targetPort" : "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t"
+      } ],
+      "processes" : {
+        "5bvlJXbO8zbKh0hAgc7ZU$$8yvIXmXpT8awJOpEXUWnu" : {
+          "id" : "5bvlJXbO8zbKh0hAgc7ZU$$8yvIXmXpT8awJOpEXUWnu",
+          "component" : "Aggregate",
+          "metadata" : {
+            "label" : "sum_trans",
+            "slug" : "sum_trans",
+            "x" : 238.00000000000003,
+            "y" : 105,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "wcFj1vDjLOfTYIkgpvzuM$$x5t5EBPDJ2iagAd4_7nLd",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "doPivot" : false,
+            "aggregate" : [ {
+              "target" : "signed_tran_amount",
+              "expression" : {
+                "format" : "python",
+                "expression" : "sum(col(\"signed_tran_amount\"))"
+              },
+              "description" : "",
+              "_row_id" : ""
+            } ],
+            "pivotColumn" : null,
+            "pivotValues" : [ ],
+            "activeTab" : "groupBy",
+            "columnsSelector" : [ "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##acc_id", "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##business_date" ],
+            "groupBy" : [ {
+              "target" : "acc_id",
+              "expression" : {
+                "format" : "python",
+                "expression" : "col(\"acc_id\")"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "business_date",
+              "expression" : {
+                "format" : "python",
+                "expression" : "col(\"business_date\")"
+              },
+              "description" : "",
+              "_row_id" : null
+            } ]
+          }
+        },
+        "YG5950MONXlvAgmOLg57v$$NNfVVmvSQwITfw4FNtIAg" : {
+          "id" : "YG5950MONXlvAgmOLg57v$$NNfVVmvSQwITfw4FNtIAg",
+          "component" : "SchemaTransform",
+          "metadata" : {
+            "label" : "signed_tran_amt_1",
+            "slug" : "signed_tran_amt_1",
+            "x" : 64,
+            "y" : 106,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "ds0G_bDBAuPoel9PJr8FR$$NS2r4wAGRKNHgLCyEDSGA",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "DCGpGBRaIH1qWpNQkoSuq$$8Lwxy2rjV-P9MbXsymsSj",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "transformations" : [ {
+              "kind" : "AddReplaceColumn",
+              "AddReplaceColumn" : {
+                "sourceColumn" : "signed_tran_amt",
+                "expression" : {
+                  "format" : "python",
+                  "expression" : "when((col(\"tran_type\") == lit(\"DEBIT\")), - col(\"tran_amount\")).otherwise(col(\"tran_amount\"))"
+                }
+              },
+              "DropColumn" : {
+                "sourceColumn" : ""
+              },
+              "RenameColumn" : {
+                "sourceColumn" : "",
+                "targetColumn" : ""
+              }
+            } ]
+          }
+        },
+        "2QFCdetMj_zU5pJrD5YyL$$_s4XYLnImJJDxBQRNkK1D" : {
+          "id" : "2QFCdetMj_zU5pJrD5YyL$$_s4XYLnImJJDxBQRNkK1D",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "balances_1",
+            "slug" : "balances_1",
+            "x" : 79,
+            "y" : 279,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "CIffbziPIDpHAskZlS1AD$$KNjhPNV33rAxVTqA7SZMb",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "datasetId" : "5468/datasets/acc_status_silver"
+          }
+        }
+      }
+    },
     "bEhvKlqkm_ZR9HIFZHsP1$$8VEqPzSSDYuTsnGbLYO7K" : {
       "id" : "bEhvKlqkm_ZR9HIFZHsP1$$8VEqPzSSDYuTsnGbLYO7K",
       "component" : "Source",
