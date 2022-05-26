@@ -126,7 +126,7 @@
         "selectedInputFields" : [ ]
       },
       "properties" : {
-        "script" : "if (in0.filter(\r\n    col(\"acc_id\").isNull\r\n    or col(\"tran_amount\").isNull\r\n    or col(\"tran_type\").isNull or col(\"tran_type\") === \"\"\r\n    or col(\"tran_id\").isNull or col(\"tran_id\") === \"\"\r\n    or col(\"business_date\").isNull\r\n    or col(\"tran_ts\").isNull\r\n    ).count()> 0){\r\n    throw new RuntimeException(\"Schema Validation Failed\")\r\n}\r\nval out0 = in0\r\nout0",
+        "script" : "if (in0.filter(\r\n    col(\"acc_id\").isNull()\r\n    | col(\"tran_amount\").isNull()\r\n    | col(\"tran_type\").isNull()\r\n    | col(\"tran_id\").isNull() \r\n    | col(\"business_date\").isNull()\r\n    | col(\"tran_ts\").isNull()\r\n    ).count()> 0):\r\n    raise Exception(\"Schema Validation Failed\")\r\n\r\nout0 = in0\r\n",
         "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
         "scriptMethodFooter" : "    return out0"
       }
