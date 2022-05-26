@@ -10,5 +10,6 @@ def flatten_schema(spark: SparkSession, in0: DataFrame) -> DataFrame:
         col("name"), 
         col("slug"), 
         col("properties.bonus_rate").alias("bonus_rate"), 
-        col("properties.lock_in_period").alias("lock_in_period")
+        col("properties.lock_in_period").alias("lock_in_period"), 
+        col("import_ts")
     )
