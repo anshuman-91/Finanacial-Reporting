@@ -8,7 +8,7 @@ from job.graph import *
 def pipeline(spark: SparkSession) -> None:
     df_Source_0 = Source_0(spark)
     df_dedup = dedup(spark, df_Source_0)
-    df_flatten_schema = flatten_schema(spark)
+    df_flatten_schema = flatten_schema(spark, df_dedup)
     df_null_check = null_check(spark, df_flatten_schema)
     df_import_ts = import_ts(spark, df_null_check)
     df_validate_bonus_rate = validate_bonus_rate(spark, df_import_ts)

@@ -107,7 +107,7 @@
         "selectedInputFields" : [ ]
       },
       "properties" : {
-        "script" : "",
+        "script" : "if (in0.filter(col(\"bonus_rate\") < 0).count() > 0):\r\n    raise Exception(\"Found negative bonus rate\")\r\n\r\nout0 = in0",
         "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
         "scriptMethodFooter" : "    return out0"
       }
@@ -162,8 +162,114 @@
         "selectedInputFields" : [ ]
       },
       "properties" : { },
-      "connections" : [ ],
-      "processes" : { }
+      "connections" : [ {
+        "id" : "SefdsjGWJ9gOt5rrf8Ju-",
+        "source" : "PDiLbDJag43b_VOXHul6o$$zLBPZrmWUokfKpueqiF0y",
+        "sourcePort" : "sldb4_JsS1n-zWH_DQ-6O$$d-e_RZSRzQi-1UxvqQxDz",
+        "target" : "U25aak7f83f6XnlI8mH8c$$bnx3H64pguwp3mlk2eFTa",
+        "targetPort" : "YorhT9DoCBRLl7XLNw5D3$$aMNuXYMydaL9hVrcP_lsq"
+      }, {
+        "id" : "XcUHL0QVq70adxhNimDYU",
+        "source" : "U25aak7f83f6XnlI8mH8c$$bnx3H64pguwp3mlk2eFTa",
+        "sourcePort" : "mTiWif-Kda1tQZkOQ8Et3$$HupJJRcXl3rreijjmxZxO",
+        "target" : "WrABjbeI7rDavjPNHHOIB$$9iN0n3-dwAGjJ4xr0S5pf",
+        "targetPort" : "CcCVkXF7j4RYmX1t0pNiM$$uR9eXX_OsIldQBk1Su9ks"
+      }, {
+        "id" : "w2FLo9F2SuoUUs6SEw5z1",
+        "source" : "WrABjbeI7rDavjPNHHOIB$$9iN0n3-dwAGjJ4xr0S5pf",
+        "sourcePort" : "y2pgmAZjiP1FrQjugFQQF$$U5RY0qt6lnMGQbNKK_a6I",
+        "target" : "PDiLbDJag43b_VOXHul6o$$zLBPZrmWUokfKpueqiF0y",
+        "targetPort" : "CoFX08MLea8QpbrXnZhwn$$oiw20JRCgFCWrCekdscbn"
+      } ],
+      "processes" : {
+        "WrABjbeI7rDavjPNHHOIB$$9iN0n3-dwAGjJ4xr0S5pf" : {
+          "id" : "WrABjbeI7rDavjPNHHOIB$$9iN0n3-dwAGjJ4xr0S5pf",
+          "component" : "Filter",
+          "metadata" : {
+            "label" : "Filter_1",
+            "slug" : "Filter_1",
+            "x" : 808,
+            "y" : 162,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "CcCVkXF7j4RYmX1t0pNiM$$uR9eXX_OsIldQBk1Su9ks",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "y2pgmAZjiP1FrQjugFQQF$$U5RY0qt6lnMGQbNKK_a6I",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "columnsSelector" : [ "CcCVkXF7j4RYmX1t0pNiM$$uR9eXX_OsIldQBk1Su9ks##row_num" ],
+            "condition" : {
+              "format" : "sql",
+              "expression" : "row_num = 1"
+            }
+          }
+        },
+        "U25aak7f83f6XnlI8mH8c$$bnx3H64pguwp3mlk2eFTa" : {
+          "id" : "U25aak7f83f6XnlI8mH8c$$bnx3H64pguwp3mlk2eFTa",
+          "component" : "WindowFunction",
+          "metadata" : {
+            "label" : "WindowFunction_1",
+            "slug" : "WindowFunction_1",
+            "x" : 308,
+            "y" : 165,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "YorhT9DoCBRLl7XLNw5D3$$aMNuXYMydaL9hVrcP_lsq",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "mTiWif-Kda1tQZkOQ8Et3$$HupJJRcXl3rreijjmxZxO",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "userSpecifiedEnd" : null,
+            "expressionColumns" : [ {
+              "target" : "row_num",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "row_number()"
+              },
+              "description" : "",
+              "_row_id" : ""
+            } ],
+            "frameType" : "row",
+            "partitionColumns" : [ {
+              "format" : "sql",
+              "expression" : "id"
+            } ],
+            "activeTab" : "windowUse",
+            "columnsSelector" : [ ],
+            "specifyFrame" : false,
+            "frameStart" : null,
+            "orderColumns" : [ {
+              "expression" : {
+                "format" : "sql",
+                "expression" : "updated_at"
+              },
+              "sortType" : "desc"
+            } ],
+            "frameEnd" : null,
+            "userSpecifiedStart" : null
+          }
+        }
+      }
     },
     "OvXfcyisCTYnQ8WqN9iU5$$eZls_uq5cBDU4M9xqu8bp" : {
       "id" : "OvXfcyisCTYnQ8WqN9iU5$$eZls_uq5cBDU4M9xqu8bp",
@@ -191,7 +297,23 @@
       },
       "properties" : {
         "columnsSelector" : [ ],
-        "transformations" : [ ]
+        "transformations" : [ {
+          "kind" : "AddReplaceColumn",
+          "AddReplaceColumn" : {
+            "sourceColumn" : "business_date",
+            "expression" : {
+              "format" : "sql",
+              "expression" : "current_date()"
+            }
+          },
+          "DropColumn" : {
+            "sourceColumn" : ""
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          }
+        } ]
       }
     },
     "uIGLy35Kt68h-O2tiw1_G$$0JIDtCGsJmbDr8aUK70qc" : {
@@ -215,7 +337,9 @@
         "outputs" : [ ],
         "selectedInputFields" : [ ]
       },
-      "properties" : { }
+      "properties" : {
+        "datasetId" : "5468/datasets/products_silver"
+      }
     },
     "1OcbuL78ZRYHzBzd89UmH$$yp7ciEmSWPycDQe-Az7Ny" : {
       "id" : "1OcbuL78ZRYHzBzd89UmH$$yp7ciEmSWPycDQe-Az7Ny",
@@ -242,7 +366,7 @@
         "selectedInputFields" : [ ]
       },
       "properties" : {
-        "script" : "",
+        "script" : "if (in0.filter(\r\n    col(\"id\").isNull()\r\n    | col(\"name\").isNull() \r\n    | col(\"bonus_rate\").isNull()\r\n    | col(\"slug\").isNull() \r\n    ).count()> 0):\r\n    raise Exception(\"Schema Validation Failed\")\r\n\r\nout0 = in0\r\n",
         "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
         "scriptMethodFooter" : "    return out0"
       }
@@ -254,7 +378,7 @@
         "label" : "flatten_schema",
         "slug" : "flatten_schema",
         "x" : 481,
-        "y" : 162,
+        "y" : 164,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -272,8 +396,43 @@
         "selectedInputFields" : [ ]
       },
       "properties" : {
-        "columnsSelector" : [ ],
-        "expressions" : [ ]
+        "columnsSelector" : [ "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties.lock_in_period", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##slug", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##name", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties.bonus_rate", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##id" ],
+        "expressions" : [ {
+          "target" : "id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "id"
+          },
+          "description" : ""
+        }, {
+          "target" : "name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "name"
+          },
+          "description" : ""
+        }, {
+          "target" : "slug",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "slug"
+          },
+          "description" : ""
+        }, {
+          "target" : "bonus_rate",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "properties.bonus_rate"
+          },
+          "description" : ""
+        }, {
+          "target" : "lock_in_period",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "properties.lock_in_period"
+          },
+          "description" : ""
+        } ]
       }
     }
   },

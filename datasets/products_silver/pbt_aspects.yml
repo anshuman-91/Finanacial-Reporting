@@ -1,0 +1,28 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: id
+    type: string
+    nullable: true
+    metadata: {}
+  - name: name
+    type: string
+    nullable: true
+    metadata: {}
+  - name: slug
+    type: string
+    nullable: true
+    metadata: {}
+  - name: bonus_rate
+    type: double
+    nullable: true
+    metadata: {}
+  - name: lock_in_period
+    type: integer
+    nullable: true
+    metadata: {}
+  - name: business_date
+    type: date
+    nullable: false
+    metadata: {}

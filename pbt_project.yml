@@ -14,7 +14,8 @@ pipelines:
     datasets:
       inputs:
       - 5468/datasets/products_bronze
-      outputs: []
+      outputs:
+      - 5468/datasets/products_silver
     dependencies: {}
   pipelines/data_generator:
     name: data_generator
@@ -124,6 +125,18 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-25 15:26:53'
+  datasets/products_silver:
+    name: products_silver
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-05-26 10:56:51'
+    physicalDatasets:
+      recipes_fabric:
+        fabricId: 1010
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-26 10:56:51'
   datasets/transactions_external:
     name: transactions_external
     description: ''
