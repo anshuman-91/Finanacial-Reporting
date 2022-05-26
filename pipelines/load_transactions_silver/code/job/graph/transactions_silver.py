@@ -9,7 +9,7 @@ def transactions_silver(spark: SparkSession, in0: DataFrame):
         in0.write\
             .format("parquet")\
             .mode("append")\
-            .partitionBy("business_date")\
+            .partitionBy("business_date", "import_ts")\
             .save("dbfs:/Prophecy/anshuman@simpledatalabs.com/fin_reporting/transactions/silver/")
     else:
         raise Exception("No valid dataset present to read fabric")

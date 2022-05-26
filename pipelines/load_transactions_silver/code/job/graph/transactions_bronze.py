@@ -10,7 +10,7 @@ def transactions_bronze(spark: SparkSession) -> DataFrame:
             .format("parquet")\
             .schema(
               StructType([
-                StructField("acc_id", IntegerType(), True), StructField("tran_id", StringType(), True), StructField("business_date", DateType(), True), StructField("tran_amount", DoubleType(), True), StructField("tran_type", StringType(), True), StructField("tran_ts", TimestampType(), True)
+                StructField("acc_id", IntegerType(), True), StructField("tran_id", StringType(), True), StructField("business_date", DateType(), True), StructField("tran_amount", DoubleType(), True), StructField("tran_type", StringType(), True), StructField("tran_ts", TimestampType(), True), StructField("import_ts", TimestampType(), True)
             ])
             )\
             .load("dbfs:/Prophecy/anshuman@simpledatalabs.com/fin_reporting/transactions/bronze/")
