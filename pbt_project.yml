@@ -72,6 +72,19 @@ pipelines:
       outputs:
       - 5468/datasets/products_bronze
     dependencies: {}
+  pipelines/load_acc_status_silver:
+    name: load_acc_status_silver
+    description: ''
+    author: anshuman@simpledatalabs.com
+    mode: batch
+    language: python
+    createdAt: '2022-05-26 06:43:29'
+    datasets:
+      inputs:
+      - 5468/datasets/acc_status_bronze
+      outputs:
+      - 5468/datasets/acc_status_silver
+    dependencies: {}
 datasets:
   datasets/acc_status_external_20220505:
     name: acc_status_external_20220505
@@ -181,6 +194,18 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-25 15:33:43'
+  datasets/acc_status_silver:
+    name: acc_status_silver
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-05-26 06:53:09'
+    physicalDatasets:
+      recipes_fabric:
+        fabricId: 1010
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-26 06:53:09'
   datasets/products_external_20220505:
     name: products_external_20220505
     description: ''

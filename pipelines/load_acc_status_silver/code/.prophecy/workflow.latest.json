@@ -1,0 +1,219 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "1010",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "interimMode" : "Full",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : {
+        "recipes_fabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "gamedayfabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman2" : {
+          "type" : "record",
+          "fields" : [ ]
+        }
+      }
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ]
+  },
+  "connections" : [ {
+    "id" : "aoeBbzap00h8Zv4DadOH5",
+    "source" : "5W9zaAQrNBOgWxOxA9j-S$$b9rBFca-nJF0IFU5T3dga",
+    "sourcePort" : "IBAgAoHw0rPl6i3Tgu0Nn$$6LBDXNy3cxwE_5ibnY4Un",
+    "target" : "MkmNs9NXv53w3KIgjqjy2$$yN2nZ2XCf2R9SUsFyjI20",
+    "targetPort" : "9zrdvQ2Gah9w79zUPhMvD$$GhySVjBwfGKWqe8jX32tv"
+  }, {
+    "id" : "2U_4kwyRC5TCP1bJi8T95",
+    "source" : "MkmNs9NXv53w3KIgjqjy2$$yN2nZ2XCf2R9SUsFyjI20",
+    "sourcePort" : "JpF2yGSUZmIwgWahZPJ6y$$lBefnBSMW8gRPT3j5PKAK",
+    "target" : "F13bnppyjDIEfVQ40ae4U$$-k6x5HnU_VPPYWPev_Vmp",
+    "targetPort" : "LLWnccoqOeco0tEFQWKjY$$O4qT6xmbkNozVyuFIdSFK"
+  }, {
+    "id" : "NXFZTe5rnbjX25zvz52qc",
+    "source" : "rpavCSmkHKEgijqB9Pw2_$$YhWGcEEHifV4MBmZRztuP",
+    "sourcePort" : "_3D0PvNbvGRrDt_k2K0ZA$$4NHpOcW8BxiHBD58A4pgm",
+    "target" : "MmimlghcPXRq2wmIPMzzr$$8bWjjLC-ez1CRT9QI2N1W",
+    "targetPort" : "LW2HC7s8GHaWyqBGS0_YN$$Iw0rwyu3-nVAQN9uN3Qzq"
+  }, {
+    "id" : "3Qm1ik-ted00WIRYW3Ezv",
+    "source" : "F13bnppyjDIEfVQ40ae4U$$-k6x5HnU_VPPYWPev_Vmp",
+    "sourcePort" : "zfNGfvhiiT4EPyqhCryCh$$A2HRROKsEtR-WGjEZ91f-",
+    "target" : "rpavCSmkHKEgijqB9Pw2_$$YhWGcEEHifV4MBmZRztuP",
+    "targetPort" : "HKLlr78ax77b3abnDekVF$$oXlm-yBvV_ISds8ssDCxV"
+  } ],
+  "processes" : {
+    "rpavCSmkHKEgijqB9Pw2_$$YhWGcEEHifV4MBmZRztuP" : {
+      "id" : "rpavCSmkHKEgijqB9Pw2_$$YhWGcEEHifV4MBmZRztuP",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "dvr",
+        "slug" : "dvr",
+        "x" : 451.9000000000005,
+        "y" : 145.40000000000003,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "HKLlr78ax77b3abnDekVF$$oXlm-yBvV_ISds8ssDCxV",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "_3D0PvNbvGRrDt_k2K0ZA$$4NHpOcW8BxiHBD58A4pgm",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "script" : "if (in0.filter(col(\"balance\") < 0).count() > 0){\r\n    throw new RuntimeException(\"Found negative account balances\")\r\n}\r\nval out0 = in0\r\n    ",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    },
+    "5W9zaAQrNBOgWxOxA9j-S$$b9rBFca-nJF0IFU5T3dga" : {
+      "id" : "5W9zaAQrNBOgWxOxA9j-S$$b9rBFca-nJF0IFU5T3dga",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "acc_status_bronze",
+        "slug" : "acc_status_bronze",
+        "x" : -64.79999999999995,
+        "y" : 145.80000000000018,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "IBAgAoHw0rPl6i3Tgu0Nn$$6LBDXNy3cxwE_5ibnY4Un",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "datasetId" : "5468/datasets/acc_status_bronze"
+      }
+    },
+    "F13bnppyjDIEfVQ40ae4U$$-k6x5HnU_VPPYWPev_Vmp" : {
+      "id" : "F13bnppyjDIEfVQ40ae4U$$-k6x5HnU_VPPYWPev_Vmp",
+      "component" : "Deduplicate",
+      "metadata" : {
+        "label" : "dedupe",
+        "slug" : "dedupe",
+        "x" : 273.2000000000001,
+        "y" : 145.80000000000018,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "LLWnccoqOeco0tEFQWKjY$$O4qT6xmbkNozVyuFIdSFK",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "zfNGfvhiiT4EPyqhCryCh$$A2HRROKsEtR-WGjEZ91f-",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "dedupType" : "any",
+        "dedupColumns" : [ ]
+      }
+    },
+    "MmimlghcPXRq2wmIPMzzr$$8bWjjLC-ez1CRT9QI2N1W" : {
+      "id" : "MmimlghcPXRq2wmIPMzzr$$8bWjjLC-ez1CRT9QI2N1W",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "acc_status_silver",
+        "slug" : "acc_status_silver",
+        "x" : 620.8999999999993,
+        "y" : 142.40000000000003,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "LW2HC7s8GHaWyqBGS0_YN$$Iw0rwyu3-nVAQN9uN3Qzq",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "datasetId" : "5468/datasets/acc_status_silver"
+      }
+    },
+    "MkmNs9NXv53w3KIgjqjy2$$yN2nZ2XCf2R9SUsFyjI20" : {
+      "id" : "MkmNs9NXv53w3KIgjqjy2$$yN2nZ2XCf2R9SUsFyjI20",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "null_check",
+        "slug" : "null_check",
+        "x" : 96.19999999999997,
+        "y" : 148.80000000000018,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "9zrdvQ2Gah9w79zUPhMvD$$GhySVjBwfGKWqe8jX32tv",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "JpF2yGSUZmIwgWahZPJ6y$$lBefnBSMW8gRPT3j5PKAK",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "script" : "if (in0.filter(\r\n    col(\"acc_id\").isNull\r\n    or col(\"person_id\").isNull\r\n    or col(\"product_id\").isNull\r\n    or col(\"business_date\").isNull\r\n    or col(\"balance\").isNull\r\n    ).count()> 0){\r\n    throw new RuntimeException(\"Schema Validation Failed\")\r\n}\r\nval out0 = in0\r\n",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ]
+  }
+}
