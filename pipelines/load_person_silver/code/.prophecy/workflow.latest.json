@@ -1,0 +1,220 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "1010",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "interimMode" : "Full",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : {
+        "recipes_fabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "gamedayfabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman2" : {
+          "type" : "record",
+          "fields" : [ ]
+        }
+      }
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ]
+  },
+  "connections" : [ {
+    "id" : "cntzzpHS3cB5VfOVhMZTT",
+    "source" : "-MMiGekpVILAQ5IsZuU2F$$7U5yTx7uH4vHSpPb0f1XS",
+    "sourcePort" : "3nd3dk63aH0OXeF8dRGXE$$7Qsl4nGritpksKeyKiu7l",
+    "target" : "hVyIujyG7xAOpvd2U5xxV$$sak4tFL3ZP4Lb3gA58aR-",
+    "targetPort" : "CaFEXwe3eElZmUztdae72$$M2VnvcJBtaOvP1gA1kSLb"
+  } ],
+  "processes" : {
+    "-MMiGekpVILAQ5IsZuU2F$$7U5yTx7uH4vHSpPb0f1XS" : {
+      "id" : "-MMiGekpVILAQ5IsZuU2F$$7U5yTx7uH4vHSpPb0f1XS",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "person_bronze",
+        "slug" : "person_bronze",
+        "x" : -443.1999999999998,
+        "y" : 246.6,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "3nd3dk63aH0OXeF8dRGXE$$7Qsl4nGritpksKeyKiu7l",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "datasetId" : "5468/datasets/person_bronze"
+      }
+    },
+    "hVyIujyG7xAOpvd2U5xxV$$sak4tFL3ZP4Lb3gA58aR-" : {
+      "id" : "hVyIujyG7xAOpvd2U5xxV$$sak4tFL3ZP4Lb3gA58aR-",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "dedup",
+        "slug" : "dedup",
+        "x" : -253.2,
+        "y" : 222.59999999999997,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CaFEXwe3eElZmUztdae72$$M2VnvcJBtaOvP1gA1kSLb",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "HQYm7s1k6bcr_oDHRzkmn$$TH3TITpzGU27y1I35rkDQ",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : { },
+      "connections" : [ {
+        "id" : "WT8rmznHu_4KMn15uc7H6",
+        "source" : "hVyIujyG7xAOpvd2U5xxV$$sak4tFL3ZP4Lb3gA58aR-",
+        "sourcePort" : "CaFEXwe3eElZmUztdae72$$M2VnvcJBtaOvP1gA1kSLb",
+        "target" : "mCSwaVgmXDkLXvCAFtMEY$$DJT9p4vc9_rkCEqmfRINM",
+        "targetPort" : "0W1VUZip8nt2BLgrcAG7s$$-yuzMse4D4uJLmLROlYcE"
+      }, {
+        "id" : "-ebvIpIiQ1aJIXES70zYM",
+        "source" : "mCSwaVgmXDkLXvCAFtMEY$$DJT9p4vc9_rkCEqmfRINM",
+        "sourcePort" : "fo6l-CiyppX9jZX8GQ0wu$$94secnw6Wb-3gFM3AGEUx",
+        "target" : "jwiCjnMTYJMsrZNRujW6N$$tmAhybcV5ZprrwNamEYNU",
+        "targetPort" : "5CRR0HDfosogXlqMhVjmw$$cebx54gf9cL1vnMDnvjMF"
+      }, {
+        "id" : "dPoSPTFz0MAhi0zl9FcKH",
+        "source" : "jwiCjnMTYJMsrZNRujW6N$$tmAhybcV5ZprrwNamEYNU",
+        "sourcePort" : "2AvCO9oFzgaiV7K5nvcbF$$fdxahp_6Nn6sdlB76X9Ja",
+        "target" : "hVyIujyG7xAOpvd2U5xxV$$sak4tFL3ZP4Lb3gA58aR-",
+        "targetPort" : "HQYm7s1k6bcr_oDHRzkmn$$TH3TITpzGU27y1I35rkDQ"
+      } ],
+      "processes" : {
+        "mCSwaVgmXDkLXvCAFtMEY$$DJT9p4vc9_rkCEqmfRINM" : {
+          "id" : "mCSwaVgmXDkLXvCAFtMEY$$DJT9p4vc9_rkCEqmfRINM",
+          "component" : "WindowFunction",
+          "metadata" : {
+            "label" : "WindowFunction_1",
+            "slug" : "WindowFunction_1",
+            "x" : 115,
+            "y" : 159,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "0W1VUZip8nt2BLgrcAG7s$$-yuzMse4D4uJLmLROlYcE",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "fo6l-CiyppX9jZX8GQ0wu$$94secnw6Wb-3gFM3AGEUx",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "userSpecifiedEnd" : null,
+            "expressionColumns" : [ {
+              "target" : "row_num",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "row_number()"
+              },
+              "description" : "",
+              "_row_id" : ""
+            } ],
+            "frameType" : "row",
+            "partitionColumns" : [ {
+              "format" : "sql",
+              "expression" : "id"
+            } ],
+            "activeTab" : "windowUse",
+            "columnsSelector" : [ ],
+            "specifyFrame" : false,
+            "frameStart" : null,
+            "orderColumns" : [ {
+              "expression" : {
+                "format" : "sql",
+                "expression" : "updated_at"
+              },
+              "sortType" : "desc"
+            } ],
+            "frameEnd" : null,
+            "userSpecifiedStart" : null
+          }
+        },
+        "jwiCjnMTYJMsrZNRujW6N$$tmAhybcV5ZprrwNamEYNU" : {
+          "id" : "jwiCjnMTYJMsrZNRujW6N$$tmAhybcV5ZprrwNamEYNU",
+          "component" : "Filter",
+          "metadata" : {
+            "label" : "Filter_1",
+            "slug" : "Filter_1",
+            "x" : 899,
+            "y" : 149,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "5CRR0HDfosogXlqMhVjmw$$cebx54gf9cL1vnMDnvjMF",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "2AvCO9oFzgaiV7K5nvcbF$$fdxahp_6Nn6sdlB76X9Ja",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "condition" : {
+              "format" : "sql",
+              "expression" : "true"
+            }
+          }
+        }
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ]
+  }
+}

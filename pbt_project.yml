@@ -4,6 +4,18 @@ version: 0.0.1
 author: anshuman@simpledatalabs.com
 language: python
 pipelines:
+  pipelines/load_person_silver:
+    name: load_person_silver
+    description: ''
+    author: anshuman@simpledatalabs.com
+    mode: batch
+    language: python
+    createdAt: '2022-05-26 13:45:11'
+    datasets:
+      inputs:
+      - 5468/datasets/person_bronze
+      outputs: []
+    dependencies: {}
   pipelines/load_products_silver:
     name: load_products_silver
     description: ''
