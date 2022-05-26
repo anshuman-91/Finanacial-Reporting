@@ -95,7 +95,7 @@
         "selectedInputFields" : [ ]
       },
       "properties" : {
-        "script" : "if (in0.filter(col(\"balance\") < 0).count() > 0){\r\n    throw new RuntimeException(\"Found negative account balances\")\r\n}\r\nval out0 = in0\r\n    ",
+        "script" : "if (in0.filter(col(\"balance\") < 0).count() > 0):\r\n    raise Exception(\"Found negative account balances\")\r\nout0 = in0\r\n    ",
         "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
         "scriptMethodFooter" : "    return out0"
       }
@@ -150,9 +150,13 @@
         "selectedInputFields" : [ ]
       },
       "properties" : {
-        "columnsSelector" : [ ],
+        "columnsSelector" : [ "LLWnccoqOeco0tEFQWKjY$$O4qT6xmbkNozVyuFIdSFK##business_date", "LLWnccoqOeco0tEFQWKjY$$O4qT6xmbkNozVyuFIdSFK##acc_id" ],
         "dedupType" : "any",
-        "dedupColumns" : [ ]
+        "dedupColumns" : [ {
+          "colName" : "acc_id"
+        }, {
+          "colName" : "business_date"
+        } ]
       }
     },
     "MmimlghcPXRq2wmIPMzzr$$8bWjjLC-ez1CRT9QI2N1W" : {
@@ -161,8 +165,8 @@
       "metadata" : {
         "label" : "acc_status_silver",
         "slug" : "acc_status_silver",
-        "x" : 620.8999999999993,
-        "y" : 142.40000000000003,
+        "x" : 619.8999999999993,
+        "y" : 143.40000000000003,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -186,8 +190,8 @@
       "metadata" : {
         "label" : "null_check",
         "slug" : "null_check",
-        "x" : 98.19999999999997,
-        "y" : 148.80000000000018,
+        "x" : 102.19999999999997,
+        "y" : 146.80000000000018,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -205,7 +209,7 @@
         "selectedInputFields" : [ ]
       },
       "properties" : {
-        "script" : "if (in0.filter(\r\n    col(\"acc_id\").isNull\r\n    or col(\"person_id\").isNull\r\n    or col(\"product_id\").isNull\r\n    or col(\"business_date\").isNull\r\n    or col(\"balance\").isNull\r\n    ).count()> 0){\r\n    throw new RuntimeException(\"Schema Validation Failed\")\r\n}\r\nval out0 = in0\r\n",
+        "script" : "if (in0.filter(\r\n    col(\"acc_id\").isNull()\r\n    | col(\"person_id\").isNull()\r\n    | col(\"product_id\").isNull()\r\n    | col(\"business_date\").isNull()\r\n    | col(\"balance\").isNull()\r\n    ).count()> 0):\r\n    raise Exception(\"Schema Validation Failed\")\r\n\r\nout0 = in0\r\n",
         "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
         "scriptMethodFooter" : "    return out0"
       }

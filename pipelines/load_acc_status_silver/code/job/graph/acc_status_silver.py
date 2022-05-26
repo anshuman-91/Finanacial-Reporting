@@ -9,7 +9,7 @@ def acc_status_silver(spark: SparkSession, in0: DataFrame):
         in0.write\
             .option("header", True)\
             .option("sep", ",")\
-            .mode("error")\
+            .mode("append")\
             .option("separator", ",")\
             .option("header", True)\
             .csv("dbfs:/Prophecy/anshuman@simpledatalabs.com/fin_reporting/acc_status/silver")
