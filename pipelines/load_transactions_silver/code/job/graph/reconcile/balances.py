@@ -4,7 +4,7 @@ from pyspark.sql.types import *
 from job.config.ConfigStore import *
 from job.udfs.UDFs import *
 
-def balances_1(spark: SparkSession) -> DataFrame:
+def balances(spark: SparkSession) -> DataFrame:
     if Config.fabricName == "recipes_fabric":
         return spark.read\
             .format("parquet")\

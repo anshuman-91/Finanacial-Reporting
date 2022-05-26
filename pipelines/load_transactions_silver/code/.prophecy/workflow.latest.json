@@ -484,8 +484,8 @@
           "id" : "Du_v1Ogmy0lVyGKrQfGFi$$QtICrgBSGPTpodPAASKnJ",
           "component" : "Filter",
           "metadata" : {
-            "label" : "Filter_1",
-            "slug" : "Filter_1",
+            "label" : "row_num_eq1",
+            "slug" : "row_num_eq1",
             "x" : -36.49999999999994,
             "y" : 288.6,
             "language" : "python",
@@ -516,8 +516,8 @@
           "id" : "phheWdtyyavtAFMjkF0iy$$SkVX9n7xHVwR1Dy1F7eQP",
           "component" : "SchemaTransform",
           "metadata" : {
-            "label" : "SchemaTransform_1",
-            "slug" : "SchemaTransform_1",
+            "label" : "balance_change",
+            "slug" : "balance_change",
             "x" : 282.50000000000006,
             "y" : 285.6,
             "language" : "python",
@@ -537,7 +537,7 @@
             "selectedInputFields" : [ ]
           },
           "properties" : {
-            "columnsSelector" : [ "oD2j29iwaSLcNVdMXNnY-$$7o1wNIfElEkC7MxqNz47a##balance", "oD2j29iwaSLcNVdMXNnY-$$7o1wNIfElEkC7MxqNz47a##prev_balance" ],
+            "columnsSelector" : [ "oD2j29iwaSLcNVdMXNnY-$$7o1wNIfElEkC7MxqNz47a##prev_balance", "oD2j29iwaSLcNVdMXNnY-$$7o1wNIfElEkC7MxqNz47a##balance" ],
             "transformations" : [ {
               "kind" : "AddReplaceColumn",
               "AddReplaceColumn" : {
@@ -681,8 +681,8 @@
           "id" : "s6Q0uEf4_WSDFxAjP_RcT$$RpRSTVjzw0ooMMoxdG4Gc",
           "component" : "WindowFunction",
           "metadata" : {
-            "label" : "WindowFunction_1",
-            "slug" : "WindowFunction_1",
+            "label" : "add_row_num2",
+            "slug" : "add_row_num2",
             "x" : -196.99999999999986,
             "y" : 285.00000000000006,
             "language" : "python",
@@ -720,7 +720,7 @@
               "format" : "python",
               "expression" : "col(\"business_date\")"
             } ],
-            "activeTab" : "windowUse",
+            "activeTab" : "windowPartition",
             "columnsSelector" : [ ],
             "specifyFrame" : false,
             "frameStart" : null,
@@ -739,8 +739,8 @@
           "id" : "EWsICXz4bT9mloM_bs2Cb$$r62-uDsi8aW8R56Mvnj6c",
           "component" : "WindowFunction",
           "metadata" : {
-            "label" : "WindowFunction_2",
-            "slug" : "WindowFunction_2",
+            "label" : "prev_day_balance",
+            "slug" : "prev_day_balance",
             "x" : 112.50000000000006,
             "y" : 287.6,
             "language" : "python",
@@ -775,7 +775,7 @@
               "format" : "python",
               "expression" : "col(\"acc_id\")"
             } ],
-            "activeTab" : "windowUse",
+            "activeTab" : "windowOrder",
             "columnsSelector" : [ "6pG45X_-HM-flcKo7C9iU$$Xxi5YoBozQiUoR4QrqNpD##balance" ],
             "specifyFrame" : false,
             "frameStart" : null,
@@ -784,7 +784,7 @@
                 "format" : "python",
                 "expression" : "col(\"business_date\")"
               },
-              "sortType" : "desc"
+              "sortType" : "asc"
             } ],
             "frameEnd" : null,
             "userSpecifiedStart" : null
@@ -794,8 +794,8 @@
           "id" : "2QFCdetMj_zU5pJrD5YyL$$_s4XYLnImJJDxBQRNkK1D",
           "component" : "Source",
           "metadata" : {
-            "label" : "balances_1",
-            "slug" : "balances_1",
+            "label" : "balances",
+            "slug" : "balances",
             "x" : -378.99999999999966,
             "y" : 289.00000000000006,
             "language" : "python",
