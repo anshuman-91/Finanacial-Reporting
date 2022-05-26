@@ -3,7 +3,7 @@
     "id" : "1",
     "language" : "python",
     "fabricId" : "1010",
-    "frontEndLanguage" : "sql",
+    "frontEndLanguage" : "python",
     "mode" : "batch",
     "interimMode" : "Full",
     "udfs" : {
@@ -143,8 +143,8 @@
       "metadata" : {
         "label" : "dedup",
         "slug" : "dedup",
-        "x" : 305,
-        "y" : 166,
+        "x" : 304,
+        "y" : 165,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -175,19 +175,70 @@
         "target" : "WrABjbeI7rDavjPNHHOIB$$9iN0n3-dwAGjJ4xr0S5pf",
         "targetPort" : "CcCVkXF7j4RYmX1t0pNiM$$uR9eXX_OsIldQBk1Su9ks"
       }, {
-        "id" : "w2FLo9F2SuoUUs6SEw5z1",
+        "id" : "TMw1VNUnkaV2YVNun-2WR",
         "source" : "WrABjbeI7rDavjPNHHOIB$$9iN0n3-dwAGjJ4xr0S5pf",
         "sourcePort" : "y2pgmAZjiP1FrQjugFQQF$$U5RY0qt6lnMGQbNKK_a6I",
+        "target" : "YCOVHSJobVHuJKm0Rxusq$$l3MgkhUFPmQkVHPj987SR",
+        "targetPort" : "V8JU2WyuQFIc5DE-at_OD$$ot6XjGalLvYHxqB82MEf8"
+      }, {
+        "id" : "heRhd2QRmai8OXgbzljYy",
+        "source" : "YCOVHSJobVHuJKm0Rxusq$$l3MgkhUFPmQkVHPj987SR",
+        "sourcePort" : "u6J0Ab1ehoUAz8gYLX6iQ$$-kf8QPHWzAlOv-hkl93Dz",
         "target" : "PDiLbDJag43b_VOXHul6o$$zLBPZrmWUokfKpueqiF0y",
         "targetPort" : "CoFX08MLea8QpbrXnZhwn$$oiw20JRCgFCWrCekdscbn"
       } ],
       "processes" : {
+        "YCOVHSJobVHuJKm0Rxusq$$l3MgkhUFPmQkVHPj987SR" : {
+          "id" : "YCOVHSJobVHuJKm0Rxusq$$l3MgkhUFPmQkVHPj987SR",
+          "component" : "SchemaTransform",
+          "metadata" : {
+            "label" : "drop_row_num",
+            "slug" : "drop_row_num",
+            "x" : 1136.2000000000003,
+            "y" : 148.10000000000002,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V8JU2WyuQFIc5DE-at_OD$$ot6XjGalLvYHxqB82MEf8",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "u6J0Ab1ehoUAz8gYLX6iQ$$-kf8QPHWzAlOv-hkl93Dz",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "columnsSelector" : [ "V8JU2WyuQFIc5DE-at_OD$$ot6XjGalLvYHxqB82MEf8##row_num" ],
+            "transformations" : [ {
+              "kind" : "DropColumn",
+              "DropColumn" : {
+                "sourceColumn" : "row_num"
+              },
+              "RenameColumn" : {
+                "sourceColumn" : "",
+                "targetColumn" : ""
+              },
+              "AddReplaceColumn" : {
+                "sourceColumn" : "",
+                "expression" : {
+                  "expression" : "",
+                  "format" : "python"
+                }
+              }
+            } ]
+          }
+        },
         "WrABjbeI7rDavjPNHHOIB$$9iN0n3-dwAGjJ4xr0S5pf" : {
           "id" : "WrABjbeI7rDavjPNHHOIB$$9iN0n3-dwAGjJ4xr0S5pf",
           "component" : "Filter",
           "metadata" : {
-            "label" : "Filter_1",
-            "slug" : "Filter_1",
+            "label" : "row_num_eq_1",
+            "slug" : "row_num_eq_1",
             "x" : 808,
             "y" : 162,
             "language" : "python",
@@ -209,8 +260,8 @@
           "properties" : {
             "columnsSelector" : [ "CcCVkXF7j4RYmX1t0pNiM$$uR9eXX_OsIldQBk1Su9ks##row_num" ],
             "condition" : {
-              "format" : "sql",
-              "expression" : "row_num = 1"
+              "format" : "python",
+              "expression" : "(col(\"row_num\") == lit(1))"
             }
           }
         },
@@ -218,8 +269,8 @@
           "id" : "U25aak7f83f6XnlI8mH8c$$bnx3H64pguwp3mlk2eFTa",
           "component" : "WindowFunction",
           "metadata" : {
-            "label" : "WindowFunction_1",
-            "slug" : "WindowFunction_1",
+            "label" : "add_row_num",
+            "slug" : "add_row_num",
             "x" : 308,
             "y" : 165,
             "language" : "python",
@@ -243,7 +294,7 @@
             "expressionColumns" : [ {
               "target" : "row_num",
               "expression" : {
-                "format" : "sql",
+                "format" : "python",
                 "expression" : "row_number()"
               },
               "description" : "",
@@ -251,8 +302,8 @@
             } ],
             "frameType" : "row",
             "partitionColumns" : [ {
-              "format" : "sql",
-              "expression" : "id"
+              "format" : "python",
+              "expression" : "col(\"id\")"
             } ],
             "activeTab" : "windowUse",
             "columnsSelector" : [ ],
@@ -260,8 +311,14 @@
             "frameStart" : null,
             "orderColumns" : [ {
               "expression" : {
-                "format" : "sql",
-                "expression" : "updated_at"
+                "format" : "python",
+                "expression" : "col(\"updated_at\")"
+              },
+              "sortType" : "desc"
+            }, {
+              "expression" : {
+                "format" : "python",
+                "expression" : "col(\"import_ts\")"
               },
               "sortType" : "desc"
             } ],
@@ -275,8 +332,8 @@
       "id" : "OvXfcyisCTYnQ8WqN9iU5$$eZls_uq5cBDU4M9xqu8bp",
       "component" : "SchemaTransform",
       "metadata" : {
-        "label" : "import_ts",
-        "slug" : "import_ts",
+        "label" : "business_date",
+        "slug" : "business_date",
         "x" : 805,
         "y" : 158,
         "language" : "python",
@@ -302,8 +359,8 @@
           "AddReplaceColumn" : {
             "sourceColumn" : "business_date",
             "expression" : {
-              "format" : "sql",
-              "expression" : "current_date()"
+              "format" : "python",
+              "expression" : "to_date(lit(\"2022-05-05\"),\"yyyy-MM-dd\")"
             }
           },
           "DropColumn" : {
@@ -323,7 +380,7 @@
         "label" : "products_silver",
         "slug" : "products_silver",
         "x" : 1135,
-        "y" : 152.99999999999997,
+        "y" : 156.99999999999997,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -400,43 +457,43 @@
         "expressions" : [ {
           "target" : "id",
           "expression" : {
-            "format" : "sql",
-            "expression" : "id"
+            "format" : "python",
+            "expression" : "col(\"id\")"
           },
           "description" : ""
         }, {
           "target" : "name",
           "expression" : {
-            "format" : "sql",
-            "expression" : "name"
+            "format" : "python",
+            "expression" : "col(\"name\")"
           },
           "description" : ""
         }, {
           "target" : "slug",
           "expression" : {
-            "format" : "sql",
-            "expression" : "slug"
+            "format" : "python",
+            "expression" : "col(\"slug\")"
           },
           "description" : ""
         }, {
           "target" : "bonus_rate",
           "expression" : {
-            "format" : "sql",
-            "expression" : "properties.bonus_rate"
+            "format" : "python",
+            "expression" : "col(\"properties.bonus_rate\")"
           },
           "description" : ""
         }, {
           "target" : "lock_in_period",
           "expression" : {
-            "format" : "sql",
-            "expression" : "properties.lock_in_period"
+            "format" : "python",
+            "expression" : "col(\"properties.lock_in_period\")"
           },
           "description" : ""
         }, {
           "target" : "import_ts",
           "expression" : {
-            "format" : "sql",
-            "expression" : "import_ts"
+            "format" : "python",
+            "expression" : "col(\"import_ts\")"
           },
           "description" : ""
         } ]

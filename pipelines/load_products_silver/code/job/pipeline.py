@@ -10,8 +10,8 @@ def pipeline(spark: SparkSession) -> None:
     df_dedup = dedup(spark, df_products_bronze)
     df_flatten_schema = flatten_schema(spark, df_dedup)
     df_null_check = null_check(spark, df_flatten_schema)
-    df_import_ts = import_ts(spark, df_null_check)
-    df_validate_bonus_rate = validate_bonus_rate(spark, df_import_ts)
+    df_business_date = business_date(spark, df_null_check)
+    df_validate_bonus_rate = validate_bonus_rate(spark, df_business_date)
     products_silver(spark, df_validate_bonus_rate)
 
 def main():
