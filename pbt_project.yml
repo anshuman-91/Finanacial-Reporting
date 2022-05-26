@@ -57,7 +57,7 @@ pipelines:
       inputs:
       - 5468/datasets/transactions_bronze
       outputs:
-      - 5468/datasets/acc_status_silver
+      - 5468/datasets/transactions_silver
     dependencies: {}
   pipelines/load_transactions_bronze:
     name: load_transactions_bronze
@@ -207,6 +207,18 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-25 15:33:43'
+  datasets/transactions_silver:
+    name: transactions_silver
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-05-26 07:01:53'
+    physicalDatasets:
+      recipes_fabric:
+        fabricId: 1010
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-26 07:01:53'
   datasets/acc_status_silver:
     name: acc_status_silver
     description: ''
