@@ -36,7 +36,7 @@ def Generator(spark: SparkSession) -> (DataFrame, DataFrame, DataFrame, DataFram
           datetime.datetime.strptime("2022-05-05T12:05:11.135-05:00", "%Y-%m-%dT%H:%M:%S.%f%z")),
          (3, "a2d", datetime.date(2022, 5, 5), 449.5, "CREDIT",
           datetime.datetime.strptime("2022-05-05T15:05:15.154-05:00", "%Y-%m-%dT%H:%M:%S.%f%z")),
-         (3, "a2e", datetime.date(2022, 5, 5), 449.5, "CREDIT",
+         (3, "a2e", datetime.date(2022, 5, 5), 450.5, "CREDIT",
           datetime.datetime.strptime("2022-05-05T18:05:31.130-05:00", "%Y-%m-%dT%H:%M:%S.%f%z")),
          (3, "a2f", datetime.date(2022, 5, 5), 100.0, "INTEREST",
           datetime.datetime.strptime("2022-05-05T22:45:55.116-05:00", "%Y-%m-%dT%H:%M:%S.%f%z")),],

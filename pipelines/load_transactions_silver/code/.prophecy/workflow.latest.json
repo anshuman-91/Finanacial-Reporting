@@ -101,8 +101,171 @@
         "selectedInputFields" : [ ]
       },
       "properties" : { },
-      "connections" : [ ],
-      "processes" : { }
+      "connections" : [ {
+        "id" : "KLD0mm14NF1eYvduZ90UF",
+        "source" : "qOMcMJD5KdXnqRv18_XLv$$fG4oFssWcvf0n3CpOAiYq",
+        "sourcePort" : "Y2vsnYVA4YMpTHRbbIV5z$$w8da2sZqDLeeMD-rXCa6R",
+        "target" : "BQBNht8IbAMzxoFQIp053$$mQuFYS9xVivksTtpYh75u",
+        "targetPort" : "5SPw7BKF2anDBYqvCF29b$$UsHkoFUxEQt9ezIISw1aF"
+      }, {
+        "id" : "zLVJE22wffQ5hx6KVVRSi",
+        "source" : "BQBNht8IbAMzxoFQIp053$$mQuFYS9xVivksTtpYh75u",
+        "sourcePort" : "_mYOuB5Afkx7LcZfzjJ4J$$ppNlEejKJl3JyncrEWFbd",
+        "target" : "hf1Bhkjn2IFb3bztTbkr6$$d8zvfaEiDgY-tKkPxwhro",
+        "targetPort" : "9Hw1kX60PN3qVicxih8JB$$tLOEt18Z4-7_yXjyaMlfI"
+      }, {
+        "id" : "6CLRAGYRZxsNd0oZfq-HV",
+        "source" : "hf1Bhkjn2IFb3bztTbkr6$$d8zvfaEiDgY-tKkPxwhro",
+        "sourcePort" : "Zv3SFVN5AQFYjIMw_8LF7$$IFR39_jIugCtl93ewBpGH",
+        "target" : "XbCkIMXVxXKPjEq4nYO7Y$$Cw0ssg5X3cwQT2L_1bFhz",
+        "targetPort" : "GlQ5oM6u9PE7cnyZ6ldVj$$y6lOfBL1iVSyaRmhBaRco"
+      }, {
+        "id" : "3rfo2VPZ06TIyNhIDbEVI",
+        "source" : "XbCkIMXVxXKPjEq4nYO7Y$$Cw0ssg5X3cwQT2L_1bFhz",
+        "sourcePort" : "o6T8y1RTua6TA0TOMAh_l$$mU_FQ6jcCWyOUbsX2a041",
+        "target" : "qOMcMJD5KdXnqRv18_XLv$$fG4oFssWcvf0n3CpOAiYq",
+        "targetPort" : "bPEzTVveoozxdqpsjiin3$$-aZ7psVxylbnfKpFEJMWz"
+      } ],
+      "processes" : {
+        "hf1Bhkjn2IFb3bztTbkr6$$d8zvfaEiDgY-tKkPxwhro" : {
+          "id" : "hf1Bhkjn2IFb3bztTbkr6$$d8zvfaEiDgY-tKkPxwhro",
+          "component" : "Filter",
+          "metadata" : {
+            "label" : "row_num_eq_1",
+            "slug" : "row_num_eq_1",
+            "x" : 724,
+            "y" : 372,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "9Hw1kX60PN3qVicxih8JB$$tLOEt18Z4-7_yXjyaMlfI",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "Zv3SFVN5AQFYjIMw_8LF7$$IFR39_jIugCtl93ewBpGH",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "columnsSelector" : [ "9Hw1kX60PN3qVicxih8JB$$tLOEt18Z4-7_yXjyaMlfI##row_num" ],
+            "condition" : {
+              "format" : "python",
+              "expression" : "col(\"row_num\") == 1"
+            }
+          }
+        },
+        "XbCkIMXVxXKPjEq4nYO7Y$$Cw0ssg5X3cwQT2L_1bFhz" : {
+          "id" : "XbCkIMXVxXKPjEq4nYO7Y$$Cw0ssg5X3cwQT2L_1bFhz",
+          "component" : "SchemaTransform",
+          "metadata" : {
+            "label" : "drop_row_num",
+            "slug" : "drop_row_num",
+            "x" : 1147,
+            "y" : 382,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "GlQ5oM6u9PE7cnyZ6ldVj$$y6lOfBL1iVSyaRmhBaRco",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "o6T8y1RTua6TA0TOMAh_l$$mU_FQ6jcCWyOUbsX2a041",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "columnsSelector" : [ "GlQ5oM6u9PE7cnyZ6ldVj$$y6lOfBL1iVSyaRmhBaRco##row_num" ],
+            "transformations" : [ {
+              "kind" : "DropColumn",
+              "DropColumn" : {
+                "sourceColumn" : "row_num"
+              },
+              "RenameColumn" : {
+                "sourceColumn" : "",
+                "targetColumn" : ""
+              },
+              "AddReplaceColumn" : {
+                "sourceColumn" : "",
+                "expression" : {
+                  "expression" : "",
+                  "format" : "python"
+                }
+              }
+            } ]
+          }
+        },
+        "BQBNht8IbAMzxoFQIp053$$mQuFYS9xVivksTtpYh75u" : {
+          "id" : "BQBNht8IbAMzxoFQIp053$$mQuFYS9xVivksTtpYh75u",
+          "component" : "WindowFunction",
+          "metadata" : {
+            "label" : "add_row_num",
+            "slug" : "add_row_num",
+            "x" : 285,
+            "y" : 330,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "5SPw7BKF2anDBYqvCF29b$$UsHkoFUxEQt9ezIISw1aF",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "_mYOuB5Afkx7LcZfzjJ4J$$ppNlEejKJl3JyncrEWFbd",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "userSpecifiedEnd" : null,
+            "expressionColumns" : [ {
+              "target" : "row_num",
+              "expression" : {
+                "format" : "python",
+                "expression" : "row_number()"
+              },
+              "description" : "",
+              "_row_id" : ""
+            } ],
+            "frameType" : "row",
+            "partitionColumns" : [ {
+              "format" : "python",
+              "expression" : "col(\"tran_id\")"
+            } ],
+            "activeTab" : "windowUse",
+            "columnsSelector" : [ ],
+            "specifyFrame" : false,
+            "frameStart" : null,
+            "orderColumns" : [ {
+              "expression" : {
+                "format" : "python",
+                "expression" : "col(\"tran_ts\")"
+              },
+              "sortType" : "desc"
+            }, {
+              "expression" : {
+                "format" : "python",
+                "expression" : "col(\"import_ts\")"
+              },
+              "sortType" : "desc"
+            } ],
+            "frameEnd" : null,
+            "userSpecifiedStart" : null
+          }
+        }
+      }
     },
     "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM" : {
       "id" : "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM",
