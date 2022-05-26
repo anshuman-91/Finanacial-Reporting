@@ -3,7 +3,7 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from . import *
 
-def reconcile(spark: SparkSession, in0: DataFrame) -> None:
+def reconcile(spark: SparkSession, in0: DataFrame) -> DataFrame:
     df_signed_tran_amt_1 = signed_tran_amt_1(spark, in0)
     df_sum_trans = sum_trans(spark, df_signed_tran_amt_1)
     df_balances_1 = balances_1(spark)
@@ -14,3 +14,5 @@ def reconcile(spark: SparkSession, in0: DataFrame) -> None:
     df_join_tran_balance = join_tran_balance(spark, df_sum_trans, df_SchemaTransform_1)
     df_unmatched = unmatched(spark, df_join_tran_balance)
     df_check_unmatches = check_unmatches(spark, df_unmatched)
+
+    return df_check_unmatches
