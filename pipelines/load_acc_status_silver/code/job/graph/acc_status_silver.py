@@ -6,6 +6,10 @@ from job.udfs.UDFs import *
 
 def acc_status_silver(spark: SparkSession, in0: DataFrame):
     if Config.fabricName == "recipes_fabric":
-        in0.write.format("parquet").save("dbfs:/Prophecy/anshuman@simpledatalabs.com/fin_reporting/acc_status/silver/")
+        in0.write\
+            .format("parquet")\
+            .mode("overwrite")\
+            .partitionBy("business_date", "import_ts")\
+            .save("dbfs:/Prophecy/anshuman@simpledatalabs.com/fin_reporting/acc_status/silver/")
     else:
         raise Exception("No valid dataset present to read fabric")

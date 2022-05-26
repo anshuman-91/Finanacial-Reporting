@@ -7,22 +7,22 @@ schema:
     nullable: true
     metadata: {}
   - name: person_id
-    type: integer
+    type: string
     nullable: true
     metadata: {}
   - name: product_id
-    type: integer
-    nullable: true
-    metadata: {}
-  - name: balance
-    type: double
+    type: string
     nullable: true
     metadata: {}
   - name: business_date
     type: date
     nullable: true
     metadata: {}
+  - name: balance
+    type: double
+    nullable: true
+    metadata: {}
   - name: import_ts
-    type: string
+    type: timestamp
     nullable: true
     metadata: {}
