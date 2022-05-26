@@ -141,8 +141,8 @@
       "id" : "PDiLbDJag43b_VOXHul6o$$zLBPZrmWUokfKpueqiF0y",
       "component" : "Subgraph",
       "metadata" : {
-        "label" : "dedup",
-        "slug" : "dedup",
+        "label" : "latest",
+        "slug" : "latest",
         "x" : 304,
         "y" : 165,
         "language" : "python",
