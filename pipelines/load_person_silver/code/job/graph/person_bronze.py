@@ -15,7 +15,7 @@ def person_bronze(spark: SparkSession) -> DataFrame:
                   StructField("address_line1", StringType(), True), StructField("address_line2", StringType(), True), StructField("postal_code", StringType(), True), StructField("type", StringType(), True)
               ]), 
                 True
-              ), True), StructField("email", StringType(), True), StructField("id", StringType(), True), StructField("import_ts", TimestampType(), True), StructField("name", StringType(), True), StructField("updated_at", TimestampType(), True)
+              ), True), StructField("email", StringType(), True), StructField("id", StringType(), True), StructField("name", StringType(), True), StructField("updated_at", TimestampType(), True)
             ])
             )\
             .load("dbfs:/Prophecy/anshuman@simpledatalabs.com/fin_reporting/person/bronze/")

@@ -12,7 +12,7 @@ def products_bronze(spark: SparkSession) -> DataFrame:
               StructType([
                 StructField("id", StringType(), True), StructField("name", StringType(), True), StructField("properties", StructType([
                   StructField("bonus_rate", DoubleType(), True), StructField("lock_in_period", IntegerType(), True)
-                ]), True), StructField("slug", StringType(), True), StructField("updated_at", TimestampType(), True), StructField("import_ts", TimestampType(), True)
+                ]), True), StructField("slug", StringType(), True), StructField("updated_at", TimestampType(), True)
             ])
             )\
             .load("dbfs:/Prophecy/anshuman@simpledatalabs.com/fin_reporting/products/bronze/")

@@ -9,7 +9,7 @@ def acc_status_bronze(spark: SparkSession) -> DataFrame:
         return spark.read\
             .schema(
               StructType([
-                StructField("acc_id", IntegerType(), True), StructField("person_id", StringType(), True), StructField("product_id", StringType(), True), StructField("business_date", DateType(), True), StructField("balance", DoubleType(), True), StructField("import_ts", TimestampType(), True)
+                StructField("acc_id", IntegerType(), True), StructField("person_id", StringType(), True), StructField("product_id", StringType(), True), StructField("business_date", DateType(), True), StructField("balance", DoubleType(), True)
             ])
             )\
             .option("header", True)\

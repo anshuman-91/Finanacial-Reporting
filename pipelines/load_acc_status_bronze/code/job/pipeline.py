@@ -6,8 +6,8 @@ from job.udfs.UDFs import *
 from job.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_acc_status_external = acc_status_external(spark)
-    acc_status_bronze(spark, df_acc_status_external)
+    df_load_external = load_external(spark)
+    ingest_bronze(spark, df_load_external)
 
 def main():
     Utils.initializeFromArgs(Utils.parseArgs())
