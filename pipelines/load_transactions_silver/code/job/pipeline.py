@@ -8,8 +8,8 @@ from job.graph import *
 def pipeline(spark: SparkSession) -> None:
     df_transactions_bronze = transactions_bronze(spark)
     df_null_check = null_check(spark, df_transactions_bronze)
-    df_latest = latest(spark, df_null_check)
-    df_dvr = dvr(spark, df_latest)
+    df_dedup = dedup(spark, df_null_check)
+    df_dvr = dvr(spark, df_dedup)
     df_reconcile = reconcile(spark, df_dvr)
     transactions_silver(spark, df_dvr)
 

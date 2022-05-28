@@ -63,210 +63,19 @@
     "target" : "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM",
     "targetPort" : "1FOB5EHzjVp8PpnpFzyiN$$GaMnwl78GJN1Td-WI9PT8"
   }, {
-    "id" : "pra_GPd-2rrc0tiSe1XDH",
+    "id" : "VoOyNlf6KRYt9b7H__EXM",
     "source" : "yIzCcksEp5W4O9sg249sb$$VI5w40Q9pssvW4FGSrPNb",
     "sourcePort" : "igH4ftCtj675irjYrnxff$$l4lrHhTXGx5lj63gHUuxA",
-    "target" : "qOMcMJD5KdXnqRv18_XLv$$fG4oFssWcvf0n3CpOAiYq",
-    "targetPort" : "Y2vsnYVA4YMpTHRbbIV5z$$w8da2sZqDLeeMD-rXCa6R"
+    "target" : "DUY5W7JUSV-7i6ML0elaq$$X3kfg2OOP4B4j9gw1BKeU",
+    "targetPort" : "laKNEoVYPNlBd6Jnkm267$$miBOOdOPTm2CbtcLHvT2i"
   }, {
-    "id" : "6OSfbpq8wIGAubOYQeJ68",
-    "source" : "qOMcMJD5KdXnqRv18_XLv$$fG4oFssWcvf0n3CpOAiYq",
-    "sourcePort" : "bPEzTVveoozxdqpsjiin3$$-aZ7psVxylbnfKpFEJMWz",
+    "id" : "tqihByQqilq3KGM8SXKWi",
+    "source" : "DUY5W7JUSV-7i6ML0elaq$$X3kfg2OOP4B4j9gw1BKeU",
+    "sourcePort" : "hGENVLRo1_H19tnLqYbem$$oNOekpG8PlVWRx7Szefgs",
     "target" : "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE",
     "targetPort" : "UxcIzasK5ROxncIrS1C3V$$g4XaK0i8E9QNAibCEPEmL"
   } ],
   "processes" : {
-    "qOMcMJD5KdXnqRv18_XLv$$fG4oFssWcvf0n3CpOAiYq" : {
-      "id" : "qOMcMJD5KdXnqRv18_XLv$$fG4oFssWcvf0n3CpOAiYq",
-      "component" : "Subgraph",
-      "metadata" : {
-        "label" : "latest",
-        "slug" : "latest",
-        "x" : 699.3499999999995,
-        "y" : 273.9000000000002,
-        "language" : "python",
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "Y2vsnYVA4YMpTHRbbIV5z$$w8da2sZqDLeeMD-rXCa6R",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "bPEzTVveoozxdqpsjiin3$$-aZ7psVxylbnfKpFEJMWz",
-          "slug" : "out0"
-        } ],
-        "selectedInputFields" : [ ]
-      },
-      "properties" : { },
-      "connections" : [ {
-        "id" : "KLD0mm14NF1eYvduZ90UF",
-        "source" : "qOMcMJD5KdXnqRv18_XLv$$fG4oFssWcvf0n3CpOAiYq",
-        "sourcePort" : "Y2vsnYVA4YMpTHRbbIV5z$$w8da2sZqDLeeMD-rXCa6R",
-        "target" : "BQBNht8IbAMzxoFQIp053$$mQuFYS9xVivksTtpYh75u",
-        "targetPort" : "5SPw7BKF2anDBYqvCF29b$$UsHkoFUxEQt9ezIISw1aF"
-      }, {
-        "id" : "zLVJE22wffQ5hx6KVVRSi",
-        "source" : "BQBNht8IbAMzxoFQIp053$$mQuFYS9xVivksTtpYh75u",
-        "sourcePort" : "_mYOuB5Afkx7LcZfzjJ4J$$ppNlEejKJl3JyncrEWFbd",
-        "target" : "hf1Bhkjn2IFb3bztTbkr6$$d8zvfaEiDgY-tKkPxwhro",
-        "targetPort" : "9Hw1kX60PN3qVicxih8JB$$tLOEt18Z4-7_yXjyaMlfI"
-      }, {
-        "id" : "6CLRAGYRZxsNd0oZfq-HV",
-        "source" : "hf1Bhkjn2IFb3bztTbkr6$$d8zvfaEiDgY-tKkPxwhro",
-        "sourcePort" : "Zv3SFVN5AQFYjIMw_8LF7$$IFR39_jIugCtl93ewBpGH",
-        "target" : "XbCkIMXVxXKPjEq4nYO7Y$$Cw0ssg5X3cwQT2L_1bFhz",
-        "targetPort" : "GlQ5oM6u9PE7cnyZ6ldVj$$y6lOfBL1iVSyaRmhBaRco"
-      }, {
-        "id" : "3rfo2VPZ06TIyNhIDbEVI",
-        "source" : "XbCkIMXVxXKPjEq4nYO7Y$$Cw0ssg5X3cwQT2L_1bFhz",
-        "sourcePort" : "o6T8y1RTua6TA0TOMAh_l$$mU_FQ6jcCWyOUbsX2a041",
-        "target" : "qOMcMJD5KdXnqRv18_XLv$$fG4oFssWcvf0n3CpOAiYq",
-        "targetPort" : "bPEzTVveoozxdqpsjiin3$$-aZ7psVxylbnfKpFEJMWz"
-      } ],
-      "processes" : {
-        "hf1Bhkjn2IFb3bztTbkr6$$d8zvfaEiDgY-tKkPxwhro" : {
-          "id" : "hf1Bhkjn2IFb3bztTbkr6$$d8zvfaEiDgY-tKkPxwhro",
-          "component" : "Filter",
-          "metadata" : {
-            "label" : "row_num_eq_1",
-            "slug" : "row_num_eq_1",
-            "x" : 724,
-            "y" : 372,
-            "language" : "python",
-            "phase" : 0,
-            "cache" : false,
-            "detailedStats" : false
-          },
-          "ports" : {
-            "inputs" : [ {
-              "id" : "9Hw1kX60PN3qVicxih8JB$$tLOEt18Z4-7_yXjyaMlfI",
-              "slug" : "in0"
-            } ],
-            "outputs" : [ {
-              "id" : "Zv3SFVN5AQFYjIMw_8LF7$$IFR39_jIugCtl93ewBpGH",
-              "slug" : "out"
-            } ],
-            "selectedInputFields" : [ ]
-          },
-          "properties" : {
-            "columnsSelector" : [ "9Hw1kX60PN3qVicxih8JB$$tLOEt18Z4-7_yXjyaMlfI##row_num" ],
-            "condition" : {
-              "format" : "python",
-              "expression" : "col(\"row_num\") == 1"
-            }
-          }
-        },
-        "XbCkIMXVxXKPjEq4nYO7Y$$Cw0ssg5X3cwQT2L_1bFhz" : {
-          "id" : "XbCkIMXVxXKPjEq4nYO7Y$$Cw0ssg5X3cwQT2L_1bFhz",
-          "component" : "SchemaTransform",
-          "metadata" : {
-            "label" : "drop_row_num",
-            "slug" : "drop_row_num",
-            "x" : 1147,
-            "y" : 382,
-            "language" : "python",
-            "phase" : 0,
-            "cache" : false,
-            "detailedStats" : false
-          },
-          "ports" : {
-            "inputs" : [ {
-              "id" : "GlQ5oM6u9PE7cnyZ6ldVj$$y6lOfBL1iVSyaRmhBaRco",
-              "slug" : "in0"
-            } ],
-            "outputs" : [ {
-              "id" : "o6T8y1RTua6TA0TOMAh_l$$mU_FQ6jcCWyOUbsX2a041",
-              "slug" : "out"
-            } ],
-            "selectedInputFields" : [ ]
-          },
-          "properties" : {
-            "columnsSelector" : [ "GlQ5oM6u9PE7cnyZ6ldVj$$y6lOfBL1iVSyaRmhBaRco##row_num" ],
-            "transformations" : [ {
-              "kind" : "DropColumn",
-              "DropColumn" : {
-                "sourceColumn" : "row_num"
-              },
-              "RenameColumn" : {
-                "sourceColumn" : "",
-                "targetColumn" : ""
-              },
-              "AddReplaceColumn" : {
-                "sourceColumn" : "",
-                "expression" : {
-                  "expression" : "",
-                  "format" : "python"
-                }
-              }
-            } ]
-          }
-        },
-        "BQBNht8IbAMzxoFQIp053$$mQuFYS9xVivksTtpYh75u" : {
-          "id" : "BQBNht8IbAMzxoFQIp053$$mQuFYS9xVivksTtpYh75u",
-          "component" : "WindowFunction",
-          "metadata" : {
-            "label" : "add_row_num",
-            "slug" : "add_row_num",
-            "x" : 285,
-            "y" : 330,
-            "language" : "python",
-            "phase" : 0,
-            "cache" : false,
-            "detailedStats" : false
-          },
-          "ports" : {
-            "inputs" : [ {
-              "id" : "5SPw7BKF2anDBYqvCF29b$$UsHkoFUxEQt9ezIISw1aF",
-              "slug" : "in0"
-            } ],
-            "outputs" : [ {
-              "id" : "_mYOuB5Afkx7LcZfzjJ4J$$ppNlEejKJl3JyncrEWFbd",
-              "slug" : "out"
-            } ],
-            "selectedInputFields" : [ ]
-          },
-          "properties" : {
-            "userSpecifiedEnd" : null,
-            "expressionColumns" : [ {
-              "target" : "row_num",
-              "expression" : {
-                "format" : "python",
-                "expression" : "row_number()"
-              },
-              "description" : "",
-              "_row_id" : ""
-            } ],
-            "frameType" : "row",
-            "partitionColumns" : [ {
-              "format" : "python",
-              "expression" : "col(\"tran_id\")"
-            } ],
-            "activeTab" : "windowUse",
-            "columnsSelector" : [ ],
-            "specifyFrame" : false,
-            "frameStart" : null,
-            "orderColumns" : [ {
-              "expression" : {
-                "format" : "python",
-                "expression" : "col(\"tran_ts\")"
-              },
-              "sortType" : "desc"
-            }, {
-              "expression" : {
-                "format" : "python",
-                "expression" : "col(\"import_ts\")"
-              },
-              "sortType" : "desc"
-            } ],
-            "frameEnd" : null,
-            "userSpecifiedStart" : null
-          }
-        }
-      }
-    },
     "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM" : {
       "id" : "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM",
       "component" : "Subgraph",
@@ -366,8 +175,8 @@
           "metadata" : {
             "label" : "join_tran_balance",
             "slug" : "join_tran_balance",
-            "x" : 450.50000000000006,
-            "y" : 119.60000000000002,
+            "x" : 454.50000000000006,
+            "y" : 130.60000000000002,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -429,8 +238,10 @@
               "description" : "",
               "_row_id" : ""
             } ],
+            "allIn1" : false,
             "activeTab" : "expressions",
-            "columnsSelector" : [ "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##business_date", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##business_date", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##acc_id", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##balance_change", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##business_date", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##signed_tran_amount" ],
+            "columnsSelector" : [ "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##business_date", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##acc_id", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##business_date", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##business_date", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##balance_change", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##signed_tran_amount" ],
+            "allIn0" : false,
             "whereClause" : null,
             "headAlias" : "in0"
           }
@@ -442,7 +253,7 @@
             "label" : "signed_tran_amt_1",
             "slug" : "signed_tran_amt_1",
             "x" : -391.99999999999966,
-            "y" : 106,
+            "y" : 120,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -486,7 +297,7 @@
           "metadata" : {
             "label" : "row_num_eq1",
             "slug" : "row_num_eq1",
-            "x" : -36.49999999999994,
+            "x" : -41.49999999999994,
             "y" : 288.6,
             "language" : "python",
             "phase" : 0,
@@ -519,7 +330,7 @@
             "label" : "balance_change",
             "slug" : "balance_change",
             "x" : 282.50000000000006,
-            "y" : 285.6,
+            "y" : 286.6,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -564,7 +375,7 @@
             "label" : "sum_trans",
             "slug" : "sum_trans",
             "x" : -217.9999999999999,
-            "y" : 105,
+            "y" : 120,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -582,6 +393,7 @@
             "selectedInputFields" : [ ]
           },
           "properties" : {
+            "allIns" : false,
             "doPivot" : false,
             "aggregate" : [ {
               "target" : "signed_tran_amount",
@@ -595,7 +407,7 @@
             "pivotColumn" : null,
             "pivotValues" : [ ],
             "activeTab" : "aggregate",
-            "columnsSelector" : [ "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##signed_tran_amt", "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##acc_id", "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##business_date" ],
+            "columnsSelector" : [ "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##business_date", "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##signed_tran_amt", "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##acc_id" ],
             "groupBy" : [ {
               "target" : "acc_id",
               "expression" : {
@@ -621,8 +433,8 @@
           "metadata" : {
             "label" : "check_unmatches",
             "slug" : "check_unmatches",
-            "x" : 731.5,
-            "y" : 118.60000000000002,
+            "x" : 750.5,
+            "y" : 129.60000000000002,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -651,8 +463,8 @@
           "metadata" : {
             "label" : "unmatched",
             "slug" : "unmatched",
-            "x" : 590.5000000000001,
-            "y" : 119.60000000000002,
+            "x" : 596.5000000000001,
+            "y" : 130.60000000000002,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -670,7 +482,7 @@
             "selectedInputFields" : [ ]
           },
           "properties" : {
-            "columnsSelector" : [ "GvjC2-iazyVI-1LU23-md$$wKUvPn5LKlwBO-23kR3t3##signed_tran_amount", "GvjC2-iazyVI-1LU23-md$$wKUvPn5LKlwBO-23kR3t3##bal_change" ],
+            "columnsSelector" : [ "GvjC2-iazyVI-1LU23-md$$wKUvPn5LKlwBO-23kR3t3##bal_change", "GvjC2-iazyVI-1LU23-md$$wKUvPn5LKlwBO-23kR3t3##signed_tran_amount" ],
             "condition" : {
               "format" : "python",
               "expression" : "col(\"bal_change\")!= col(\"signed_tran_amount\")"
@@ -683,8 +495,8 @@
           "metadata" : {
             "label" : "add_row_num2",
             "slug" : "add_row_num2",
-            "x" : -196.99999999999986,
-            "y" : 285.00000000000006,
+            "x" : -208.99999999999986,
+            "y" : 289.00000000000006,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -741,7 +553,7 @@
           "metadata" : {
             "label" : "prev_day_balance",
             "slug" : "prev_day_balance",
-            "x" : 112.50000000000006,
+            "x" : 117.50000000000006,
             "y" : 287.6,
             "language" : "python",
             "phase" : 0,
@@ -925,6 +737,38 @@
         "script" : "if (in0.filter(col(\"tran_amount\") < 0).count() > 0):\r\n    raise Exception(\"Found negative account balances\")\r\nelif (in0.filter(~col(\"tran_type\").isin([\"INTEREST\", \"DEBIT\", \"CREDIT\"])).count() > 0):\r\n        raise Exception(\"Found invalid Transaction types. Allowed values = [\\\"INTEREST\\\", \\\"DEBIT\\\", \\\"CREDIT\\\"]\")\r\n\r\nout0 = in0\r\n    ",
         "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
         "scriptMethodFooter" : "    return out0"
+      }
+    },
+    "DUY5W7JUSV-7i6ML0elaq$$X3kfg2OOP4B4j9gw1BKeU" : {
+      "id" : "DUY5W7JUSV-7i6ML0elaq$$X3kfg2OOP4B4j9gw1BKeU",
+      "component" : "Deduplicate",
+      "metadata" : {
+        "label" : "dedup",
+        "slug" : "dedup",
+        "x" : 692.1499999999995,
+        "y" : 273.9000000000002,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "laKNEoVYPNlBd6Jnkm267$$miBOOdOPTm2CbtcLHvT2i",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "hGENVLRo1_H19tnLqYbem$$oNOekpG8PlVWRx7Szefgs",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "laKNEoVYPNlBd6Jnkm267$$miBOOdOPTm2CbtcLHvT2i##tran_id" ],
+        "dedupType" : "any",
+        "dedupColumns" : [ {
+          "colName" : "tran_id"
+        } ]
       }
     }
   },
