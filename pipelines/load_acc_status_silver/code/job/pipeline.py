@@ -10,7 +10,8 @@ def pipeline(spark: SparkSession) -> None:
     df_null_check = null_check(spark, df_acc_status_bronze)
     df_dedup = dedup(spark, df_null_check)
     df_dvr = dvr(spark, df_dedup)
-    acc_status_silver(spark, df_dvr)
+    df_milestone_keys = milestone_keys(spark, df_dvr)
+    acc_status_silver(spark, df_milestone_keys)
 
 def main():
     Utils.initializeFromArgs(Utils.parseArgs())

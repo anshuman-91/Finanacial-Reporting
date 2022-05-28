@@ -22,7 +22,3 @@ schema:
     type: double
     nullable: true
     metadata: {}
-  - name: import_ts
-    type: timestamp
-    nullable: true
-    metadata: {}

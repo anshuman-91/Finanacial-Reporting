@@ -51,12 +51,6 @@
     "target" : "MkmNs9NXv53w3KIgjqjy2$$yN2nZ2XCf2R9SUsFyjI20",
     "targetPort" : "9zrdvQ2Gah9w79zUPhMvD$$GhySVjBwfGKWqe8jX32tv"
   }, {
-    "id" : "NXFZTe5rnbjX25zvz52qc",
-    "source" : "rpavCSmkHKEgijqB9Pw2_$$YhWGcEEHifV4MBmZRztuP",
-    "sourcePort" : "_3D0PvNbvGRrDt_k2K0ZA$$4NHpOcW8BxiHBD58A4pgm",
-    "target" : "MmimlghcPXRq2wmIPMzzr$$8bWjjLC-ez1CRT9QI2N1W",
-    "targetPort" : "LW2HC7s8GHaWyqBGS0_YN$$Iw0rwyu3-nVAQN9uN3Qzq"
-  }, {
     "id" : "Dlndz9kuBp0-wZ5SBNxnR",
     "source" : "MkmNs9NXv53w3KIgjqjy2$$yN2nZ2XCf2R9SUsFyjI20",
     "sourcePort" : "JpF2yGSUZmIwgWahZPJ6y$$lBefnBSMW8gRPT3j5PKAK",
@@ -68,6 +62,18 @@
     "sourcePort" : "YN2oLNjk_jG_eap_AcT56$$KyqZnkJO6yZt0_OZRuX5r",
     "target" : "rpavCSmkHKEgijqB9Pw2_$$YhWGcEEHifV4MBmZRztuP",
     "targetPort" : "HKLlr78ax77b3abnDekVF$$oXlm-yBvV_ISds8ssDCxV"
+  }, {
+    "id" : "is7amTILpgV4KvadXL7Dq",
+    "source" : "rpavCSmkHKEgijqB9Pw2_$$YhWGcEEHifV4MBmZRztuP",
+    "sourcePort" : "_3D0PvNbvGRrDt_k2K0ZA$$4NHpOcW8BxiHBD58A4pgm",
+    "target" : "y907KHbBqwEBE4Rv1ImjX$$5XSvb7eGP90c6HeE35gLw",
+    "targetPort" : "NmJc26obdHKKbzgM1PUjX$$1Y9pix_spFM8ydXId3B6o"
+  }, {
+    "id" : "pygRKdQxeqNK8BQDwlD3n",
+    "source" : "y907KHbBqwEBE4Rv1ImjX$$5XSvb7eGP90c6HeE35gLw",
+    "sourcePort" : "8wCzzRRC_RQd3LCBTjVhG$$6zfLhyltqgr0MNJglAPNF",
+    "target" : "MmimlghcPXRq2wmIPMzzr$$8bWjjLC-ez1CRT9QI2N1W",
+    "targetPort" : "LW2HC7s8GHaWyqBGS0_YN$$Iw0rwyu3-nVAQN9uN3Qzq"
   } ],
   "processes" : {
     "rpavCSmkHKEgijqB9Pw2_$$YhWGcEEHifV4MBmZRztuP" : {
@@ -76,8 +82,8 @@
       "metadata" : {
         "label" : "dvr",
         "slug" : "dvr",
-        "x" : 435.9000000000005,
-        "y" : 144.40000000000003,
+        "x" : 339.9000000000009,
+        "y" : 142.00000000000006,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -106,8 +112,8 @@
       "metadata" : {
         "label" : "dedup",
         "slug" : "dedup",
-        "x" : 241.14999999999975,
-        "y" : 144.35000000000008,
+        "x" : 145.1499999999999,
+        "y" : 141.9500000000001,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -140,8 +146,8 @@
       "metadata" : {
         "label" : "acc_status_bronze",
         "slug" : "acc_status_bronze",
-        "x" : -141.59999999999997,
-        "y" : 144.6000000000002,
+        "x" : -237.59999999999982,
+        "y" : 142.20000000000022,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -165,8 +171,8 @@
       "metadata" : {
         "label" : "acc_status_silver",
         "slug" : "acc_status_silver",
-        "x" : 619.8999999999993,
-        "y" : 143.40000000000003,
+        "x" : 720.8999999999993,
+        "y" : 142.40000000000003,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -184,14 +190,59 @@
         "datasetId" : "5468/datasets/acc_status_silver"
       }
     },
+    "y907KHbBqwEBE4Rv1ImjX$$5XSvb7eGP90c6HeE35gLw" : {
+      "id" : "y907KHbBqwEBE4Rv1ImjX$$5XSvb7eGP90c6HeE35gLw",
+      "component" : "SchemaTransform",
+      "metadata" : {
+        "label" : "milestone_keys",
+        "slug" : "milestone_keys",
+        "x" : 526.1499999999997,
+        "y" : 142.40000000000015,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "NmJc26obdHKKbzgM1PUjX$$1Y9pix_spFM8ydXId3B6o",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "8wCzzRRC_RQd3LCBTjVhG$$6zfLhyltqgr0MNJglAPNF",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "transformations" : [ {
+          "kind" : "AddReplaceColumn",
+          "AddReplaceColumn" : {
+            "sourceColumn" : "import_ts",
+            "expression" : {
+              "format" : "sql",
+              "expression" : "current_timestamp()"
+            }
+          },
+          "DropColumn" : {
+            "sourceColumn" : ""
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          }
+        } ]
+      }
+    },
     "MkmNs9NXv53w3KIgjqjy2$$yN2nZ2XCf2R9SUsFyjI20" : {
       "id" : "MkmNs9NXv53w3KIgjqjy2$$yN2nZ2XCf2R9SUsFyjI20",
       "component" : "Script",
       "metadata" : {
         "label" : "null_check",
         "slug" : "null_check",
-        "x" : 43.399999999999814,
-        "y" : 144.6000000000002,
+        "x" : -52.600000000000186,
+        "y" : 142.20000000000022,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
