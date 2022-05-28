@@ -69,9 +69,15 @@
     "target" : "DUY5W7JUSV-7i6ML0elaq$$X3kfg2OOP4B4j9gw1BKeU",
     "targetPort" : "laKNEoVYPNlBd6Jnkm267$$miBOOdOPTm2CbtcLHvT2i"
   }, {
-    "id" : "tqihByQqilq3KGM8SXKWi",
+    "id" : "g9s_rm5muBN9wxdBG07kD",
     "source" : "DUY5W7JUSV-7i6ML0elaq$$X3kfg2OOP4B4j9gw1BKeU",
     "sourcePort" : "hGENVLRo1_H19tnLqYbem$$oNOekpG8PlVWRx7Szefgs",
+    "target" : "3Kahq6GpM9rYnhilGlOwZ$$Uh1odas5RNAzp-gS7tJZ7",
+    "targetPort" : "T_JMA6s1c0eRmi328YBDM$$Rn5LRrcC0RLGWjC3WEBjJ"
+  }, {
+    "id" : "rnAexSWlfQj62hFu7NOaY",
+    "source" : "3Kahq6GpM9rYnhilGlOwZ$$Uh1odas5RNAzp-gS7tJZ7",
+    "sourcePort" : "CGsY6FyDiQ4HIE2LWcwg8$$g3tCv2hrzfwmRxGcroVXL",
     "target" : "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE",
     "targetPort" : "UxcIzasK5ROxncIrS1C3V$$g4XaK0i8E9QNAibCEPEmL"
   } ],
@@ -635,8 +641,8 @@
       "metadata" : {
         "label" : "transactions_bronze",
         "slug" : "transactions_bronze",
-        "x" : 326.80000000000035,
-        "y" : 277.40000000000026,
+        "x" : 206.80000000000072,
+        "y" : 276.2000000000003,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -660,8 +666,8 @@
       "metadata" : {
         "label" : "null_check",
         "slug" : "null_check",
-        "x" : 523.7999999999996,
-        "y" : 275.80000000000024,
+        "x" : 384.79999999999995,
+        "y" : 276.60000000000025,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -691,7 +697,7 @@
         "label" : "transactions_silver",
         "slug" : "transactions_silver",
         "x" : 1089.4999999999986,
-        "y" : 274.40000000000003,
+        "y" : 273.40000000000003,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -709,14 +715,59 @@
         "datasetId" : "5468/datasets/transactions_silver"
       }
     },
+    "3Kahq6GpM9rYnhilGlOwZ$$Uh1odas5RNAzp-gS7tJZ7" : {
+      "id" : "3Kahq6GpM9rYnhilGlOwZ$$Uh1odas5RNAzp-gS7tJZ7",
+      "component" : "SchemaTransform",
+      "metadata" : {
+        "label" : "milestone_keys",
+        "slug" : "milestone_keys",
+        "x" : 731.1499999999995,
+        "y" : 273.9000000000002,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "T_JMA6s1c0eRmi328YBDM$$Rn5LRrcC0RLGWjC3WEBjJ",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "CGsY6FyDiQ4HIE2LWcwg8$$g3tCv2hrzfwmRxGcroVXL",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "transformations" : [ {
+          "kind" : "AddReplaceColumn",
+          "AddReplaceColumn" : {
+            "sourceColumn" : "import_ts",
+            "expression" : {
+              "format" : "python",
+              "expression" : "current_timestamp()"
+            }
+          },
+          "DropColumn" : {
+            "sourceColumn" : ""
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          }
+        } ]
+      }
+    },
     "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE" : {
       "id" : "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE",
       "component" : "Script",
       "metadata" : {
         "label" : "dvr",
         "slug" : "dvr",
-        "x" : 877.5000000000002,
-        "y" : 273.40000000000003,
+        "x" : 896.5000000000002,
+        "y" : 272.40000000000003,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -745,8 +796,8 @@
       "metadata" : {
         "label" : "dedup",
         "slug" : "dedup",
-        "x" : 692.1499999999995,
-        "y" : 273.9000000000002,
+        "x" : 560.149999999998,
+        "y" : 274.7000000000002,
         "language" : "python",
         "phase" : 0,
         "cache" : false,

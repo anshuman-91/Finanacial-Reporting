@@ -10,7 +10,7 @@ def balances(spark: SparkSession) -> DataFrame:
             .format("parquet")\
             .schema(
               StructType([
-                StructField("acc_id", IntegerType(), True), StructField("person_id", StringType(), True), StructField("product_id", StringType(), True), StructField("business_date", DateType(), True), StructField("balance", DoubleType(), True), StructField("import_ts", TimestampType(), True)
+                StructField("acc_id", IntegerType(), True), StructField("person_id", StringType(), True), StructField("product_id", StringType(), True), StructField("business_date", DateType(), True), StructField("balance", DoubleType(), True)
             ])
             )\
             .load("dbfs:/Prophecy/anshuman@simpledatalabs.com/fin_reporting/acc_status/silver/")
