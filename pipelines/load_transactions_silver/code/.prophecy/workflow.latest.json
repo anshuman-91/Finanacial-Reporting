@@ -499,8 +499,8 @@
           "id" : "s6Q0uEf4_WSDFxAjP_RcT$$RpRSTVjzw0ooMMoxdG4Gc",
           "component" : "WindowFunction",
           "metadata" : {
-            "label" : "add_row_num2",
-            "slug" : "add_row_num2",
+            "label" : "add_row_num",
+            "slug" : "add_row_num",
             "x" : -208.99999999999986,
             "y" : 289.00000000000006,
             "language" : "python",
@@ -612,8 +612,8 @@
           "id" : "2QFCdetMj_zU5pJrD5YyL$$_s4XYLnImJJDxBQRNkK1D",
           "component" : "Source",
           "metadata" : {
-            "label" : "balances",
-            "slug" : "balances",
+            "label" : "acc_status_silver",
+            "slug" : "acc_status_silver",
             "x" : -378.99999999999966,
             "y" : 289.00000000000006,
             "language" : "python",
