@@ -88,8 +88,8 @@
       "metadata" : {
         "label" : "validate_bonus_rate",
         "slug" : "validate_bonus_rate",
-        "x" : 961,
-        "y" : 157,
+        "x" : 968.2000000000002,
+        "y" : 163.79999999999995,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -305,7 +305,7 @@
               "format" : "python",
               "expression" : "col(\"id\")"
             } ],
-            "activeTab" : "windowUse",
+            "activeTab" : "windowOrder",
             "columnsSelector" : [ ],
             "specifyFrame" : false,
             "frameStart" : null,
@@ -313,12 +313,6 @@
               "expression" : {
                 "format" : "python",
                 "expression" : "col(\"updated_at\")"
-              },
-              "sortType" : "desc"
-            }, {
-              "expression" : {
-                "format" : "python",
-                "expression" : "col(\"import_ts\")"
               },
               "sortType" : "desc"
             } ],
@@ -332,10 +326,10 @@
       "id" : "OvXfcyisCTYnQ8WqN9iU5$$eZls_uq5cBDU4M9xqu8bp",
       "component" : "SchemaTransform",
       "metadata" : {
-        "label" : "business_date",
-        "slug" : "business_date",
-        "x" : 805,
-        "y" : 158,
+        "label" : "milestone_keys",
+        "slug" : "milestone_keys",
+        "x" : 806,
+        "y" : 164,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -379,8 +373,8 @@
       "metadata" : {
         "label" : "products_silver",
         "slug" : "products_silver",
-        "x" : 1135,
-        "y" : 156.99999999999997,
+        "x" : 1140.2000000000003,
+        "y" : 164.79999999999993,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -404,8 +398,8 @@
       "metadata" : {
         "label" : "null_check",
         "slug" : "null_check",
-        "x" : 651,
-        "y" : 161,
+        "x" : 648,
+        "y" : 164,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -453,7 +447,7 @@
         "selectedInputFields" : [ ]
       },
       "properties" : {
-        "columnsSelector" : [ "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties.lock_in_period", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##slug", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##name", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties.bonus_rate", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##id", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##import_ts" ],
+        "columnsSelector" : [ "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties.bonus_rate", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##slug", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##name", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties.lock_in_period", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##id" ],
         "expressions" : [ {
           "target" : "id",
           "expression" : {
@@ -487,13 +481,6 @@
           "expression" : {
             "format" : "python",
             "expression" : "col(\"properties.lock_in_period\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "import_ts",
-          "expression" : {
-            "format" : "python",
-            "expression" : "col(\"import_ts\")"
           },
           "description" : ""
         } ]

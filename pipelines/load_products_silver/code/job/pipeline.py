@@ -10,8 +10,8 @@ def pipeline(spark: SparkSession) -> None:
     df_latest = latest(spark, df_products_bronze)
     df_flatten_schema = flatten_schema(spark, df_latest)
     df_null_check = null_check(spark, df_flatten_schema)
-    df_business_date = business_date(spark, df_null_check)
-    df_validate_bonus_rate = validate_bonus_rate(spark, df_business_date)
+    df_milestone_keys = milestone_keys(spark, df_null_check)
+    df_validate_bonus_rate = validate_bonus_rate(spark, df_milestone_keys)
     products_silver(spark, df_validate_bonus_rate)
 
 def main():
