@@ -4,7 +4,7 @@ from pyspark.sql.types import *
 from job.config.ConfigStore import *
 from job.udfs.UDFs import *
 
-def transactions_silver(spark: SparkSession, in0: DataFrame):
+def append_silver(spark: SparkSession, in0: DataFrame):
     if Config.fabricName == "recipes_fabric":
         in0.write\
             .format("parquet")\

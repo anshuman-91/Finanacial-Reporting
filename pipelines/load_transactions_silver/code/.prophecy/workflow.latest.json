@@ -51,18 +51,6 @@
     "target" : "yIzCcksEp5W4O9sg249sb$$VI5w40Q9pssvW4FGSrPNb",
     "targetPort" : "SMC09fsyE7VdxTI_SZO0o$$0kweFPOBJ6nlX2jGziFT_"
   }, {
-    "id" : "XZJ6RmMuMhF_Avi9R5qEJ",
-    "source" : "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE",
-    "sourcePort" : "F6lGsKO6ljKVXDdFSBOxB$$xmthIwIf2BJ2NNJM8iZeJ",
-    "target" : "YgMCJMGtEPZdoML5r9e5R$$9mmevQFKNOZsJ2MBG8ZPL",
-    "targetPort" : "sZPWh9Ac37fTHyo-cUr5J$$sEhZSXoeHAgfZYy3cqCHK"
-  }, {
-    "id" : "MR60UZvACVYkAE_nyvZsv",
-    "source" : "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE",
-    "sourcePort" : "F6lGsKO6ljKVXDdFSBOxB$$xmthIwIf2BJ2NNJM8iZeJ",
-    "target" : "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM",
-    "targetPort" : "1FOB5EHzjVp8PpnpFzyiN$$GaMnwl78GJN1Td-WI9PT8"
-  }, {
     "id" : "VoOyNlf6KRYt9b7H__EXM",
     "source" : "yIzCcksEp5W4O9sg249sb$$VI5w40Q9pssvW4FGSrPNb",
     "sourcePort" : "igH4ftCtj675irjYrnxff$$l4lrHhTXGx5lj63gHUuxA",
@@ -75,21 +63,27 @@
     "target" : "3Kahq6GpM9rYnhilGlOwZ$$Uh1odas5RNAzp-gS7tJZ7",
     "targetPort" : "T_JMA6s1c0eRmi328YBDM$$Rn5LRrcC0RLGWjC3WEBjJ"
   }, {
-    "id" : "rnAexSWlfQj62hFu7NOaY",
+    "id" : "oWfjnxrQ1Eq9yWNoxbWcj",
     "source" : "3Kahq6GpM9rYnhilGlOwZ$$Uh1odas5RNAzp-gS7tJZ7",
     "sourcePort" : "CGsY6FyDiQ4HIE2LWcwg8$$g3tCv2hrzfwmRxGcroVXL",
-    "target" : "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE",
-    "targetPort" : "UxcIzasK5ROxncIrS1C3V$$g4XaK0i8E9QNAibCEPEmL"
+    "target" : "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM",
+    "targetPort" : "1FOB5EHzjVp8PpnpFzyiN$$GaMnwl78GJN1Td-WI9PT8"
+  }, {
+    "id" : "J2SmQnvywn0G_UOH5Puhl",
+    "source" : "3Kahq6GpM9rYnhilGlOwZ$$Uh1odas5RNAzp-gS7tJZ7",
+    "sourcePort" : "CGsY6FyDiQ4HIE2LWcwg8$$g3tCv2hrzfwmRxGcroVXL",
+    "target" : "YgMCJMGtEPZdoML5r9e5R$$9mmevQFKNOZsJ2MBG8ZPL",
+    "targetPort" : "sZPWh9Ac37fTHyo-cUr5J$$sEhZSXoeHAgfZYy3cqCHK"
   } ],
   "processes" : {
     "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM" : {
       "id" : "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM",
       "component" : "Subgraph",
       "metadata" : {
-        "label" : "reconcile",
-        "slug" : "reconcile",
-        "x" : 1070.6499999999994,
-        "y" : 71.60000000000014,
+        "label" : "validation_reconciliation",
+        "slug" : "validation_reconciliation",
+        "x" : 874.6499999999994,
+        "y" : 128.60000000000014,
         "language" : "python",
         "phase" : -1,
         "cache" : false,
@@ -100,20 +94,11 @@
           "id" : "1FOB5EHzjVp8PpnpFzyiN$$GaMnwl78GJN1Td-WI9PT8",
           "slug" : "in0"
         } ],
-        "outputs" : [ {
-          "id" : "cJH0KDryl9nGtrJZODxfP$$GNMuGvwo44hCaT7A1g_qU",
-          "slug" : "out0"
-        } ],
+        "outputs" : [ ],
         "selectedInputFields" : [ ]
       },
       "properties" : { },
       "connections" : [ {
-        "id" : "bHKQ3lrKM6Jd8-y1_fJTa",
-        "source" : "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM",
-        "sourcePort" : "1FOB5EHzjVp8PpnpFzyiN$$GaMnwl78GJN1Td-WI9PT8",
-        "target" : "YG5950MONXlvAgmOLg57v$$NNfVVmvSQwITfw4FNtIAg",
-        "targetPort" : "ds0G_bDBAuPoel9PJr8FR$$NS2r4wAGRKNHgLCyEDSGA"
-      }, {
         "id" : "g8HNObUvoiQwF53SQ3q7D",
         "source" : "YG5950MONXlvAgmOLg57v$$NNfVVmvSQwITfw4FNtIAg",
         "sourcePort" : "DCGpGBRaIH1qWpNQkoSuq$$8Lwxy2rjV-P9MbXsymsSj",
@@ -168,11 +153,17 @@
         "target" : "39LbVeKf0fI09WXKNQJy2$$ivYMPn7cy1kc6OmRVczc8",
         "targetPort" : "Z3_asHmXxFrXxRZgzagYq$$txIbRgQsuP3NbsVYumcc8"
       }, {
-        "id" : "S1bCxBQHdbA7lPtQPC_vh",
-        "source" : "39LbVeKf0fI09WXKNQJy2$$ivYMPn7cy1kc6OmRVczc8",
-        "sourcePort" : "RE1P3bgx8w8GU_iDG5eVx$$iABgW15je6BqOmEjez2Jf",
-        "target" : "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM",
-        "targetPort" : "cJH0KDryl9nGtrJZODxfP$$GNMuGvwo44hCaT7A1g_qU"
+        "id" : "yY2yn8wJ32-7tFOmiykCB",
+        "source" : "t-cAxy40HYGllLjEaW0Qr$$VrFPzRbxjm-R27SKU6iDM",
+        "sourcePort" : "1FOB5EHzjVp8PpnpFzyiN$$GaMnwl78GJN1Td-WI9PT8",
+        "target" : "TUweJ7AiTLYkgOH1_tkhr$$bzhsO7_95ps4-XmWxnS9y",
+        "targetPort" : "eX4tj7Cq3j4UNW3nSP8Xg$$HoxDpWhCJRNYcU6WDYYDq"
+      }, {
+        "id" : "yF2ykHNKrDhf7jAzN3r3Q",
+        "source" : "TUweJ7AiTLYkgOH1_tkhr$$bzhsO7_95ps4-XmWxnS9y",
+        "sourcePort" : "xBu7ZumdCZF24Z3xhH37f$$_DB9kQfDt_cFNcB9PdX-R",
+        "target" : "YG5950MONXlvAgmOLg57v$$NNfVVmvSQwITfw4FNtIAg",
+        "targetPort" : "ds0G_bDBAuPoel9PJr8FR$$NS2r4wAGRKNHgLCyEDSGA"
       } ],
       "processes" : {
         "Rzek95CWwszwEZucUJ4Np$$ugr3USHAdmuMahZrmAqjL" : {
@@ -181,8 +172,8 @@
           "metadata" : {
             "label" : "join_tran_balance",
             "slug" : "join_tran_balance",
-            "x" : 454.50000000000006,
-            "y" : 130.60000000000002,
+            "x" : 449.10000000000014,
+            "y" : 129.40000000000003,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -246,7 +237,7 @@
             } ],
             "allIn1" : false,
             "activeTab" : "expressions",
-            "columnsSelector" : [ "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##business_date", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##acc_id", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##business_date", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##business_date", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##balance_change", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##signed_tran_amount" ],
+            "columnsSelector" : [ "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##business_date", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##business_date", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##signed_tran_amount", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##balance_change", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##business_date" ],
             "allIn0" : false,
             "whereClause" : null,
             "headAlias" : "in0"
@@ -258,8 +249,8 @@
           "metadata" : {
             "label" : "signed_tran_amt_1",
             "slug" : "signed_tran_amt_1",
-            "x" : -391.99999999999966,
-            "y" : 120,
+            "x" : -129.39999999999958,
+            "y" : 121.79999999999997,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -303,8 +294,8 @@
           "metadata" : {
             "label" : "row_num_eq1",
             "slug" : "row_num_eq1",
-            "x" : -41.49999999999994,
-            "y" : 288.6,
+            "x" : -48.89999999999996,
+            "y" : 283.4000000000001,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -335,8 +326,8 @@
           "metadata" : {
             "label" : "balance_change",
             "slug" : "balance_change",
-            "x" : 282.50000000000006,
-            "y" : 286.6,
+            "x" : 274.10000000000014,
+            "y" : 283.4000000000001,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -354,7 +345,7 @@
             "selectedInputFields" : [ ]
           },
           "properties" : {
-            "columnsSelector" : [ "oD2j29iwaSLcNVdMXNnY-$$7o1wNIfElEkC7MxqNz47a##prev_balance", "oD2j29iwaSLcNVdMXNnY-$$7o1wNIfElEkC7MxqNz47a##balance" ],
+            "columnsSelector" : [ "oD2j29iwaSLcNVdMXNnY-$$7o1wNIfElEkC7MxqNz47a##balance", "oD2j29iwaSLcNVdMXNnY-$$7o1wNIfElEkC7MxqNz47a##prev_balance" ],
             "transformations" : [ {
               "kind" : "AddReplaceColumn",
               "AddReplaceColumn" : {
@@ -380,8 +371,8 @@
           "metadata" : {
             "label" : "sum_trans",
             "slug" : "sum_trans",
-            "x" : -217.9999999999999,
-            "y" : 120,
+            "x" : 129.60000000000022,
+            "y" : 119.79999999999997,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -413,7 +404,7 @@
             "pivotColumn" : null,
             "pivotValues" : [ ],
             "activeTab" : "aggregate",
-            "columnsSelector" : [ "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##business_date", "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##signed_tran_amt", "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##acc_id" ],
+            "columnsSelector" : [ "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##signed_tran_amt", "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##acc_id", "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##business_date" ],
             "groupBy" : [ {
               "target" : "acc_id",
               "expression" : {
@@ -433,14 +424,44 @@
             } ]
           }
         },
+        "TUweJ7AiTLYkgOH1_tkhr$$bzhsO7_95ps4-XmWxnS9y" : {
+          "id" : "TUweJ7AiTLYkgOH1_tkhr$$bzhsO7_95ps4-XmWxnS9y",
+          "component" : "Script",
+          "metadata" : {
+            "label" : "validate_transacions",
+            "slug" : "validate_transacions",
+            "x" : -389.4999999999998,
+            "y" : 122.40000000000003,
+            "language" : "python",
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "eX4tj7Cq3j4UNW3nSP8Xg$$HoxDpWhCJRNYcU6WDYYDq",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "xBu7ZumdCZF24Z3xhH37f$$_DB9kQfDt_cFNcB9PdX-R",
+              "slug" : "out0"
+            } ],
+            "selectedInputFields" : [ ]
+          },
+          "properties" : {
+            "script" : "if (in0.filter(col(\"tran_amount\") < 0).count() > 0):\r\n    raise Exception(\"Found negative account balances\")\r\nelif (in0.filter(~col(\"tran_type\").isin([\"INTEREST\", \"DEBIT\", \"CREDIT\"])).count() > 0):\r\n        raise Exception(\"Found invalid Transaction types. Allowed values = [\\\"INTEREST\\\", \\\"DEBIT\\\", \\\"CREDIT\\\"]\")\r\n\r\nout0 = in0\r\n    ",
+            "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+            "scriptMethodFooter" : "    return out0"
+          }
+        },
         "39LbVeKf0fI09WXKNQJy2$$ivYMPn7cy1kc6OmRVczc8" : {
           "id" : "39LbVeKf0fI09WXKNQJy2$$ivYMPn7cy1kc6OmRVczc8",
           "component" : "Script",
           "metadata" : {
             "label" : "check_unmatches",
             "slug" : "check_unmatches",
-            "x" : 750.5,
-            "y" : 129.60000000000002,
+            "x" : 752.0999999999997,
+            "y" : 128.40000000000003,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -451,16 +472,13 @@
               "id" : "Z3_asHmXxFrXxRZgzagYq$$txIbRgQsuP3NbsVYumcc8",
               "slug" : "in0"
             } ],
-            "outputs" : [ {
-              "id" : "RE1P3bgx8w8GU_iDG5eVx$$iABgW15je6BqOmEjez2Jf",
-              "slug" : "out0"
-            } ],
+            "outputs" : [ ],
             "selectedInputFields" : [ ]
           },
           "properties" : {
-            "script" : "if (in0.count() > 0):\r\n   raise Exception(\"Transactions don't add up to balance\")\r\nout0 = in0",
-            "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
-            "scriptMethodFooter" : "    return out0"
+            "script" : "if (in0.count() > 0):\r\n   raise Exception(\"Transactions don't add up to balance\")\r\n",
+            "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> None:",
+            "scriptMethodFooter" : "    return "
           }
         },
         "yaCiej4OmDBcyxD-hoC6z$$ffmALk_3jkBjvHVBqsthF" : {
@@ -469,8 +487,8 @@
           "metadata" : {
             "label" : "unmatched",
             "slug" : "unmatched",
-            "x" : 596.5000000000001,
-            "y" : 130.60000000000002,
+            "x" : 613.0999999999998,
+            "y" : 128.40000000000003,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -501,8 +519,8 @@
           "metadata" : {
             "label" : "add_row_num",
             "slug" : "add_row_num",
-            "x" : -208.99999999999986,
-            "y" : 289.00000000000006,
+            "x" : -217.39999999999978,
+            "y" : 283.8000000000001,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -559,8 +577,8 @@
           "metadata" : {
             "label" : "prev_day_balance",
             "slug" : "prev_day_balance",
-            "x" : 117.50000000000006,
-            "y" : 287.6,
+            "x" : 112.10000000000004,
+            "y" : 283.4000000000001,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -614,8 +632,8 @@
           "metadata" : {
             "label" : "acc_status_silver",
             "slug" : "acc_status_silver",
-            "x" : -378.99999999999966,
-            "y" : 289.00000000000006,
+            "x" : -386.3999999999996,
+            "y" : 283.8000000000001,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -639,10 +657,10 @@
       "id" : "bEhvKlqkm_ZR9HIFZHsP1$$8VEqPzSSDYuTsnGbLYO7K",
       "component" : "Source",
       "metadata" : {
-        "label" : "transactions_bronze",
-        "slug" : "transactions_bronze",
-        "x" : 206.80000000000072,
-        "y" : 276.2000000000003,
+        "label" : "load_bronze",
+        "slug" : "load_bronze",
+        "x" : 205.80000000000072,
+        "y" : 275.2000000000003,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -667,7 +685,7 @@
         "label" : "null_check",
         "slug" : "null_check",
         "x" : 384.79999999999995,
-        "y" : 276.60000000000025,
+        "y" : 274.60000000000025,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -694,9 +712,9 @@
       "id" : "YgMCJMGtEPZdoML5r9e5R$$9mmevQFKNOZsJ2MBG8ZPL",
       "component" : "Target",
       "metadata" : {
-        "label" : "transactions_silver",
-        "slug" : "transactions_silver",
-        "x" : 1089.4999999999986,
+        "label" : "append_silver",
+        "slug" : "append_silver",
+        "x" : 990.4999999999986,
         "y" : 273.40000000000003,
         "language" : "python",
         "phase" : 0,
@@ -758,36 +776,6 @@
             "targetColumn" : ""
           }
         } ]
-      }
-    },
-    "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE" : {
-      "id" : "lM2nQXce-RyXeD7btvqUf$$gDVW0OaIojOKfT0IPq0XE",
-      "component" : "Script",
-      "metadata" : {
-        "label" : "dvr",
-        "slug" : "dvr",
-        "x" : 896.5000000000002,
-        "y" : 272.40000000000003,
-        "language" : "python",
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "UxcIzasK5ROxncIrS1C3V$$g4XaK0i8E9QNAibCEPEmL",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "F6lGsKO6ljKVXDdFSBOxB$$xmthIwIf2BJ2NNJM8iZeJ",
-          "slug" : "out0"
-        } ],
-        "selectedInputFields" : [ ]
-      },
-      "properties" : {
-        "script" : "if (in0.filter(col(\"tran_amount\") < 0).count() > 0):\r\n    raise Exception(\"Found negative account balances\")\r\nelif (in0.filter(~col(\"tran_type\").isin([\"INTEREST\", \"DEBIT\", \"CREDIT\"])).count() > 0):\r\n        raise Exception(\"Found invalid Transaction types. Allowed values = [\\\"INTEREST\\\", \\\"DEBIT\\\", \\\"CREDIT\\\"]\")\r\n\r\nout0 = in0\r\n    ",
-        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
-        "scriptMethodFooter" : "    return out0"
       }
     },
     "DUY5W7JUSV-7i6ML0elaq$$X3kfg2OOP4B4j9gw1BKeU" : {
