@@ -8,7 +8,6 @@ def person_external(spark: SparkSession) -> DataFrame:
     if Config.fabricName == "recipes_fabric":
         return spark.read\
             .format("json")\
-            .option("multiLine", True)\
             .option("recursiveFileLookup", True)\
             .schema(
               StructType([
