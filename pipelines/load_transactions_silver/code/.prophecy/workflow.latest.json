@@ -172,8 +172,8 @@
           "metadata" : {
             "label" : "join_tran_balance",
             "slug" : "join_tran_balance",
-            "x" : 448.10000000000014,
-            "y" : 129.40000000000003,
+            "x" : 450.10000000000014,
+            "y" : 131.40000000000003,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -237,7 +237,7 @@
             } ],
             "allIn1" : false,
             "activeTab" : "conditions",
-            "columnsSelector" : [ "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##business_date", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##business_date", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##signed_tran_amount", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##balance_change", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##business_date" ],
+            "columnsSelector" : [ "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##acc_id", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##acc_id", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##business_date", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##business_date", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##acc_id", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##business_date", "qUY4LYf-jpyoxme5Z6U3t$$4jjy_AzOfzd0m7qHdvcjP##balance_change", "z4DOa_hGX66ZebciDwy7_$$EoruBhMdeCu84xMOmTCD0##signed_tran_amount" ],
             "allIn0" : false,
             "whereClause" : null,
             "headAlias" : "in0"
@@ -461,7 +461,7 @@
             "label" : "check_unmatches",
             "slug" : "check_unmatches",
             "x" : 792.0999999999997,
-            "y" : 127.40000000000003,
+            "y" : 129.40000000000003,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -488,7 +488,7 @@
             "label" : "unmatched",
             "slug" : "unmatched",
             "x" : 613.0999999999998,
-            "y" : 128.40000000000003,
+            "y" : 130.40000000000003,
             "language" : "python",
             "phase" : 0,
             "cache" : false,
@@ -506,7 +506,7 @@
             "selectedInputFields" : [ ]
           },
           "properties" : {
-            "columnsSelector" : [ "GvjC2-iazyVI-1LU23-md$$wKUvPn5LKlwBO-23kR3t3##bal_change", "GvjC2-iazyVI-1LU23-md$$wKUvPn5LKlwBO-23kR3t3##signed_tran_amount" ],
+            "columnsSelector" : [ "GvjC2-iazyVI-1LU23-md$$wKUvPn5LKlwBO-23kR3t3##signed_tran_amount", "GvjC2-iazyVI-1LU23-md$$wKUvPn5LKlwBO-23kR3t3##bal_change" ],
             "condition" : {
               "format" : "python",
               "expression" : "col(\"bal_change\")!= col(\"signed_tran_amount\")"
