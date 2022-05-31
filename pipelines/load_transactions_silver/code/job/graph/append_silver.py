@@ -8,7 +8,7 @@ def append_silver(spark: SparkSession, in0: DataFrame):
     if Config.fabricName == "recipes_fabric":
         in0.write\
             .format("parquet")\
-            .mode("overwrite")\
+            .mode("append")\
             .partitionBy("business_date", "import_ts")\
             .save("dbfs:/Prophecy/anshuman@simpledatalabs.com/fin_reporting/transactions/silver/")
     else:

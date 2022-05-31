@@ -172,7 +172,7 @@
           "metadata" : {
             "label" : "join_tran_balance",
             "slug" : "join_tran_balance",
-            "x" : 449.10000000000014,
+            "x" : 448.10000000000014,
             "y" : 129.40000000000003,
             "language" : "python",
             "phase" : 0,
@@ -352,7 +352,7 @@
                 "sourceColumn" : "balance_change",
                 "expression" : {
                   "format" : "python",
-                  "expression" : "when(col(\"prev_balance\").isNotNull(),col(\"balance\") - col(\"prev_balance\")).otherwise(col(\"balance\") )"
+                  "expression" : "when(col(\"prev_balance\").isNotNull(), col(\"balance\") - col(\"prev_balance\"))\n    .otherwise(col(\"balance\") )"
                 }
               },
               "DropColumn" : {
@@ -556,7 +556,7 @@
               "format" : "python",
               "expression" : "col(\"business_date\")"
             } ],
-            "activeTab" : "windowUse",
+            "activeTab" : "windowFrame",
             "columnsSelector" : [ ],
             "specifyFrame" : false,
             "frameStart" : null,
