@@ -1,5 +1,6 @@
 from pyhocon import ConfigFactory
 import argparse
+from pyspark.sql import SparkSession
 from .Config import Config as ConfigClass
 Config: ConfigClass = ConfigClass()
 
@@ -25,8 +26,9 @@ class Utils:
         return args
 
     @staticmethod
-    def initializeFromArgs(args):
+    def initializeFromArgs(spark: SparkSession, args):
         global Config
+        Config.updateSpark(spark)
 
         if args.file is not None:
             conf = ConfigFactory.parse_file(args.file)

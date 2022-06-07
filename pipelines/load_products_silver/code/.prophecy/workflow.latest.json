@@ -463,7 +463,7 @@
         "selectedInputFields" : [ ]
       },
       "properties" : {
-        "columnsSelector" : [ "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties.bonus_rate", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##slug", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##name", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties.lock_in_period", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##id" ],
+        "columnsSelector" : [ "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##id", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##name", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties.lock_in_period", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##slug", "wyMQknJ52x_gtlpZIrUOe$$RVTUHI1yARfNOpQVNhb3L##properties.bonus_rate" ],
         "expressions" : [ {
           "target" : "id",
           "expression" : {

@@ -6,8 +6,14 @@ from job.udfs.UDFs import *
 from job.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_person_bronze = person_bronze(spark)
-    df_dedup = dedup(spark, df_person_bronze)
+    df_all_orders = all_orders(spark)
+    df_research = research(spark, df_all_orders)
+    df_Limit_1 = Limit_1(spark, df_research)
+    df_all_orders_1 = all_orders_1(spark)
+    df_training = training(spark, df_all_orders_1)
+    df_Limit_2 = Limit_2(spark, df_training)
+    df_union = union(spark, df_Limit_1, df_Limit_2)
+    total_orders(spark, df_union)
 
 def main():
     spark = SparkSession.builder\

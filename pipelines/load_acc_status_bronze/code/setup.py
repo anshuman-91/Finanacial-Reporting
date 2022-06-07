@@ -7,7 +7,7 @@ setup(
     description='load_acc_status_bronze',
     install_requires=[
         'pyhocon==0.3.59',
-        'prophecy-libs==0.1.6'
+        'prophecy-libs==1.0.2'
     ],
     entry_points={
         'console_scripts': [

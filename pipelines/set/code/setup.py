@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='load_person_silver',
+    name='set',
     version='1.0',
     packages=find_packages(include=('job*',)),
-    description='load_person_silver',
+    description='set',
     install_requires=[
         'pyhocon==0.3.59',
         'prophecy-libs==1.0.2'

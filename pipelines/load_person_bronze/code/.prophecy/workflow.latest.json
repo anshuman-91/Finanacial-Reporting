@@ -45,7 +45,7 @@
     "externalDependencies" : [ ]
   },
   "connections" : [ {
-    "id" : "F5euEvDSeEIcSqnpt-_17",
+    "id" : "65TY1cgPehJqxG4MrysF5",
     "source" : "SRBciHuI7ut8mYKMnJ0sq$$vJ1Hie8qUsQzkudo3-DG4",
     "sourcePort" : "do1c1VkGdiDV1tKrj10Yp$$P3TPFBb549dZ2Aw4M3JTp",
     "target" : "l2ZPXTHnivcF738Th_p1r$$VZRZVgfuB7O1E4Ux9aTSU",
@@ -58,8 +58,8 @@
       "metadata" : {
         "label" : "person_external",
         "slug" : "person_external",
-        "x" : 255,
-        "y" : 131,
+        "x" : -81,
+        "y" : 22,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -83,8 +83,8 @@
       "metadata" : {
         "label" : "person_bronze",
         "slug" : "person_bronze",
-        "x" : 585,
-        "y" : 129,
+        "x" : 357,
+        "y" : 14,
         "language" : "python",
         "phase" : 0,
         "cache" : false,

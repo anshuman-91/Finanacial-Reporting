@@ -71,6 +71,19 @@ pipelines:
       outputs:
       - 5468/datasets/person_bronze
     dependencies: {}
+  pipelines/set:
+    name: set
+    description: ''
+    author: anshuman@simpledatalabs.com
+    mode: batch
+    language: python
+    createdAt: '2022-06-07 12:12:58'
+    datasets:
+      inputs:
+      - 5468/datasets/orders
+      outputs:
+      - 5468/datasets/orders_output
+    dependencies: {}
   pipelines/load_transactions_silver:
     name: load_transactions_silver
     description: ''
@@ -125,6 +138,18 @@ pipelines:
       - 5468/datasets/acc_status_silver
     dependencies: {}
 datasets:
+  datasets/orders:
+    name: orders
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-06-07 12:14:01'
+    physicalDatasets:
+      recipes_fabric:
+        fabricId: 1010
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-06-07 12:14:01'
   datasets/acc_status_external_20220505:
     name: acc_status_external_20220505
     description: ''
@@ -233,6 +258,18 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-25 14:03:17'
+  datasets/orders_output:
+    name: orders_output
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-06-07 12:16:40'
+    physicalDatasets:
+      recipes_fabric:
+        fabricId: 1010
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-06-07 12:16:40'
   datasets/transactions_external_20220505:
     name: transactions_external_20220505
     description: ''

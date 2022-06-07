@@ -404,7 +404,7 @@
             "pivotColumn" : null,
             "pivotValues" : [ ],
             "activeTab" : "aggregate",
-            "columnsSelector" : [ "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##signed_tran_amt", "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##acc_id", "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##business_date" ],
+            "columnsSelector" : [ "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##business_date", "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##signed_tran_amt", "zVZeI7iZA0StWWvpZ7UHp$$2ku8JDqWEj8WrsEjN05_t##acc_id" ],
             "groupBy" : [ {
               "target" : "acc_id",
               "expression" : {

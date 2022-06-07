@@ -10,13 +10,13 @@ def pipeline(spark: SparkSession) -> None:
     ingest_bronze(spark, df_load_external)
 
 def main():
-    Utils.initializeFromArgs(Utils.parseArgs())
     spark = SparkSession.builder\
                 .config("spark.default.parallelism", "4")\
                 .config("spark.sql.legacy.allowUntypedScalaUDF", "true")\
                 .enableHiveSupport()\
                 .appName("Prophecy Pipeline")\
                 .getOrCreate()
+    Utils.initializeFromArgs(spark, Utils.parseArgs())
     initialize(spark)
     pipeline(spark)
 
